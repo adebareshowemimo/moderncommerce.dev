@@ -2,7 +2,7 @@
 
 ModernCommerce uses Moodle's native role and capability system. The plugin seeds **nine custom system roles** as least-privilege starting points. It does not assign users to them automatically and it does not maintain a separate permission database.
 
-This reference is derived from `classes/services/role_preset_service.php`, `db/access.php`, the administration page capability checks, and the centralized admin navigation definition in the audited 2.17 source.
+This reference is derived from `classes/services/role_preset_service.php`, `db/access.php`, the administration page capability checks, and the centralized admin navigation definition in the audited 2.1.7 source.
 
 ## Assign a custom role
 
@@ -356,6 +356,25 @@ On a development or staging site, create marked preview accounts:
 ```bash
 php local/moderncommerce/cli/demo_data.php --seed-role-users
 ```
+
+The marked preview accounts use the shared development-only password `ModernCommerceDemo#2026!`:
+
+| Preview | Username |
+| --- | --- |
+| Moodle Manager | `mcdemo_manager` |
+| Modern Commerce Administrator | `mcdemo_commerceadmin` |
+| Finance | `mcdemo_finance` |
+| Product Manager | `mcdemo_product` |
+| Reporting Manager | `mcdemo_reporting` |
+| Storefront Manager | `mcdemo_storefront` |
+| Marketing Manager | `mcdemo_marketing` |
+| Support | `mcdemo_support` |
+| Subscription Manager | `mcdemo_subscription` |
+| Payment Operations | `mcdemo_paymentops` |
+
+`mcdemo_manager` uses Moodle's core Manager role and intentionally cannot access several specialist areas such as global commerce settings, catalogue structure, gateway configuration, audit evidence, and subscription-plan management. `mcdemo_commerceadmin` uses the complete ModernCommerce administrator preset; the remaining users use their matching least-privilege presets.
+
+> {danger} These credentials are public and exist only for disposable local or isolated staging demonstrations. Never create these accounts on an Internet-accessible production site. If a staging site is reachable by untrusted users, change the passwords immediately or do not seed the accounts.
 
 Remove only the marked preview users afterward:
 

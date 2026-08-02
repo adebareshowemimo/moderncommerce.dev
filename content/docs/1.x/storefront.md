@@ -4,6 +4,7 @@
 
 - [What the storefront is](#what)
 - [Public pages](#pages)
+- [Manage Store Pages](#manage-pages)
 - [Widgets & edit mode](#widgets)
 - [Course & bundle detail pages](#detail)
 - [Branding](#branding)
@@ -32,6 +33,77 @@ Manage page records and the widget gallery from the admin side:
 
 - `/local/moderncommerce/admin/pages.php`: storefront page records.
 - `/local/moderncommerce/admin/gallery.php`: widget gallery and presets.
+
+<a name="manage-pages"></a>
+## Manage Store Pages
+
+Open **Modern Commerce → Store pages** or go directly to:
+
+```text
+/local/moderncommerce/admin/pages.php
+```
+
+This administration page is the control centre for buyer-facing storefront pages. It lists each page, its public URL, current availability, and page-level actions.
+
+### Access requirements
+
+The route requires a signed-in user with the system capability:
+
+```text
+local/moderncommerce:managestorefront
+```
+
+Site administrators, Modern Commerce administrators, and appropriately configured storefront managers normally receive this capability. See [Roles & Permissions](/{{route}}/{{version}}/modern-commerce/roles-and-permissions).
+
+### Managed pages
+
+| Page | Public route | Availability |
+| --- | --- | --- |
+| Catalogue | `/local/moderncommerce/index.php` | Required; cannot be disabled |
+| About | `/local/moderncommerce/about.php` | Optional |
+| Support | `/local/moderncommerce/support.php` | Optional |
+| Terms | `/local/moderncommerce/terms.php` | Optional |
+| Privacy | `/local/moderncommerce/privacy.php` | Optional |
+| Refund policy | `/local/moderncommerce/refund-policy.php` | Optional |
+
+New installations treat every optional page as enabled until a manager explicitly disables it. Disabling an optional page hides it from ordinary visitors and returns Moodle's page-not-found response. Users with storefront-management permission can still open the disabled page for review.
+
+> {warning} Disabling a legal or support page does not replace your organization's compliance obligations. Confirm which policy pages your jurisdiction, payment provider, and business model require before hiding them.
+
+### Available actions
+
+- **Visibility switch**: enable or disable an optional page. The catalogue is marked **Required page** and has no visibility switch.
+- **Manage widgets**: open the page-layout drawer.
+- **Preview**: open the buyer-facing URL to review the rendered page.
+- **Manage global widgets**: open `/local/moderncommerce/admin/global.php` for elements that appear across the storefront.
+
+The page table displays the configured page title and summary, but this screen does not directly edit those text values. Page content and presentation come from the widgets assigned to that page and from the page defaults or stored page settings.
+
+### Manage the widget layout
+
+Choose **Actions → Manage widgets** for a page. The drawer groups assigned widgets by render zone and lets you:
+
+1. Move a widget up or down within its current zone.
+2. Show or hide an individual widget without deleting it.
+3. Review both page-scoped and applicable global widgets.
+4. Save the revised ordering and visibility.
+
+The save operation re-sequences widget order inside each zone. It does not create widgets or edit their content. Use storefront edit mode or the [Widget gallery](/{{route}}/{{version}}/modern-commerce/storefront#widgets) to add, configure, or reuse widgets.
+
+### Global versus page-scoped widgets
+
+Page-scoped widgets belong to one storefront page. Global widgets belong to the `global` scope and render in the global top or bottom bands across applicable storefront pages. Manage cross-page elements such as a shared announcement, breadcrumb, or footer from **Manage global widgets** instead of copying the same widget to every page.
+
+### Recommended publishing workflow
+
+1. Keep the page enabled while building it only if public visitors may see unfinished content; otherwise disable the optional page first.
+2. Add and configure the required widgets in storefront edit mode or the widget gallery.
+3. Use **Manage widgets** to confirm ordering and visibility.
+4. Select **Preview** and test desktop and mobile layouts.
+5. Verify links, forms, policy text, contact details, and global elements.
+6. Enable the page and test again as a user without storefront-management permission.
+
+If a page has no assigned widgets, the layout drawer reports that no widgets are assigned. Seed the standard storefront set with `php local/moderncommerce/cli/demo_data.php --install-defaults`, or create the required widgets through the gallery.
 
 <a name="widgets"></a>
 ## Widgets & edit mode
@@ -73,3 +145,4 @@ Public support and newsletter forms use **Moodle core reCAPTCHA v2**. Modern Com
 - [Products & Pricing](/{{route}}/{{version}}/modern-commerce/products-and-pricing)
 - [Payments](/{{route}}/{{version}}/modern-commerce/payments)
 - [Admin Settings Reference](/{{route}}/{{version}}/modern-commerce/admin-settings)
+- [Storefront widget reference](/{{route}}/{{version}}/modern-commerce/storefront-widget-reference)

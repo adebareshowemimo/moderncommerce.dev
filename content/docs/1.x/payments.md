@@ -60,7 +60,7 @@ Monitor webhook and gateway lifecycle events from:
 <a name="currency"></a>
 ## Currency
 
-Modern Commerce is **single-currency**: one active store currency at a time, chosen from **18 supported currencies** (default **NGN**). It is not simultaneous multi-currency. Set the currency, symbol position, and decimal formatting in Settings **before** creating production prices; changing it after orders exist makes old and new reports harder to compare.
+Modern Commerce is **single-currency**: one active store currency at a time, chosen from **21 supported currencies** (default **USD**). It is not simultaneous multi-currency. Set the currency, symbol position, and decimal formatting in Settings **before** creating production prices; changing it after orders exist makes old and new reports harder to compare.
 
 <a name="tax"></a>
 ## Tax

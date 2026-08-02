@@ -53,7 +53,7 @@
   if ($resolvedSchemaType === 'TechArticle') {
     $schemaGraph[2]['author'] = ['@id' => $siteUrl . '/#/schema/organization'];
     $schemaGraph[2]['proficiencyLevel'] = 'Beginner to advanced';
-    $schemaGraph[2]['dependencies'] = 'ModernCommerce 2.17, Moodle 5.2, PHP 8.3 or later';
+    $schemaGraph[2]['dependencies'] = 'ModernCommerce 2.1.7, Moodle 5.2, PHP 8.3 or later';
   }
   $schemaGraph[] = [
       '@type' => 'SoftwareApplication',

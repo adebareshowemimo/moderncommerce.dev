@@ -35,7 +35,7 @@ class DocumentationTest extends TestCase
             ->assertSee('Build the catalogue')
             ->assertSee('Sell and fulfil')
             ->assertSee('Operate the platform')
-            ->assertSee('Version 2.17')
+            ->assertSee('Version 2.1.7')
             ->assertSee('aria-current="page"', false)
             ->assertSee('Quick start');
     }
@@ -54,6 +54,20 @@ class DocumentationTest extends TestCase
             ->assertSee('<table>', false)
             ->assertSee('local_moderncommerce_products')
             ->assertDontSee('| Table | Purpose |');
+    }
+
+    public function test_store_pages_admin_workflow_is_documented(): void
+    {
+        $this->get('/docs/1.x/storefront')
+            ->assertOk()
+            ->assertSee('/local/moderncommerce/admin/pages.php')
+            ->assertSee('local/moderncommerce:managestorefront')
+            ->assertSee('Required; cannot be disabled')
+            ->assertSee('Manage widgets')
+            ->assertSee('Manage global widgets')
+            ->assertSee('/local/moderncommerce/admin/global.php')
+            ->assertSee('page-not-found response')
+            ->assertSee('Recommended publishing workflow');
     }
 
     public function test_dashboard_widget_catalogue_documents_the_source_counts(): void
@@ -85,6 +99,61 @@ class DocumentationTest extends TestCase
         ] as $roleShortname) {
             $response->assertSee($roleShortname);
         }
+    }
+
+    public function test_documentation_uses_current_release_and_currency_facts(): void
+    {
+        $this->get('/docs/1.x/upgrading')
+            ->assertOk()
+            ->assertSee('2.1.7')
+            ->assertSee('2026080100')
+            ->assertDontSee('2026072301');
+
+        $this->get('/docs/1.x/admin-settings')
+            ->assertOk()
+            ->assertSee('Default <strong>USD</strong>', false)
+            ->assertSee('21 supported currencies')
+            ->assertSee('BRL, CHF, SGD');
+    }
+
+    public function test_missing_help_center_references_are_published(): void
+    {
+        $this->get('/docs/1.x/email-templates-and-placeholders')
+            ->assertOk()
+            ->assertSee('Shared placeholder palette')
+            ->assertSee('{unsubscribe_url}')
+            ->assertSee('test_emails.php');
+
+        $this->get('/docs/1.x/storefront-widget-reference')
+            ->assertOk()
+            ->assertSee('Widget lifecycle')
+            ->assertSee('widget_resolver.php')
+            ->assertSee('mediastorycarousel');
+
+        $this->get('/docs/1.x/release-packaging')
+            ->assertOk()
+            ->assertSee('composer run mc:package')
+            ->assertSee('moderncommerce-v2.1.7.zip');
+
+        $this->get('/docs/1.x/moodle-plugin-directory')
+            ->assertOk()
+            ->assertSee('thirdpartylibs.xml')
+            ->assertSee('privacy provider');
+
+        $this->get('/docs/1.x/certificate-integration')
+            ->assertOk()
+            ->assertSee('mod_coursecertificate')
+            ->assertSee('certificate enabled')
+            ->assertSee('course completion');
+    }
+
+    public function test_demo_role_credentials_are_explicitly_non_production(): void
+    {
+        $this->get('/docs/1.x/roles-and-permissions')
+            ->assertOk()
+            ->assertSee('mcdemo_commerceadmin')
+            ->assertSee('ModernCommerceDemo#2026!')
+            ->assertSee('Never create these accounts on an Internet-accessible production site');
     }
 
     public function test_documentation_home_redirects_to_current_overview(): void

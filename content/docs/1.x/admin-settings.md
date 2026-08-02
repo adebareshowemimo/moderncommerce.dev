@@ -38,7 +38,7 @@ Set this **before** creating production prices; it affects product cards, checko
 
 | Setting | Controls |
 |---|---|
-| Primary currency | The single active store currency. Default **NGN**. Chosen from **18 supported currencies** (NGN, USD, EUR, GBP, ZAR, GHS, KES, UGX, TZS, XOF, XAF, EGP, MAD, CAD, AUD, INR, CNY, JPY). |
+| Primary currency | The single active store currency. Default **USD**. Chosen from **21 supported currencies** (NGN, USD, EUR, GBP, ZAR, GHS, KES, UGX, TZS, XOF, XAF, EGP, MAD, CAD, AUD, INR, CNY, JPY, BRL, CHF, SGD). |
 | Currency position | Symbol/code before or after the amount. Default `before`. |
 | Decimal places | 0–6. Default `2`. |
 | Thousand separator | Default comma. |
@@ -162,8 +162,36 @@ Configure these before selling subscription products. See [Subscriptions](/{{rou
 11. Notification delivery (Slack/Teams) if used.
 12. Subscription settings (before selling plans).
 
+## Configuration surfaces and access
+
+ModernCommerce has two related settings surfaces:
+
+- `/local/moderncommerce/admin/settings.php` is the day-to-day React configuration app for identity, currency, tax, checkout, navigation, notification display, reviews, product-form fields, and contact email behavior. It requires the applicable ModernCommerce settings capability at system context.
+- **Site administration → Plugins → Local plugins → Modern Commerce** contains native Moodle settings for gateway/webhook security, notification delivery channels, branding seeds, navigation hooks, and subscription defaults. These settings normally require `moodle/site:config`.
+
+Do not grant broad Moodle site configuration merely to let a staff member update a narrow commerce setting. Use the ModernCommerce role presets or a tested custom system role where the React settings service supports the required operation.
+
+## Core reCAPTCHA prerequisite
+
+ModernCommerce does not store separate Google keys. Public support and newsletter forms read Moodle's global reCAPTCHA public and private keys. Configure both keys in Moodle administration before opening those forms on production, then verify the browser submits `g-recaptcha-response` and the server can reach Google's verification endpoint.
+
+## After changing settings
+
+1. Save and reload the administration surface to confirm the normalized value.
+2. Purge Moodle caches after navigation, branding, webhook, or service-definition changes.
+3. Test currency/tax changes with a new sandbox order; never reinterpret historical orders using a new currency.
+4. Test checkout field requirements as a buyer, including validation failures.
+5. Send test email after identity, support, branding, SMTP, or template changes.
+6. Send a signed provider test webhook after gateway or webhook-security changes.
+7. Test public pages on desktop/mobile and as a user without management capabilities.
+
+## Developer source of truth
+
+The React settings app persists through the commerce settings service; native settings are declared in `settings.php`; labels and descriptions come from language strings. Add a setting to its owning service/schema, validate it server-side, enforce context and capability checks, expose it through the intended administration surface, document its default and operational impact, and add an upgrade/default path when existing installations require one.
+
 ## Where to go next
 
 - [Installation](/{{route}}/{{version}}/modern-commerce/installation)
 - [Payments](/{{route}}/{{version}}/modern-commerce/payments)
 - [Notifications](/{{route}}/{{version}}/modern-commerce/notifications)
+- [Email templates & placeholders](/{{route}}/{{version}}/modern-commerce/email-templates-and-placeholders)

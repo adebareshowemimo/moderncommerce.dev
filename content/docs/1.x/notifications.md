@@ -84,3 +84,4 @@ Go-live essentials: confirm Moodle SMTP works; set business name and support ema
 - [Admin Settings Reference](/{{route}}/{{version}}/modern-commerce/admin-settings)
 - [Subscriptions](/{{route}}/{{version}}/modern-commerce/subscriptions)
 - [Reports & Analytics](/{{route}}/{{version}}/modern-commerce/reports-and-analytics)
+- [Email templates & placeholders](/{{route}}/{{version}}/modern-commerce/email-templates-and-placeholders)

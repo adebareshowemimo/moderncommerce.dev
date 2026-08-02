@@ -24,7 +24,7 @@ class ExampleTest extends TestCase
             ->assertSee('Sell recurring access')
             ->assertSee('Low-balance alerts')
             ->assertSee('Do I need WordPress?')
-            ->assertSee('ModernCommerce 2.17 currently supports Moodle 5.2')
+            ->assertSee('ModernCommerce 2.1.7 currently supports Moodle 5.2')
             ->assertSee('GPL-3.0-or-later')
             ->assertSee('by Agunfon Interactivity LLC, USA')
             ->assertSee('/images/brand/moderncommerce-logo-dark.png', false)

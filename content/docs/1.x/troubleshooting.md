@@ -45,6 +45,46 @@ Purge Moodle caches and browser/CDN caches after verifying the saved value. Run 
 
 Confirm both Moodle core keys, permitted production domain, outbound verification access and `g-recaptcha-response`. Privacy extensions or content security policy can prevent the browser script from loading.
 
+## Webhook rejected or repeated
+
+Confirm the public HTTPS endpoint, gateway mode, configured signing secret, signature algorithm, provider event identifier, and optional IP allow-list. Inspect both the webhook intake ledger and normalized payment-event ledger. Provider retries are normal: processing must be idempotent and must not create a second fulfilment. Do not delete failed or duplicate events merely to make the ledger look clean.
+
+After changing webhook settings, purge Moodle caches and send a provider test event where available. Redact secrets and buyer data before sharing evidence.
+
+## Cron task not progressing
+
+Run Moodle cron from the Moodle root and inspect individual scheduled-task results:
+
+```bash
+php admin/cli/cron.php
+```
+
+A successful cron process can still contain one failed task. Check the task's last/next run, failure output, lock state, queue eligibility time, retry/backoff state, and PHP memory/runtime limits. Use the scheduled-task administration page for a controlled manual run; do not run payment or subscription tasks concurrently against production without understanding their locking and idempotency behavior.
+
+## Frontend or generated assets are stale
+
+Verify the saved value first, then check source and generated assets:
+
+```bash
+node local/moderncommerce/styles/tools/build-design-system.mjs --check
+php admin/cli/purge_caches.php
+```
+
+Also clear browser/CDN caches and confirm the active Moodle theme is not overriding ModernCommerce CSS. If TypeScript/React or AMD source changed, rebuild the corresponding Moodle assets before concluding that the PHP change failed.
+
+## Demo data or documentation checks fail
+
+Use `demo_data.php --audit` as an inventory signal. Empty tables can be normal on a new store. Seed, refresh, and reset commands are development/staging tools and may remove scoped commerce data; do not use destructive modes on production.
+
+Run the documentation and focused source checks from the plugin directory:
+
+```bash
+composer run mc:docs-check
+composer run mc:check-fast
+```
+
+Capture the exact command, current plugin release/build, Moodle/PHP versions, environment, and redacted output when escalating.
+
 ## Escalation package
 
 Provide redacted ledger rows, scheduled-task output, exact route/action, expected/actual result and reproduction steps. Never include secret keys, webhook signing secrets, full raw payload personal data, passwords or card information.

@@ -39,7 +39,7 @@
         ['One connected checkout', 'Resolve product availability, current price, discounts, stock, buyer permissions and gateway readiness before payment.'],
         ['Configurable buyer fields', 'Hide, request or require phone and billing-address fields according to invoicing, tax and support needs.'],
         ['Coupon-aware totals', 'Preserve discount and tax adjustments with the order so historical documents do not depend on later coupon edits.'],
-        ['Single active currency', 'Choose one of 18 supported store currencies with configured symbol position and decimal formatting.'],
+        ['Single active currency', 'Choose one of 21 supported store currencies with configured symbol position and decimal formatting.'],
         ['Inclusive or exclusive tax', 'Configure tax treatment and carry calculated tax into order and document records.'],
         ['Inventory reservations', 'Protect limited offers during checkout and release stale reservations through cleanup workflows.'],
         ['Abandoned-cart state', 'Retain the evidence needed for cleanup and consent-aware recovery communication.'],
@@ -208,7 +208,7 @@
           <p class="lead mt-4">ModernCommerce covers the complete path from merchandising and checkout to verified payment, Moodle enrolment, recurring access, finance operations, customer service, analytics, and governance, inside one open-source Moodle plugin.</p>
           <div class="d-grid d-sm-flex gap-3 mt-4"><a class="btn btn-primary btn-lg" href="{{ config('app.demo_url') }}">Explore the live product</a><a class="btn btn-outline-primary btn-lg" href="{{ route('docs.show', 'feature-reference') }}">Open the technical reference</a></div>
         </div>
-        <div class="col-lg-4"><div class="mc-feature-version"><span>Source reviewed</span><strong>ModernCommerce 2.17</strong><small>1 August 2026 · Moodle 5.2 · PHP 8.3+</small></div></div>
+        <div class="col-lg-4"><div class="mc-feature-version"><span>Source reviewed</span><strong>ModernCommerce 2.1.7</strong><small>1 August 2026 · Moodle 5.2 · PHP 8.3+</small></div></div>
       </div></div>
     </section>
 

@@ -11,7 +11,7 @@ class DevelopersPageTest extends TestCase
         $this->get('/developers')
             ->assertOk()
             ->assertSee('Build on the commerce layer already inside Moodle.')
-            ->assertSee('ModernCommerce 2.17')
+            ->assertSee('ModernCommerce 2.1.7')
             ->assertSee('Moodle 5.2')
             ->assertSee('PHP 8.3+')
             ->assertSee('156')

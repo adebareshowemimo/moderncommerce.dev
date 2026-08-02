@@ -27,9 +27,10 @@
                 'Get started' => ['overview', 'feature-reference', 'architecture', 'requirements', 'installation', 'upgrading', 'quick-start', 'roles-and-permissions'],
                 'Build the catalogue' => ['products-and-pricing', 'course-merchandising', 'bundles-and-programs', 'catalog-organization', 'storefront', 'branding-and-navigation'],
                 'Sell and fulfil' => ['cart-and-checkout', 'payments', 'webhooks-and-payment-operations', 'order-lifecycle', 'orders-invoices-refunds', 'coupons-and-keys', 'subscriptions', 'corporate-sales'],
-                'Serve customers' => ['learner-account', 'customers-reviews-wishlists', 'contacts-and-newsletter', 'notifications'],
+                'Serve customers' => ['learner-account', 'customers-reviews-wishlists', 'contacts-and-newsletter', 'notifications', 'email-templates-and-placeholders'],
                 'Operate the platform' => ['reports-and-analytics', 'admin-settings', 'scheduled-tasks', 'privacy-and-security', 'troubleshooting'],
-                'Developer reference' => ['admin-page-reference', 'database-reference', 'web-services-and-events', 'cli-and-maintenance', 'localization', 'addons-and-extension', 'faq'],
+                'Developer reference' => ['admin-page-reference', 'database-reference', 'web-services-and-events', 'storefront-widget-reference', 'cli-and-maintenance', 'localization', 'addons-and-extension', 'certificate-integration', 'faq'],
+                'Maintain and release' => ['release-packaging', 'moodle-plugin-directory'],
               ];
               $activeDocumentationGroup = collect($documentationGroups)
                 ->first(fn ($slugs) => in_array($activeSection, $slugs, true));
