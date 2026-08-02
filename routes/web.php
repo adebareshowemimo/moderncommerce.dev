@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Carbon\Carbon;
 use Spatie\LaravelMarkdown\MarkdownRenderer;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
@@ -12,7 +13,7 @@ Route::get('/', function () {
 $pages = [
     'open-source' => ['Open source', 'Commerce infrastructure you can own.', 'Run it where you choose, inspect the code, adapt workflows, and retain control under GPL-3.0-or-later.', 'open-source'],
     'developers' => ['Developers', 'Extend commerce with Moodle-native building blocks.', 'Start with installation, architecture, web services, events, webhooks, and the add-on integration contract.', 'developers'],
-    'roadmap' => ['Roadmap', 'Build the roadmap with us.', 'See what is shipping, what comes next, and where community contributions can move the project forward.'],
+    'roadmap' => ['Roadmap', 'Build the roadmap with us.', 'Follow planned ModernCommerce Moodle ecommerce capabilities, active development priorities, releases, and open-source contribution opportunities.', 'roadmap'],
     'support' => ['Support', 'Get the right kind of help.', 'Find documentation, report reproducible bugs, disclose security concerns privately, or plan implementation support.', 'support'],
     'support-development' => ['Support development', 'Help sustain the open-source project.', 'Fund maintenance, compatibility, documentation, testing, security work, and new open-source capabilities.', 'support-development'],
 ];
@@ -51,6 +52,7 @@ Route::get('/docs/1.x/{section}', function (string $section, MarkdownRenderer $m
 
     return view('docs.show', [
         'title' => $sections[$section],
+        'description' => config("moderncommerce-docs.descriptions.{$section}"),
         'content' => $markdown->toHtml($source),
         'sections' => $sections,
         'activeSection' => $section,
@@ -60,19 +62,36 @@ Route::get('/docs/1.x/{section}', function (string $section, MarkdownRenderer $m
 })->where('section', '[a-z0-9-]+')->name('docs.show');
 
 Route::get('/sitemap.xml', function () use ($pages) {
-    $sitemap = Sitemap::create()->add(Url::create(route('home'))->setPriority(1.0));
+    $modified = static fn (string $path): Carbon => Carbon::createFromTimestamp(filemtime($path));
+    $sitemap = Sitemap::create()->add(
+        Url::create(route('home'))
+            ->setPriority(1.0)
+            ->setLastModificationDate($modified(resource_path('views/home.blade.php'))),
+    );
 
-    $sitemap->add(Url::create(route('product'))->setPriority(0.9));
-    $sitemap->add(Url::create(route('features'))->setPriority(0.9));
-    $sitemap->add(Url::create(route('compare'))->setPriority(0.85));
-    $sitemap->add(Url::create(route('terms-of-sale'))->setPriority(0.4));
+    foreach (['product' => 0.9, 'features' => 0.9, 'compare' => 0.85, 'terms-of-sale' => 0.4] as $route => $priority) {
+        $sitemap->add(
+            Url::create(route($route))
+                ->setPriority($priority)
+                ->setLastModificationDate($modified(resource_path("views/{$route}.blade.php"))),
+        );
+    }
 
     foreach (array_keys($pages) as $route) {
-        $sitemap->add(Url::create(route($route))->setPriority(0.8));
+        $view = $pages[$route][3] ?? 'page';
+        $sitemap->add(
+            Url::create(route($route))
+                ->setPriority(0.8)
+                ->setLastModificationDate($modified(resource_path("views/{$view}.blade.php"))),
+        );
     }
 
     foreach (array_keys(config('moderncommerce-docs.sections')) as $section) {
-        $sitemap->add(Url::create(route('docs.show', $section))->setPriority(0.7));
+        $sitemap->add(
+            Url::create(route('docs.show', $section))
+                ->setPriority(0.7)
+                ->setLastModificationDate($modified(base_path("content/docs/1.x/{$section}.md"))),
+        );
     }
 
     return $sitemap->toResponse(request());

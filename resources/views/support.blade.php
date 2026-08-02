@@ -1,4 +1,4 @@
-<x-marketing-layout title="ModernCommerce support | Documentation, security and professional services" description="Find ModernCommerce documentation, report defects and security concerns, or discuss implementation, customization, training, priority support, and managed operations.">
+<x-marketing-layout title="ModernCommerce Support, Security & Implementation Help" description="Find ModernCommerce documentation, report Moodle ecommerce defects or security concerns, and discuss implementation, customization, training, or managed support.">
   <main id="main-content">
     <section class="mc-page-hero mc-support-hero">
       <div class="container">

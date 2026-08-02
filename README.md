@@ -60,6 +60,8 @@ sudo DEPLOY_RUNTIME_GROUP=nginx ./deploy.sh
 
 If production reports that `tempnam()` created a file in the system temporary directory, the configured PHP runtime cannot write to the intended Laravel cache directory. Run the deployment script with sufficient permission to correct the group ownership, then restart PHP-FPM if the warning persists.
 
+The deployment lock defaults to `storage/framework/moderncommerce-deploy.lock`, avoiding ownership and ACL conflicts with shared files in `/tmp`. Set `DEPLOY_LOCK_FILE` only when production requires another lock location.
+
 ## Recommended implementation sequence
 
 1. Confirm the public GitHub repository, documentation, demo, roadmap, and support URLs.

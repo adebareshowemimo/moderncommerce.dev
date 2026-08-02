@@ -1,11 +1,125 @@
-@props(['title' => 'ModernCommerce', 'description' => 'The best open-source plugin for selling courses through Moodle.'])
+@props([
+  'title' => 'ModernCommerce | Open-source Moodle ecommerce platform',
+  'description' => 'Sell Moodle courses, bundles, subscriptions, and corporate training with an open-source storefront, checkout, payment, enrolment, and commerce platform.',
+  'canonical' => null,
+  'robots' => 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1',
+  'schemaType' => null,
+])
+@php
+  $canonicalUrl = $canonical ?: url()->current();
+  $socialImage = asset('images/product/dashboard.png');
+  $siteUrl = rtrim(url('/'), '/');
+  $resolvedSchemaType = $schemaType ?: (request()->routeIs('docs.show') ? 'TechArticle' : 'WebPage');
+  $schemaGraph = [
+    [
+      '@type' => 'Organization',
+      '@id' => $siteUrl . '/#/schema/organization',
+      'name' => 'Agunfon Interactivity LLC',
+      'url' => 'https://agunfoninteractivity.com',
+      'logo' => asset('images/brand/agunfon-logo.svg'),
+      'email' => 'support@agunfoninteractivity.com',
+      'address' => [
+        '@type' => 'PostalAddress',
+        'streetAddress' => '8735 Dunwoody Place #11785',
+        'addressLocality' => 'Atlanta',
+        'addressRegion' => 'GA',
+        'postalCode' => '30350',
+        'addressCountry' => 'US',
+      ],
+    ],
+    [
+      '@type' => 'WebSite',
+      '@id' => $siteUrl . '/#/schema/website',
+      'url' => $siteUrl,
+      'name' => 'ModernCommerce',
+      'description' => 'Open-source ecommerce and course-selling platform for Moodle.',
+      'publisher' => ['@id' => $siteUrl . '/#/schema/organization'],
+      'inLanguage' => 'en',
+    ],
+    [
+      '@type' => $resolvedSchemaType,
+      '@id' => $canonicalUrl . '#/schema/page',
+      'url' => $canonicalUrl,
+      'name' => $title,
+      'headline' => $title,
+      'description' => $description,
+      'isPartOf' => ['@id' => $siteUrl . '/#/schema/website'],
+      'about' => ['@id' => $siteUrl . '/#/schema/software'],
+      'publisher' => ['@id' => $siteUrl . '/#/schema/organization'],
+      'inLanguage' => 'en',
+      'dateModified' => '2026-08-02',
+    ],
+  ];
+  if ($resolvedSchemaType === 'TechArticle') {
+    $schemaGraph[2]['author'] = ['@id' => $siteUrl . '/#/schema/organization'];
+    $schemaGraph[2]['proficiencyLevel'] = 'Beginner to advanced';
+    $schemaGraph[2]['dependencies'] = 'ModernCommerce 2.17, Moodle 5.2, PHP 8.3 or later';
+  }
+  $schemaGraph[] = [
+      '@type' => 'SoftwareApplication',
+      '@id' => $siteUrl . '/#/schema/software',
+      'name' => 'ModernCommerce',
+      'alternateName' => 'Modern Commerce for Moodle',
+      'url' => $siteUrl,
+      'description' => 'Free, open-source Moodle ecommerce software for storefronts, checkout, payments, automatic course enrolment, subscriptions, corporate sales, invoicing, refunds, and reporting.',
+      'applicationCategory' => 'BusinessApplication',
+      'applicationSubCategory' => 'Moodle ecommerce and course commerce',
+      'operatingSystem' => 'Moodle 5.2 with PHP 8.3 or later',
+      'softwareVersion' => config('moderncommerce-docs.version'),
+      'license' => 'https://www.gnu.org/licenses/gpl-3.0.html',
+      'isAccessibleForFree' => true,
+      'offers' => [
+        '@type' => 'Offer',
+        'price' => '0',
+        'priceCurrency' => 'USD',
+        'availability' => 'https://schema.org/InStock',
+        'url' => 'https://github.com/adebareshowemimo/moodle-local_moderncommerce',
+      ],
+      'featureList' => [
+        'Moodle-native product catalogue and storefront',
+        'Cart, checkout, payments, and automatic course enrolment',
+        'Bundles, programs, subscriptions, coupons, and corporate seats',
+        'Orders, invoices, refunds, notifications, and commerce reporting',
+        'GPL-3.0-or-later source code with no platform revenue share',
+      ],
+      'author' => ['@id' => $siteUrl . '/#/schema/organization'],
+  ];
+  if (request()->routeIs('docs.show')) {
+    $schemaGraph[] = [
+      '@type' => 'BreadcrumbList',
+      '@id' => $canonicalUrl . '#/schema/breadcrumbs',
+      'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Documentation', 'item' => route('docs.show', 'overview')],
+        ['@type' => 'ListItem', 'position' => 3, 'name' => $title, 'item' => $canonicalUrl],
+      ],
+    ];
+  }
+@endphp
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ $description }}">
+  <meta name="robots" content="{{ $robots }}">
   <title>{{ $title }}</title>
+  <link rel="canonical" href="{{ $canonicalUrl }}">
+  <link rel="alternate" hreflang="en" href="{{ $canonicalUrl }}">
+  <meta property="og:site_name" content="ModernCommerce">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:url" content="{{ $canonicalUrl }}">
+  <meta property="og:image" content="{{ $socialImage }}">
+  <meta property="og:image:alt" content="ModernCommerce Moodle ecommerce administration dashboard">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+  <meta name="twitter:image" content="{{ $socialImage }}">
+  <meta name="twitter:image:alt" content="ModernCommerce Moodle ecommerce administration dashboard">
+  <script type="application/ld+json">{!! json_encode(['@context' => 'https://schema.org', '@graph' => $schemaGraph], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
   <link rel="icon" type="image/png" href="{{ asset('images/brand/moderncommerce-logo-dark.png') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,9 +157,9 @@
           <nav aria-labelledby="footer-product-heading">
             <h2 class="mc-footer-heading" id="footer-product-heading">Product</h2>
             <ul class="mc-footer-links list-unstyled mb-0">
-              <li><a href="{{ route('product') }}">Overview</a></li>
-              <li><a href="{{ route('features') }}">Features</a></li>
-              <li><a href="{{ route('compare') }}">Compare</a></li>
+              <li><a href="{{ route('product') }}">Moodle ecommerce platform</a></li>
+              <li><a href="{{ route('features') }}">Ecommerce features</a></li>
+              <li><a href="{{ route('compare') }}">Compare alternatives</a></li>
               <li><a href="{{ config('app.demo_url') }}">Live demo</a></li>
             </ul>
           </nav>

@@ -1,4 +1,4 @@
-<x-marketing-layout :title="$title . ' | ModernCommerce Documentation'" description="Official ModernCommerce installation, configuration, operations, and developer documentation.">
+<x-marketing-layout :title="$title . ' | ModernCommerce docs'" :description="$description" schema-type="TechArticle">
   <main id="main-content">
     <header class="mc-doc-header border-bottom">
       <div class="container py-4 py-lg-5">

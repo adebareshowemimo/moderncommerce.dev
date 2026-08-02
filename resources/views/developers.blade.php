@@ -1,4 +1,4 @@
-<x-marketing-layout title="ModernCommerce for developers | Architecture, events and extension points" description="Build and operate ModernCommerce extensions with source-backed guidance for Moodle events, external functions, scheduled tasks, add-ons and local development.">
+<x-marketing-layout title="ModernCommerce Developer Guide: Moodle APIs & Extensions" description="Build ModernCommerce extensions with source-backed Moodle architecture, events, external functions, scheduled tasks, add-on contracts, and development guidance.">
   <main id="main-content">
     <section class="mc-page-hero mc-developer-hero">
       <div class="container">
@@ -56,7 +56,7 @@ $observers = [
           <div class="col-md-6 col-xl-3"><a class="mc-developer-path" href="{{ route('docs.show', 'installation') }}"><span>01</span><h3>Install safely</h3><p>Confirm Moodle and PHP requirements, install Composer dependencies, upgrade Moodle, and verify cron.</p><strong>Installation guide →</strong></a></div>
           <div class="col-md-6 col-xl-3"><a class="mc-developer-path" href="{{ route('docs.show', 'architecture') }}"><span>02</span><h3>Understand ownership</h3><p>Learn which records belong to Moodle and which belong to catalogue, transaction, access, and engagement services.</p><strong>Architecture guide →</strong></a></div>
           <div class="col-md-6 col-xl-3"><a class="mc-developer-path" href="{{ route('docs.show', 'web-services-and-events') }}"><span>03</span><h3>Integrate by contract</h3><p>Use capability-checked external functions and domain events instead of bypassing business rules with table writes.</p><strong>Services and events →</strong></a></div>
-          <div class="col-md-6 col-xl-3"><a class="mc-developer-path" href="{{ route('docs.show', 'cli-and-maintenance') }}"><span>04</span><h3>Operate and verify</h3><p>Seed development data, run audits, validate documentation and strings, and exercise Moodle cron.</p><strong>CLI reference →</strong></a></div>
+          <div class="col-md-6 col-xl-3"><a class="mc-developer-path" href="{{ route('docs.show', 'cli-and-maintenance') }}"><span>04</span><h3>First run and CLI</h3><p>Install safe defaults, seed or refresh demo data, audit coverage, manage preview users, and validate the plugin.</p><strong>First-run guide →</strong></a></div>
         </div>
       </div>
     </section>

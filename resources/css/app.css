@@ -275,3 +275,15 @@ html{scroll-padding-top:5rem}body{overflow-x:hidden;color:var(--mc-text);font-si
 .mc-legal-content h2{margin:0 0 1.1rem;color:var(--mc-ink);font-size:clamp(1.35rem,2.2vw,1.8rem)}
 .mc-legal-content p,.mc-legal-content address{color:#43566d}.mc-legal-content a{font-weight:650}.mc-legal-content address{font-style:normal}
 @media(max-width:575.98px){.mc-legal-hero{padding:7rem 0 5rem}.mc-legal-content section{padding-bottom:2.25rem}.mc-legal-content section+section{padding-top:2.25rem}}
+
+/* Search-answer summary and open-source roadmap. */
+.mc-answer-summary{border-block:1px solid var(--mc-border);background:var(--mc-pale)}
+.mc-roadmap-release,.mc-roadmap-boundary{padding:1.75rem;border:1px solid var(--mc-border);border-radius:12px;background:#fff}
+.mc-roadmap-release span,.mc-roadmap-release small{display:block;color:var(--mc-muted)}
+.mc-roadmap-release span{font:700 .72rem Manrope,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.mc-roadmap-release strong{display:block;margin:.55rem 0;color:var(--mc-navy);font:700 1.35rem Manrope,sans-serif}
+.mc-roadmap-principle{padding:1.5rem;border-top:2px solid var(--mc-navy)}
+.mc-roadmap-principle>span{color:var(--mc-navy);font:700 .72rem Manrope,sans-serif}.mc-roadmap-principle h3{margin:.7rem 0 .5rem;font-size:1.15rem}.mc-roadmap-principle p{margin:0;color:var(--mc-muted);font-size:.9rem}
+.mc-roadmap-track{background:var(--mc-cloud)}.mc-roadmap-list{border-top:1px solid #bcd0e5}.mc-roadmap-list article{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:1.5rem 0;border-bottom:1px solid #bcd0e5}.mc-roadmap-list article>span{color:var(--mc-navy);font:700 .72rem Manrope,sans-serif;letter-spacing:.05em;text-transform:uppercase}.mc-roadmap-list h3{font-size:1.15rem}.mc-roadmap-list p{margin:0;color:var(--mc-muted);font-size:.9rem}
+.mc-roadmap-boundary{border-top:4px solid var(--mc-focus)}.mc-roadmap-boundary strong{display:block;color:var(--mc-ink);font:700 1.25rem Manrope,sans-serif}.mc-roadmap-boundary p{margin:.65rem 0;color:var(--mc-muted)}.mc-roadmap-boundary a{font-weight:700}
+@media(max-width:575.98px){.mc-roadmap-list article{grid-template-columns:1fr;gap:.35rem}}

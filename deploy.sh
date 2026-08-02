@@ -10,6 +10,7 @@ DEPLOY_SKIP_BUILD="${DEPLOY_SKIP_BUILD:-0}"
 DEPLOY_HEALTHCHECK_URL="${DEPLOY_HEALTHCHECK_URL:-}"
 ALLOW_NON_PRODUCTION="${ALLOW_NON_PRODUCTION:-0}"
 DEPLOY_RUNTIME_GROUP="${DEPLOY_RUNTIME_GROUP:-}"
+DEPLOY_LOCK_FILE="${DEPLOY_LOCK_FILE:-$DEPLOY_ROOT/storage/framework/moderncommerce-deploy.lock}"
 MAINTENANCE_ACTIVE=0
 
 [[ -d "$DEPLOY_ROOT" ]] || {
@@ -106,7 +107,8 @@ if [[ "$ALLOW_NON_PRODUCTION" != "1" ]] && ! grep -Eq '^APP_ENV=(production|"pro
 fi
 
 if command -v flock >/dev/null 2>&1; then
-    exec 9>"${DEPLOY_LOCK_FILE:-/tmp/moderncommerce-deploy.lock}"
+    mkdir -p "$(dirname "$DEPLOY_LOCK_FILE")"
+    exec 9>"$DEPLOY_LOCK_FILE"
     flock -n 9 || fail "Another ModernCommerce deployment is already running."
 fi
 

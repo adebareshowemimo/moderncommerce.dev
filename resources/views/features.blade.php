@@ -198,7 +198,7 @@
   ];
 @endphp
 
-<x-marketing-layout title="ModernCommerce features | Complete Moodle course-commerce platform" description="Explore every ModernCommerce feature: products, storefront, checkout, payments, enrolment, subscriptions, corporate seats, analytics, roles, privacy, and extension points.">
+<x-marketing-layout title="Moodle Ecommerce Features: Checkout, Payments & Enrolment" description="Explore ModernCommerce features for Moodle products, storefronts, checkout, payments, automatic enrolment, subscriptions, B2B seats, reporting, and operations.">
   <main id="main-content">
     <section class="mc-page-hero mc-feature-hero">
       <div class="container"><div class="row gy-5 align-items-end">

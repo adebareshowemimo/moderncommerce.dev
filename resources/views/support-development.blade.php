@@ -1,5 +1,5 @@
 @php($kofiUrl = config('app.kofi_url'))
-<x-marketing-layout title="Support ModernCommerce development | Sustain the open-source project" description="Support ongoing ModernCommerce maintenance, Moodle compatibility, documentation, testing, security work, accessibility, and new open-source capabilities.">
+<x-marketing-layout title="Support Open-Source ModernCommerce Development" description="Fund ModernCommerce maintenance, Moodle compatibility, documentation, testing, security, accessibility, and new open-source ecommerce capabilities.">
   <main id="main-content">
     <section class="mc-page-hero mc-funding-hero">
       <div class="container">

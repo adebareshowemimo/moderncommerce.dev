@@ -1,4 +1,4 @@
-<x-marketing-layout title="Terms of Sale | ModernCommerce" description="ModernCommerce is free, open-source software. There is no purchase contract, licence fee, subscription, or paid edition required to use it.">
+<x-marketing-layout title="ModernCommerce Open-Source Use and No-Sale Terms" description="ModernCommerce is free GPL-licensed Moodle ecommerce software with no purchase contract, licence fee, subscription, paid edition, or mandatory revenue share.">
   <main>
     <section class="mc-legal-hero">
       <div class="container">

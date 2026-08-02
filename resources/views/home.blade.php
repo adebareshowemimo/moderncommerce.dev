@@ -1,4 +1,4 @@
-<x-marketing-layout title="The best open-source plugin for selling Moodle courses | ModernCommerce" description="Sell Moodle courses, bundles, programs, subscriptions, and corporate seats through one open-source storefront, checkout, payment, enrolment, and finance platform.">
+<x-marketing-layout title="Moodle Ecommerce Plugin for Selling Courses | ModernCommerce" description="Sell Moodle courses, bundles, subscriptions, and corporate seats with a free open-source storefront, checkout, payment, enrolment, and commerce platform.">
   <main id="main-content">
     <section class="mc-hero" id="top">
       <div class="container"><div class="row align-items-center gy-5">
@@ -19,6 +19,8 @@
     </section>
 
     <section class="py-4 mc-provider-strip"><div class="container"><div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between gap-4"><span>Connect the accounts you already use</span><strong>stripe</strong><strong>PayPal</strong><strong>paystack</strong><strong>Flutterwave</strong></div></div></section>
+
+    <section class="py-5 mc-answer-summary"><div class="container"><div class="row align-items-start gy-4"><div class="col-lg-4"><p class="mc-section-label">What is ModernCommerce?</p><h2 class="h1 mb-0">Open-source ecommerce built for Moodle.</h2></div><div class="col-lg-8"><p class="lead mb-3">ModernCommerce is a free, GPL-licensed Moodle ecommerce plugin that lets organizations sell courses directly from Moodle. It combines a public storefront, cart, checkout, Stripe, PayPal, Paystack and Flutterwave payments, automatic course enrolment, subscriptions, corporate seats, invoices, refunds and reporting in one Moodle installation.</p><p class="mb-0 text-secondary">Best for course businesses, training providers, academies and organizations that want Moodle to remain both the learning system and the commerce system, without WordPress, WooCommerce, a synchronization bridge or a ModernCommerce platform revenue share.</p></div></div></div></section>
 
     <section class="mc-capability-strip" aria-label="Platform capabilities"><div class="container"><div class="row g-0">
       <div class="col-6 col-lg-3"><div><strong>4</strong><span>payment gateways using your accounts</span></div></div>

@@ -1,4 +1,4 @@
-<x-marketing-layout title="Open-source Moodle commerce | ModernCommerce" description="ModernCommerce is GPL-3.0-or-later course-commerce software for Moodle. Inspect, self-host, modify, and operate your storefront without a platform revenue share.">
+<x-marketing-layout title="Open-Source Moodle Ecommerce Platform | ModernCommerce" description="Use free GPL-licensed Moodle ecommerce software you can inspect, self-host, modify, and operate without licence fees or a platform revenue share.">
   <main id="main-content">
     <section class="mc-page-hero mc-open-source-hero">
       <div class="container">

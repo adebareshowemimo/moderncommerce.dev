@@ -1,4 +1,4 @@
-<x-marketing-layout title="Compare course commerce platforms | ModernCommerce" description="An evidence-based comparison of ModernCommerce, Moodle enrolment on payment, WooCommerce, LearnDash, Edwiser Bridge, and LearnWorlds.">
+<x-marketing-layout title="Moodle Ecommerce Comparison: ModernCommerce vs Alternatives" description="Compare ModernCommerce with Moodle payment enrolment, WooCommerce, LearnDash, Edwiser Bridge, LearnWorlds, and other course-selling approaches.">
   <main id="main-content">
     <section class="mc-page-hero mc-compare-hero"><div class="container"><div class="row"><div class="col-xl-9">
       <p class="mc-section-label">Platform comparison</p>

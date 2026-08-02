@@ -24,4 +24,22 @@ class DevelopersPageTest extends TestCase
             ->assertSee('https://moodledev.io/docs/5.2/apis', false)
             ->assertDontSee('Page foundation ready');
     }
+
+    public function test_first_run_and_demo_data_guide_is_published(): void
+    {
+        $this->get('/docs/1.x/cli-and-maintenance')
+            ->assertOk()
+            ->assertSee('First run, demo data &amp; CLI maintenance', false)
+            ->assertSee('--install-defaults')
+            ->assertSee('--seed')
+            ->assertSee('--refresh --yes')
+            ->assertSee('--reset-empty --yes')
+            ->assertSee('Windows PowerShell')
+            ->assertSee('Table coverage audit');
+
+        $this->get('/developers')
+            ->assertOk()
+            ->assertSee('First run and CLI')
+            ->assertSee('First-run guide');
+    }
 }
