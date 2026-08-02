@@ -59,6 +59,7 @@
               <li><a href="{{ route('roadmap') }}">Roadmap</a></li>
               <li><a href="{{ route('support') }}">Support</a></li>
               <li><a href="{{ route('support-development') }}">Support development</a></li>
+              <li><a href="{{ route('terms-of-sale') }}">Terms of sale</a></li>
             </ul>
           </nav>
         </div>

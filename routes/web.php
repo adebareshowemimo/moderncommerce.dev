@@ -26,6 +26,7 @@ foreach ($pages as $slug => $page) {
 Route::view('/product', 'product')->name('product');
 Route::view('/features', 'features')->name('features');
 Route::view('/compare', 'compare')->name('compare');
+Route::view('/terms-of-sale', 'terms-of-sale')->name('terms-of-sale');
 
 Route::redirect('/docs', '/docs/1.x/overview', 301)->name('docs');
 
@@ -64,6 +65,7 @@ Route::get('/sitemap.xml', function () use ($pages) {
     $sitemap->add(Url::create(route('product'))->setPriority(0.9));
     $sitemap->add(Url::create(route('features'))->setPriority(0.9));
     $sitemap->add(Url::create(route('compare'))->setPriority(0.85));
+    $sitemap->add(Url::create(route('terms-of-sale'))->setPriority(0.4));
 
     foreach (array_keys($pages) as $route) {
         $sitemap->add(Url::create(route($route))->setPriority(0.8));
