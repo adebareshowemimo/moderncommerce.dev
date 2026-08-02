@@ -35,7 +35,7 @@ class DocumentationTest extends TestCase
             ->assertSee('Build the catalogue')
             ->assertSee('Sell and fulfil')
             ->assertSee('Operate the platform')
-            ->assertSee('Version 2.1.6')
+            ->assertSee('Version 2.17')
             ->assertSee('aria-current="page"', false)
             ->assertSee('Quick start');
     }

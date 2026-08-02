@@ -2,7 +2,7 @@
 
 ModernCommerce uses Moodle's native role and capability system. The plugin seeds **nine custom system roles** as least-privilege starting points. It does not assign users to them automatically and it does not maintain a separate permission database.
 
-This reference is derived from `classes/services/role_preset_service.php`, `db/access.php`, the administration page capability checks, and the centralized admin navigation definition in the audited 2.1.6 source.
+This reference is derived from `classes/services/role_preset_service.php`, `db/access.php`, the administration page capability checks, and the centralized admin navigation definition in the audited 2.17 source.
 
 ## Assign a custom role
 

@@ -5,7 +5,7 @@ Audit date: 2026-08-01
 ## Authoritative build
 
 - Component: `local_moderncommerce`
-- Release: 2.1.6 (`version.php`)
+- Release: 2.17 (`version.php`)
 - Moodle: 5.2 only (`supported = [502, 502]`)
 - PHP: 8.3+ (`composer.json`)
 - Licence: GPL-3.0-or-later (`LICENSE`, Composer metadata and source headers)
@@ -34,7 +34,7 @@ The public manual is organized by product workflow for operators and by contract
 
 ## Source discrepancies found
 
-1. `version.php` declares 2.1.6 while the root README and internal docs mention earlier releases.
+1. `version.php` declares 2.17 while the root README and internal docs mention earlier releases.
 2. The root README contains a proprietary-commercial licence paragraph, but `LICENSE`, `composer.json`, source headers and user-facing open-source language declare GPL-3.0-or-later.
 3. The schema contains product attributes/relations and bundle prerequisite records whose existence is broader than the current administrator UI. Documentation labels these as data/service support and does not invent a complete UI workflow.
 4. Optional notifier/reminder/page-designer/certificate pages are integrations. Documentation keeps their business logic under the owning add-on.

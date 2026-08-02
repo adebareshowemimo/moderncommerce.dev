@@ -11,7 +11,7 @@
               <a class="btn btn-primary btn-lg" href="{{ route('docs.show', 'quick-start') }}">Start locally</a>
               <a class="btn btn-outline-primary btn-lg" href="{{ route('docs.show', 'architecture') }}">Read the architecture</a>
             </div>
-            <p class="mc-developer-version mt-4 mb-0">Current source contract: ModernCommerce 2.1.6 · Moodle 5.2 · PHP 8.3+</p>
+            <p class="mc-developer-version mt-4 mb-0">Current source contract: ModernCommerce 2.17 · Moodle 5.2 · PHP 8.3+</p>
           </div>
           <div class="col-lg-5 offset-lg-1">
             <div class="mc-developer-code" aria-label="Example Moodle event observer declaration">
@@ -42,7 +42,7 @@ $observers = [
           <div><strong>36</strong><span>Moodle capabilities</span></div>
           <div><strong>81</strong><span>database tables</span></div>
         </div>
-        <p class="small text-secondary mt-3 mb-0">Audited directly from <code>db/services.php</code>, <code>classes/event</code>, <code>db/tasks.php</code>, <code>db/access.php</code>, and <code>db/install.xml</code> in release 2.1.6.</p>
+        <p class="small text-secondary mt-3 mb-0">Audited directly from <code>db/services.php</code>, <code>classes/event</code>, <code>db/tasks.php</code>, <code>db/access.php</code>, and <code>db/install.xml</code> in release 2.17.</p>
       </div>
     </section>
 

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'version' => '2.1.6',
+    'version' => '2.17',
     'sections' => [
         'overview' => 'Overview',
         'feature-reference' => 'Complete feature reference',

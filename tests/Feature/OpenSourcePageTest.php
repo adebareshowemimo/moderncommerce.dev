@@ -12,7 +12,7 @@ class OpenSourcePageTest extends TestCase
             ->assertOk()
             ->assertSee('Open-source commerce infrastructure for Moodle, under your control.')
             ->assertSee('GPL-3.0-or-later')
-            ->assertSee('Release 2.1.6')
+            ->assertSee('Release 2.17')
             ->assertSee('156')
             ->assertSee('81')
             ->assertSee('36')

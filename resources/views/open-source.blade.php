@@ -11,7 +11,7 @@
               <a class="btn btn-primary btn-lg" href="{{ route('docs.show', 'installation') }}">Install ModernCommerce</a>
               <a class="btn btn-outline-primary btn-lg" href="https://www.gnu.org/licenses/gpl-3.0.html">Read the GPL licence</a>
             </div>
-            <p class="mc-research-date mt-4 mb-0">Release 2.1.6 · Moodle 5.2 · PHP 8.3+ · GPL-3.0-or-later</p>
+            <p class="mc-research-date mt-4 mb-0">Release 2.17 · Moodle 5.2 · PHP 8.3+ · GPL-3.0-or-later</p>
           </div>
           <div class="col-lg-5">
             <aside class="mc-open-license-card" aria-label="Open-source project facts">
@@ -70,7 +70,7 @@
             <div class="mc-code-proof mc-open-code-proof">
               <div><span></span><span></span><span></span><small>local_moderncommerce / version.php</small></div>
               <pre><code><b>component</b>  local_moderncommerce
-<b>release</b>    2.1.6
+<b>release</b>    2.17
 <b>moodle</b>     5.2
 <b>php</b>        8.3+
 <b>license</b>    GPL-3.0-or-later
@@ -141,6 +141,6 @@
 
     <section class="pb-5"><div class="container"><div class="mc-final-cta text-center"><p class="mc-section-label">Start with evidence</p><h2 class="display-3">Inspect the architecture. Install the release. Keep control.</h2><p class="lead mx-auto">Use the complete documentation to evaluate compatibility, deployment, data ownership, permissions, payments, and operations before launch.</p><div class="d-grid d-sm-flex justify-content-center gap-3 mt-4"><a class="btn btn-light btn-lg" href="{{ route('docs.show', 'quick-start') }}">Start the quick guide</a><a class="btn btn-outline-light btn-lg" href="{{ route('support-development') }}">Support development</a></div></div></div></section>
 
-    <section class="pb-5"><div class="container"><div class="mc-source-panel"><p class="mc-section-label">Research and source basis</p><p class="mb-2">Page reviewed 1 August 2026 against ModernCommerce 2.1.6 source and official open-source project guidance.</p><ul class="mb-0"><li><a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3</a></li><li><a href="https://download.moodle.org/">Moodle's official open-source distribution model</a></li><li><a href="https://moodle.org/">Moodle community and contribution model</a></li><li><a href="{{ route('docs.show', 'architecture') }}">ModernCommerce audited architecture</a></li><li><a href="{{ route('docs.show', 'web-services-and-events') }}">ModernCommerce web services and events</a></li></ul></div></div></section>
+    <section class="pb-5"><div class="container"><div class="mc-source-panel"><p class="mc-section-label">Research and source basis</p><p class="mb-2">Page reviewed 1 August 2026 against ModernCommerce 2.17 source and official open-source project guidance.</p><ul class="mb-0"><li><a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3</a></li><li><a href="https://download.moodle.org/">Moodle's official open-source distribution model</a></li><li><a href="https://moodle.org/">Moodle community and contribution model</a></li><li><a href="{{ route('docs.show', 'architecture') }}">ModernCommerce audited architecture</a></li><li><a href="{{ route('docs.show', 'web-services-and-events') }}">ModernCommerce web services and events</a></li></ul></div></div></section>
   </main>
 </x-marketing-layout>

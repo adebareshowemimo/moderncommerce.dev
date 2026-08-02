@@ -29,5 +29,5 @@
 |---|---|
 | Component | `local_moderncommerce` |
 | Supported Moodle | 5.2 |
-| Release | 2.1.6 (Stable) |
+| Release | 2.17 (Stable) |
 | License | GPL-3.0-or-later |

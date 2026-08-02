@@ -1,6 +1,6 @@
 # Upgrade & release compatibility
 
-This documentation targets ModernCommerce **2.1.6**, the stable release declared in the audited `version.php` (`2026072301`). That release declares Moodle **5.2 only** in its supported range and requires the Moodle 5.2 build `2026042000` or later. Composer requires **PHP 8.3 or later**.
+This documentation targets ModernCommerce **2.17**, the stable release declared in the audited `version.php` (`2026072301`). That release declares Moodle **5.2 only** in its supported range and requires the Moodle 5.2 build `2026042000` or later. Composer requires **PHP 8.3 or later**.
 
 > Check the `version.php`, `composer.json`, and `LICENSE` shipped in the package you are actually installing. Those files are authoritative when a README or older document shows a different release number or licence statement.
 

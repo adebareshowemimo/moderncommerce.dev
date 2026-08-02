@@ -1,7 +1,7 @@
 # ModernCommerce.dev: Product and Content Strategy
 
 Status: launch content brief
-Product basis: `local_moderncommerce` 2.1.6, Moodle 5.2, GPL-3.0-or-later
+Product basis: `local_moderncommerce` 2.17, Moodle 5.2, GPL-3.0-or-later
 Primary category: the best open-source plugin for selling courses through Moodle
 
 Business-model authority: [`BUSINESS-MODEL.md`](BUSINESS-MODEL.md). Its later dated ownership, brand, domain, support, service, and decision records supersede older planning language in this brief.
@@ -423,7 +423,7 @@ Voice: capable, direct, open, and operationally honest.
 - Prefer outcomes (“enrol the buyer automatically”) over abstractions (“seamless automation”).
 - Prefer “built for Moodle” or “Moodle-native plugin architecture” over the vague “native” by itself.
 - Use “open source” only with a nearby licence or source link.
-- State compatibility precisely: Moodle 5.2 and PHP 8.3+ for release 2.1.6.
+- State compatibility precisely: Moodle 5.2 and PHP 8.3+ for release 2.17.
 - Distinguish available, beta, add-on, and roadmap capabilities visually and in copy.
 - Never claim “secure” solely because the code is open source. Publish security practices and reporting paths.
 - Never claim “no fees” without narrowing it to “no Modern Commerce platform transaction fee”; processors still charge fees.
