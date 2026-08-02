@@ -21,8 +21,8 @@
       <div class="offcanvas offcanvas-end" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel">
         <div class="offcanvas-header"><h2 class="offcanvas-title h5" id="siteNavLabel">Modern Commerce</h2><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close navigation"></button></div>
         <div class="offcanvas-body align-items-lg-center">
-          <ul class="navbar-nav mx-lg-auto gap-lg-1"><li class="nav-item"><a class="nav-link" href="{{ route('product') }}">Product</a></li><li class="nav-item"><a class="nav-link" href="{{ route('features') }}">Features</a></li><li class="nav-item"><a class="nav-link" href="{{ route('compare') }}">Compare</a></li><li class="nav-item"><a class="nav-link" href="{{ route('open-source') }}">Open source</a></li><li class="nav-item"><a class="nav-link" href="{{ route('developers') }}">Developers</a></li><li class="nav-item"><a class="nav-link" href="{{ route('docs') }}">Docs</a></li></ul>
-          <div class="d-grid d-lg-flex gap-2 mt-4 mt-lg-0"><a class="btn btn-link text-decoration-none" href="{{ route('open-source') }}">Source &amp; licence</a><a class="btn btn-primary" href="{{ config('app.demo_url') }}">Explore the demo</a></div>
+          <ul class="navbar-nav mx-lg-auto gap-lg-1"><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('product')]) href="{{ route('product') }}" @if(request()->routeIs('product')) aria-current="page" @endif>Product</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('features')]) href="{{ route('features') }}" @if(request()->routeIs('features')) aria-current="page" @endif>Features</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('compare')]) href="{{ route('compare') }}" @if(request()->routeIs('compare')) aria-current="page" @endif>Compare</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('open-source')]) href="{{ route('open-source') }}" @if(request()->routeIs('open-source')) aria-current="page" @endif>Open source</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('developers')]) href="{{ route('developers') }}" @if(request()->routeIs('developers')) aria-current="page" @endif>Developers</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('docs*')]) href="{{ route('docs') }}" @if(request()->routeIs('docs*')) aria-current="page" @endif>Docs</a></li></ul>
+          <div class="d-grid d-lg-flex gap-2 mt-4 mt-lg-0"><a class="btn btn-link text-decoration-none" href="https://github.com/adebareshowemimo/moodle-local_moderncommerce" rel="external">GitHub</a><a class="btn btn-primary" href="{{ config('app.demo_url') }}">Explore the demo</a></div>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
   {{ $slot }}
   <footer class="mc-footer py-5">
     <div class="container">
-      <div class="row gy-4 align-items-center">
+      <div class="row gy-5 gx-lg-5 align-items-start">
         <div class="col-lg-5">
           <div class="mc-footer-product d-flex align-items-center gap-3">
             <img class="mc-moderncommerce-logo mc-moderncommerce-logo-white" src="{{ asset('images/brand/moderncommerce-logo-white.png') }}" alt="" width="54" height="37">
@@ -39,8 +39,28 @@
           <p class="mb-0 mt-3">Every feature required to sell, fulfil, and operate a modern ecommerce business for training, eLearning courses, and digital products.</p>
           <div class="mc-footer-maintainer d-flex align-items-center gap-3 mt-4"><span>Maintained by</span><img class="mc-agunfon-footer-logo" src="{{ asset('images/brand/agunfon-logo-white.svg') }}" alt="Agunfon Interactivity LLC, USA"></div>
         </div>
-        <div class="col-lg-7">
-          <nav class="d-flex flex-wrap gap-3 gap-md-4 justify-content-lg-end" aria-label="Footer navigation"><a href="{{ route('product') }}">Product</a><a href="{{ route('features') }}">Features</a><a href="{{ route('compare') }}">Compare</a><a href="{{ route('docs') }}">Documentation</a><a href="{{ route('open-source') }}">Open source</a><a href="{{ route('roadmap') }}">Roadmap</a><a href="{{ route('support') }}">Support</a><a href="{{ route('support-development') }}">Support development</a></nav>
+        <div class="col-sm-6 col-lg-3">
+          <nav aria-labelledby="footer-product-heading">
+            <h2 class="mc-footer-heading" id="footer-product-heading">Product</h2>
+            <ul class="mc-footer-links list-unstyled mb-0">
+              <li><a href="{{ route('product') }}">Overview</a></li>
+              <li><a href="{{ route('features') }}">Features</a></li>
+              <li><a href="{{ route('compare') }}">Compare</a></li>
+              <li><a href="{{ config('app.demo_url') }}">Live demo</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <nav aria-labelledby="footer-resources-heading">
+            <h2 class="mc-footer-heading" id="footer-resources-heading">Project &amp; resources</h2>
+            <ul class="mc-footer-links list-unstyled mb-0">
+              <li><a href="{{ route('docs') }}">Documentation</a></li>
+              <li><a href="{{ route('open-source') }}">Open source</a></li>
+              <li><a href="{{ route('roadmap') }}">Roadmap</a></li>
+              <li><a href="{{ route('support') }}">Support</a></li>
+              <li><a href="{{ route('support-development') }}">Support development</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
       <div class="mt-5 pt-4 border-top border-secondary">

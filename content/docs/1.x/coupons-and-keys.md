@@ -1,4 +1,4 @@
-# Modern Commerce — Coupons & Keys
+# Modern Commerce: Coupons & Keys
 
 ---
 
@@ -16,7 +16,7 @@ Coupons drive promotions and discounts at checkout. Manage them at **`/local/mod
 - Use **targets** to limit a coupon to a specific product, bundle, category, or supported target type.
 - Use **usage records** to audit who redeemed a coupon and when.
 
-Coupon behavior (codes, minimum spend, expiry, discount percent) surfaces in emails through tokens such as `{coupon_code}`, `{coupon_expiry}`, `{coupon_min_spend}`, and `{discount_percent}` — see [Notifications](/{{route}}/{{version}}/modern-commerce/notifications).
+Coupon behavior (codes, minimum spend, expiry, discount percent) surfaces in emails through tokens such as `{coupon_code}`, `{coupon_expiry}`, `{coupon_min_spend}`, and `{discount_percent}`. See [Notifications](/{{route}}/{{version}}/modern-commerce/notifications).
 
 <a name="keys"></a>
 ## Enrolment keys
@@ -30,32 +30,32 @@ Coupon behavior (codes, minimum spend, expiry, discount percent) surfaces in ema
 
 Manage them at:
 
-- `/local/moderncommerce/admin/keys.php` — keys overview.
-- `/local/moderncommerce/admin/course_keys.php` — course keys.
-- `/local/moderncommerce/admin/bundle_keys.php` — bundle/program keys.
+- `/local/moderncommerce/admin/keys.php`: keys overview.
+- `/local/moderncommerce/admin/course_keys.php`: course keys.
+- `/local/moderncommerce/admin/bundle_keys.php`: bundle/program keys.
 
 Generating keys requires the `local/moderncommerce:generatekeys` capability. Key-related email tokens include `{key_code}`, `{key_count}`, `{seats_total}`, `{seats_used}`, and `{seats_remaining}`.
 
 <a name="subkeys"></a>
 ## Subscription keys
 
-**Subscription keys** activate a subscription plan without going through online checkout — the recurring-access equivalent of enrolment keys. Manage them at `/local/moderncommerce/admin/subscription_keys.php`. See [Subscriptions](/{{route}}/{{version}}/modern-commerce/subscriptions).
+**Subscription keys** activate a subscription plan without going through online checkout: the recurring-access equivalent of enrolment keys. Manage them at `/local/moderncommerce/admin/subscription_keys.php`. See [Subscriptions](/{{route}}/{{version}}/modern-commerce/subscriptions).
 
 <a name="redeem"></a>
 ## Redeeming
 
 Buyers redeem keys from public routes:
 
-- `/local/moderncommerce/redeem.php` — redeem a single key.
-- `/local/moderncommerce/redeem_bundle.php` — redeem a bundle/program key.
-- `/local/moderncommerce/redeem_multiple.php` — redeem multiple keys.
+- `/local/moderncommerce/redeem.php`: redeem a single key.
+- `/local/moderncommerce/redeem_bundle.php`: redeem a bundle/program key.
+- `/local/moderncommerce/redeem_multiple.php`: redeem multiple keys.
 
 > {primary} Corporate/team scenario: sell a block of enrolment keys, hand them to the customer, and let their learners self-redeem. Seat counts and usage are tracked automatically.
 
 <a name="maintenance"></a>
 ## Maintenance
 
-Expired keys are cleaned up automatically — the `expire_keys` scheduled task runs every six hours (at minute 30). This runs on Moodle cron, so keep cron running in production.
+Expired keys are cleaned up automatically: the `expire_keys` scheduled task runs every six hours (at minute 30). This runs on Moodle cron, so keep cron running in production.
 
 ## Where to go next
 

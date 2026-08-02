@@ -17,20 +17,20 @@ Then open `http://127.0.0.1:8000`.
 
 ## Structure
 
-- `resources/views/home.blade.php` — responsive homepage
-- `resources/views/components/marketing-layout.blade.php` — shared site shell
-- `resources/views/page.blade.php` — marketing-page foundation
-- `resources/views/support.blade.php` — support routing and professional-services page
-- `resources/views/support-development.blade.php` — voluntary open-source funding page
-- `resources/views/docs/show.blade.php` — Markdown documentation layout
-- `resources/css/app.css` — Agunfon-aligned Modern Commerce theme
-- `resources/js/app.js` — Bootstrap and site behavior
-- `content/docs/` — publishable Markdown documentation
-- `routes/web.php` — page, documentation, and sitemap routes
-- `docs/PRODUCT.md` — positioning, audiences, and conversion strategy
-- `docs/BUSINESS-MODEL.md` — agreed ownership, brand architecture, business model, customer flows, support routing, and decision log
-- `docs/DESIGN.md` — visual and Bootstrap design system
-- `docs/CONTENT-STRATEGY.md` — sitemap, page copy, SEO plan, and launch sequence
+- `resources/views/home.blade.php`: responsive homepage
+- `resources/views/components/marketing-layout.blade.php`: shared site shell
+- `resources/views/page.blade.php`: marketing-page foundation
+- `resources/views/support.blade.php`: support routing and professional-services page
+- `resources/views/support-development.blade.php`: voluntary open-source funding page
+- `resources/views/docs/show.blade.php`: Markdown documentation layout
+- `resources/css/app.css`: Agunfon-aligned Modern Commerce theme
+- `resources/js/app.js`: Bootstrap and site behavior
+- `content/docs/`: publishable Markdown documentation
+- `routes/web.php`: page, documentation, and sitemap routes
+- `docs/PRODUCT.md`: positioning, audiences, and conversion strategy
+- `docs/BUSINESS-MODEL.md`: agreed ownership, brand architecture, business model, customer flows, support routing, and decision log
+- `docs/DESIGN.md`: visual and Bootstrap design system
+- `docs/CONTENT-STRATEGY.md`: sitemap, page copy, SEO plan, and launch sequence
 
 ## Funding channel
 
@@ -60,10 +60,10 @@ The page will replace both setup-state labels with the live **Support on Ko-fi**
 
 ## Installed accelerators
 
-- Laravel 13 — routing, Blade templates, configuration, testing, and deployment tooling
-- Bootstrap 5.3.8 + Sass — responsive design system bundled through Vite
-- Spatie Laravel Markdown — cached Markdown rendering for documentation
-- Spatie Laravel Sitemap — sitemap generation and SEO discovery
+- Laravel 13: routing, Blade templates, configuration, testing, and deployment tooling
+- Bootstrap 5.3.8 + Sass: responsive design system bundled through Vite
+- Spatie Laravel Markdown: cached Markdown rendering for documentation
+- Spatie Laravel Sitemap: sitemap generation and SEO discovery
 
 ## Positioning rule
 

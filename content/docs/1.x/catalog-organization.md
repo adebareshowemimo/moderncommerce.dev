@@ -6,7 +6,7 @@ ModernCommerce has its own commerce catalogue structure. Moodle course categorie
 
 Manage categories at `/local/moderncommerce/admin/categories.php` with `local/moderncommerce:managecategories`. The category service supports listing, saving, deleting and reordering categories. Category-to-product membership is stored in `local_moderncommerce_product_category_map`.
 
-Use a small, stable taxonomy based on how buyers search—for example role, outcome, industry or subject. Avoid recreating the entire Moodle administration hierarchy if it is not meaningful to a buyer.
+Use a small, stable taxonomy based on how buyers search, for example role, outcome, industry or subject. Avoid recreating the entire Moodle administration hierarchy if it is not meaningful to a buyer.
 
 Before deleting a category, inspect its mapped products and storefront filters. Reassign products first when removing the category would leave an important offer undiscoverable.
 

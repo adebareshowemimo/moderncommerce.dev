@@ -38,7 +38,7 @@
       <div class="container">
         <div class="row gy-4 align-items-center">
           <div class="col-lg-3"><p class="mc-section-label mb-lg-0">Security channel</p></div>
-          <div class="col-lg-6"><h2 class="h3">Sensitive reports stay private.</h2><p class="mb-0">Email <strong>support@agunfoninteractivity.com</strong> with the subject <code>ModernCommerce security report</code>. Include affected version, impact, reproduction details, and a safe way to contact you—but never send live credentials or unnecessary personal data.</p></div>
+          <div class="col-lg-6"><h2 class="h3">Sensitive reports stay private.</h2><p class="mb-0">Email <strong>support@agunfoninteractivity.com</strong> with the subject <code>ModernCommerce security report</code>. Include affected version, impact, reproduction details, and a safe way to contact you, but never send live credentials or unnecessary personal data.</p></div>
           <div class="col-lg-3 text-lg-end"><a class="btn btn-light" href="mailto:support@agunfoninteractivity.com?subject=ModernCommerce%20security%20report">Prepare security email</a></div>
         </div>
       </div>
@@ -75,7 +75,7 @@
             <li class="col-md-6"><div><span>01</span><strong>Enquiry</strong><p>Share the organization, Moodle environment, business objective, urgency, and known constraints.</p></div></li>
             <li class="col-md-6"><div><span>02</span><strong>Discovery</strong><p>Clarify technical fit, responsibilities, dependencies, risks, access, and acceptance criteria.</p></div></li>
             <li class="col-md-6"><div><span>03</span><strong>Proposal</strong><p>Agree scope, deliverables, commercial terms, schedule, and any support or operational boundary.</p></div></li>
-            <li class="col-md-6"><div><span>04</span><strong>Delivery and handover</strong><p>Implement, verify, document, train, and transfer ownership—or begin an explicitly agreed ongoing service.</p></div></li>
+            <li class="col-md-6"><div><span>04</span><strong>Delivery and handover</strong><p>Implement, verify, document, train, and transfer ownership, or begin an explicitly agreed ongoing service.</p></div></li>
           </ol></div>
         </div>
       </div>

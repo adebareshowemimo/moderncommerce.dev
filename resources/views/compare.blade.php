@@ -3,13 +3,13 @@
     <section class="mc-page-hero mc-compare-hero"><div class="container"><div class="row"><div class="col-xl-9">
       <p class="mc-section-label">Platform comparison</p>
       <h1 class="display-3">Why ModernCommerce is the best plugin for selling courses through Moodle.</h1>
-      <p class="lead mt-4">It is the only option in this comparison that combines a complete course storefront and commerce operation with Moodle remaining the learning system of record—without WordPress, a synchronization bridge, or hosted-platform migration.</p>
+      <p class="lead mt-4">It is the only option in this comparison that combines a complete course storefront and commerce operation with Moodle remaining the learning system of record, without WordPress, a synchronization bridge, or hosted-platform migration.</p>
       <p class="mc-research-date mb-0">Research reviewed 31 July 2026 · Official product and documentation sources</p>
     </div></div></div></section>
 
     <section class="mc-section pt-0 mc-route-summary"><div class="container">
       <div class="row justify-content-between align-items-end gy-3 mb-4">
-        <div class="col-lg-7"><p class="mc-section-label">Four ways to sell a Moodle course</p><h2 class="display-4">Compare what costs money—and what costs operational time.</h2></div>
+        <div class="col-lg-7"><p class="mc-section-label">Four ways to sell a Moodle course</p><h2 class="display-4">Compare what costs money, and what costs operational time.</h2></div>
         <div class="col-lg-4"><p class="text-secondary mb-0">A concise decision view for Moodle teams. The detailed product-by-product evidence follows below.</p></div>
       </div>
       <div class="table-responsive mc-comparison-wrap" tabindex="0" aria-label="Scrollable summary comparison of four ways to sell Moodle courses">
@@ -17,7 +17,7 @@
           <thead><tr><th scope="col">Decision factor</th><th scope="col">Moodle payment enrolment</th><th scope="col">WordPress + WooCommerce bridge</th><th scope="col">Hosted SaaS LMS</th><th scope="col" class="mc-highlight-col">ModernCommerce</th></tr></thead>
           <tbody>
             <tr><th scope="row">Runs entirely inside Moodle</th><td>Yes</td><td>No</td><td>No</td><td class="mc-highlight-col">Yes</td></tr>
-            <tr><th scope="row">Moodle remains the learning system</th><td>Yes</td><td>Yes</td><td>No—migration required</td><td class="mc-highlight-col">Yes</td></tr>
+            <tr><th scope="row">Moodle remains the learning system</th><td>Yes</td><td>Yes</td><td>No, migration required</td><td class="mc-highlight-col">Yes</td></tr>
             <tr><th scope="row">Additional application to operate</th><td>None</td><td>WordPress</td><td>None if Moodle is replaced</td><td class="mc-highlight-col">None</td></tr>
             <tr><th scope="row">Cross-system synchronization</th><td>None</td><td>Required</td><td>Only if Moodle is retained</td><td class="mc-highlight-col">None</td></tr>
             <tr><th scope="row">Branded storefront and catalogue</th><td>No full storefront</td><td>Included through WordPress</td><td>Included</td><td class="mc-highlight-col">Included</td></tr>
@@ -49,7 +49,7 @@
       <div class="row gy-5"><div class="col-lg-5"><p class="mc-section-label">Why ModernCommerce</p><h2 class="display-4">Commerce becomes part of your learning operating model.</h2><p class="lead">The advantage is not simply avoiding WordPress. ModernCommerce connects merchandising, payment evidence, access rights, learner identity, finance operations, and support history inside Moodle.</p></div>
       <div class="col-lg-7"><div class="mc-reason-grid">
         <article><span>01</span><h3>One system of record</h3><p>The product sold, buyer identity, Moodle enrolment, entitlement, invoice, refund, and subscription state can be investigated without reconciling separate applications.</p></article>
-        <article><span>02</span><h3>More than payment enrolment</h3><p>Operate a catalogue, cart, promotions, bundles, subscriptions, invoices, recovery automations, reporting, and learner accounts—not only a payment button.</p></article>
+        <article><span>02</span><h3>More than payment enrolment</h3><p>Operate a catalogue, cart, promotions, bundles, subscriptions, invoices, recovery automations, reporting, and learner accounts, not only a payment button.</p></article>
         <article><span>03</span><h3>Direct and organizational sales</h3><p>Serve individual buyers, prepaid cohorts, resellers, corporate seat pools, manual-invoice customers, and recurring memberships from one commerce model.</p></article>
         <article><span>04</span><h3>Operational evidence</h3><p>Separate ledgers for orders, payment attempts, gateway events, webhooks, fulfilment, entitlements, refunds, and audit history make failures traceable.</p></article>
         <article><span>05</span><h3>Governed delegation</h3><p>Thirty-six capabilities and nine role presets separate storefront, product, finance, reporting, support, marketing, subscription, and payment responsibilities.</p></article>
@@ -98,7 +98,7 @@
     </div></section>
 
     <section class="mc-section"><div class="container">
-      <div class="row justify-content-between align-items-end gy-3 mb-4"><div class="col-lg-7"><p class="mc-section-label">Capability chart</p><h2 class="display-4">What is available—and what must be assembled</h2></div><div class="col-lg-4"><p class="text-secondary mb-0">Capabilities marked “extension” or “higher plan” are not part of the base product path.</p></div></div>
+      <div class="row justify-content-between align-items-end gy-3 mb-4"><div class="col-lg-7"><p class="mc-section-label">Capability chart</p><h2 class="display-4">What is available, and what must be assembled</h2></div><div class="col-lg-4"><p class="text-secondary mb-0">Capabilities marked “extension” or “higher plan” are not part of the base product path.</p></div></div>
       <div class="table-responsive mc-comparison-wrap" tabindex="0" aria-label="Scrollable capability comparison">
         <table class="table mc-comparison-table mc-feature-table align-middle mb-0">
           <thead><tr><th scope="col">Capability</th><th scope="col" class="mc-highlight-col">ModernCommerce</th><th scope="col">Moodle payment</th><th scope="col">WooCommerce</th><th scope="col">LearnDash + Woo</th><th scope="col">Edwiser + Woo</th><th scope="col">LearnWorlds</th></tr></thead>

@@ -10,7 +10,7 @@ class OpenSourcePageTest extends TestCase
     {
         $this->get('/open-source')
             ->assertOk()
-            ->assertSee('Own the commerce layer your learning business depends on.')
+            ->assertSee('Open-source commerce infrastructure for Moodle, under your control.')
             ->assertSee('GPL-3.0-or-later')
             ->assertSee('Release 2.1.6')
             ->assertSee('156')

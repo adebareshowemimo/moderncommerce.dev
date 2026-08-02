@@ -1,4 +1,4 @@
-# ModernCommerce.dev — Product and Content Strategy
+# ModernCommerce.dev: Product and Content Strategy
 
 Status: launch content brief
 Product basis: `local_moderncommerce` 2.1.6, Moodle 5.2, GPL-3.0-or-later
@@ -16,7 +16,7 @@ ModernCommerce.dev should establish a category, not present a long plugin featur
 
 **Practical promise**
 
-> Build a complete learning storefront inside Moodle—catalog, checkout, enrolment, subscriptions, and operations—without running a second commerce platform.
+> Build a complete learning storefront inside Moodle, including catalog, checkout, enrolment, subscriptions, and operations, without running a second commerce platform.
 
 **Brand idea**
 
@@ -130,14 +130,14 @@ Publish these first: Home, Product, Open Source, Developers, Documentation, Pric
 
 ## Home
 
-**SEO title:** Modern Commerce — Open-source ecommerce for Moodle
+**SEO title:** Modern Commerce: Open-source ecommerce for Moodle
 **Meta description:** Turn Moodle into a complete learning storefront. Sell courses, bundles, programs, and subscriptions with native checkout, enrolment, learner accounts, and commerce operations.
 
 **Hero eyebrow:** Open-source commerce for Moodle
 
 **H1:** Sell learning where learning happens.
 
-**Hero body:** Modern Commerce turns Moodle into a complete learning storefront. Create offers, take payments, enrol buyers, manage recurring access, and support customers—without operating a separate ecommerce stack.
+**Hero body:** Modern Commerce turns Moodle into a complete learning storefront. Create offers, take payments, enrol buyers, manage recurring access, and support customers, without operating a separate ecommerce stack.
 
 **Primary CTA:** Explore the demo
 **Secondary CTA:** View on GitHub
@@ -145,7 +145,7 @@ Publish these first: Home, Product, Open Source, Developers, Documentation, Pric
 
 **Section: One connected journey**
 
-H2: From discovery to enrolled learner—in one system.
+H2: From discovery to enrolled learner, in one system.
 
 Body: A buyer finds a course, checks out, receives access, and manages their learning account without crossing an integration boundary. Your team manages the commercial journey from the same Moodle environment.
 
@@ -198,7 +198,7 @@ CTAs: Get Modern Commerce · Explore the demo · Talk to the team
 
 ## Product overview
 
-**SEO title:** Product — A complete Moodle commerce system | Modern Commerce
+**SEO title:** Product: A complete Moodle commerce system | Modern Commerce
 
 **H1:** Everything between “I want this course” and “start learning.”
 
@@ -206,12 +206,12 @@ CTAs: Get Modern Commerce · Explore the demo · Talk to the team
 
 Organise the page by workflow rather than backend module:
 
-1. **Merchandise** — course pricing, bundles, programs, subscription plans, categories, featured offers, reviews, and wishlists.
-2. **Convert** — catalog, product detail pages, cart, coupons, checkout, payment gateways, and abandoned-order recovery.
-3. **Deliver access** — automatic enrolment, bundle enrolment, subscription access rules, enrolment keys, and redemption flows.
-4. **Serve learners** — library, courses, orders, invoices, subscription management, wishlist, profile, grades, certificates, and calendar.
-5. **Operate** — customers, orders, refunds, invoices, reports, email templates, notifications, payment events, webhooks, and audit history.
-6. **Extend** — Moodle web services, capabilities, scheduled tasks, events, optional add-ons, and custom gateway support.
+1. **Merchandise**: course pricing, bundles, programs, subscription plans, categories, featured offers, reviews, and wishlists.
+2. **Convert**: catalog, product detail pages, cart, coupons, checkout, payment gateways, and abandoned-order recovery.
+3. **Deliver access**: automatic enrolment, bundle enrolment, subscription access rules, enrolment keys, and redemption flows.
+4. **Serve learners**: library, courses, orders, invoices, subscription management, wishlist, profile, grades, certificates, and calendar.
+5. **Operate**: customers, orders, refunds, invoices, reports, email templates, notifications, payment events, webhooks, and audit history.
+6. **Extend**: Moodle web services, capabilities, scheduled tasks, events, optional add-ons, and custom gateway support.
 
 CTA: Explore the demo
 
@@ -271,7 +271,7 @@ Do not create artificial product tiers for GPL code. Separate software price fro
 
 **H1:** The software is open. Choose the help you need.
 
-**Core card — Community**
+**Core card: Community**
 
 - Modern Commerce core
 - Self-hosted
@@ -280,7 +280,7 @@ Do not create artificial product tiers for GPL code. Separate software price fro
 - Price: Free
 - CTA: Download from GitHub
 
-**Service card — Implementation**
+**Service card: Implementation**
 
 - Installation and configuration
 - Storefront setup and migration
@@ -289,7 +289,7 @@ Do not create artificial product tiers for GPL code. Separate software price fro
 - Price: Project-based
 - CTA: Plan an implementation
 
-**Service card — Priority support**
+**Service card: Priority support**
 
 - Defined response times
 - Upgrade guidance
@@ -298,7 +298,7 @@ Do not create artificial product tiers for GPL code. Separate software price fro
 - Price: Publish when SLA is defined
 - CTA: Contact sales
 
-**Service card — Managed**
+**Service card: Managed**
 
 - Hosting, monitoring, updates, backups, and operational support
 - Price: Publish only after service scope is operationally ready
@@ -466,19 +466,19 @@ Avoid making newsletter sign-up the dominant conversion. The product should be u
 
 ## 12. Launch sequence
 
-### Phase 0 — trust foundation
+### Phase 0: trust foundation
 
 Resolve licence messaging, publish repository, add contributing/code-of-conduct/security files, reconcile versions in docs, define support boundaries, and verify gateway claims.
 
-### Phase 1 — useful launch
+### Phase 1: useful launch
 
 Ship Home, Product, Open Source, Developers, Docs, Pricing/Services, Roadmap, About, Support, demo, GitHub links, analytics, and technical SEO.
 
-### Phase 2 — evidence and discovery
+### Phase 2: evidence and discovery
 
 Publish workflow guides, comparison pages, implementation stories, gateway matrix, architecture diagrams, release notes, and community discussions.
 
-### Phase 3 — ecosystem
+### Phase 3: ecosystem
 
 Add extension directory, partner/service-provider program, contributor recognition, sponsorship, translations, and maintained integration recipes.
 

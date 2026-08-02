@@ -5,8 +5,8 @@
         <div class="row gy-5 align-items-center">
           <div class="col-lg-7">
             <p class="mc-section-label">GPL open-source commerce for Moodle</p>
-            <h1 class="display-2">Own the commerce layer your learning business depends on.</h1>
-            <p class="lead mt-4">ModernCommerce gives individuals and organizations a complete Moodle course-selling system they can inspect, self-host, modify, and operate on their own terms—without a closed connector or ModernCommerce platform revenue share.</p>
+            <h1 class="display-2">Open-source commerce infrastructure for Moodle, under your control.</h1>
+            <p class="lead mt-4">ModernCommerce gives individuals and organizations a complete Moodle course-selling system they can inspect, self-host, modify, and operate on their own terms, without a closed connector or ModernCommerce platform revenue share.</p>
             <div class="d-grid d-sm-flex flex-wrap gap-3 mt-4">
               <a class="btn btn-primary btn-lg" href="{{ route('docs.show', 'installation') }}">Install ModernCommerce</a>
               <a class="btn btn-outline-primary btn-lg" href="https://www.gnu.org/licenses/gpl-3.0.html">Read the GPL licence</a>
@@ -128,7 +128,7 @@
 
     <section class="mc-section mc-faq-section">
       <div class="container"><div class="row gy-5">
-        <div class="col-lg-4"><div class="mc-faq-intro"><p class="mc-section-label">Open-source FAQ</p><h2 class="display-4">Know what you control—and what you operate.</h2></div></div>
+        <div class="col-lg-4"><div class="mc-faq-intro"><p class="mc-section-label">Open-source FAQ</p><h2 class="display-4">Know what you control, and what you operate.</h2></div></div>
         <div class="col-lg-8"><div class="accordion mc-faq" id="openSourceFaq">
           <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#osFaqOne" aria-expanded="true" aria-controls="osFaqOne">Is ModernCommerce Core really free?</button></h3><div id="osFaqOne" class="accordion-collapse collapse show" data-bs-parent="#openSourceFaq"><div class="accordion-body">Yes. The software licence price is $0 under GPL-3.0-or-later, and ModernCommerce does not take a platform percentage of sales. Hosting, payment-provider fees, implementation, support, and operating costs remain your responsibility.</div></div></div>
           <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#osFaqTwo" aria-expanded="false" aria-controls="osFaqTwo">Can an individual, institution, or agency modify it?</button></h3><div id="osFaqTwo" class="accordion-collapse collapse" data-bs-parent="#openSourceFaq"><div class="accordion-body">Yes, subject to the GPL terms. Individuals and organizations can run and modify it, and service providers can deploy or adapt it for clients. Anyone redistributing covered work must meet the applicable GPL source and licence obligations.</div></div></div>

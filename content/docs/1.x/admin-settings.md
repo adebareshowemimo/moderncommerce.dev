@@ -1,11 +1,11 @@
-# Modern Commerce — Admin Settings Reference
+# Modern Commerce: Admin Settings Reference
 
 ---
 
 Modern Commerce settings live in two places that write to the same config store:
 
-- **Modern Commerce → Settings** (`/local/moderncommerce/admin/settings.php`) — day-to-day store configuration.
-- **Site administration → Plugins → Local plugins → Modern Commerce** — Moodle's native pages for deeper configuration (webhook security, delivery channels, branding seeds, subscription defaults).
+- **Modern Commerce → Settings** (`/local/moderncommerce/admin/settings.php`): day-to-day store configuration.
+- **Site administration → Plugins → Local plugins → Modern Commerce**: Moodle's native pages for deeper configuration (webhook security, delivery channels, branding seeds, subscription defaults).
 
 Changing a shared setting in either place updates the same value. Settings require Moodle site-config access (`moodle/site:config`) or the equivalent Modern Commerce capability.
 
@@ -38,13 +38,13 @@ Set this **before** creating production prices; it affects product cards, checko
 
 | Setting | Controls |
 |---|---|
-| Primary currency | The single active store currency. Default **NGN**. Chosen from **21 supported currencies** (NGN, USD, EUR, GBP, ZAR, GHS, KES, UGX, TZS, XOF, XAF, EGP, MAD, CAD, AUD, INR, CNY, JPY, BRL, CHF, SGD). |
+| Primary currency | The single active store currency. Default **NGN**. Chosen from **18 supported currencies** (NGN, USD, EUR, GBP, ZAR, GHS, KES, UGX, TZS, XOF, XAF, EGP, MAD, CAD, AUD, INR, CNY, JPY). |
 | Currency position | Symbol/code before or after the amount. Default `before`. |
 | Decimal places | 0–6. Default `2`. |
 | Thousand separator | Default comma. |
 | Decimal separator | Default period; cannot equal the thousand separator. |
 
-> {warning} Modern Commerce is **single-currency** — one active currency at a time, not simultaneous multi-currency. Changing it after orders exist makes reports harder to compare.
+> {warning} Modern Commerce is **single-currency**: one active currency at a time, not simultaneous multi-currency. Changing it after orders exist makes reports harder to compare.
 
 <a name="tax"></a>
 ## Tax & documents
@@ -61,7 +61,7 @@ Set document prefixes before your first production transaction.
 <a name="checkout"></a>
 ## Checkout fields
 
-A master **Collect contact information** toggle (off by default) enables extra checkout fields — phone, address, city, state/province, country, ZIP/postal code. Each field is `hidden`, `optional`, or `required`. Keep fields hidden unless you have a real fulfilment, invoice, tax, or support reason to collect them.
+A master **Collect contact information** toggle (off by default) enables extra checkout fields: phone, address, city, state/province, country, ZIP/postal code. Each field is `hidden`, `optional`, or `required`. Keep fields hidden unless you have a real fulfilment, invoice, tax, or support reason to collect them.
 
 <a name="reviews"></a>
 ## Reviews & product form
@@ -93,7 +93,7 @@ A master **Collect contact information** toggle (off by default) enables extra c
 | Notification position | Screen corner for toast messages. Default `top-right`. |
 | Auto-dismiss delay | Milliseconds before a toast closes. Default `4000`; `0` = stay until dismissed. |
 
-This is on-screen toast behavior only — delivery channels are configured below.
+This is on-screen toast behavior only: delivery channels are configured below.
 
 <a name="gateways"></a>
 ## Payment gateways & webhook security

@@ -1,4 +1,4 @@
-# Modern Commerce — Reports & Analytics
+# Modern Commerce: Reports & Analytics
 
 ---
 
@@ -16,7 +16,7 @@ The Modern Commerce dashboard (`/local/moderncommerce/admin/index.php`) shows sa
 
 Viewing reports, dashboard charts, payment/webhook events, and wishlists requires `local/moderncommerce:viewreports`.
 
-> {primary} Set your store currency **before** launch — changing it after orders exist makes older and newer report figures harder to compare. Reports use the single active store currency.
+> {primary} Set your store currency **before** launch: changing it after orders exist makes older and newer report figures harder to compare. Reports use the single active store currency.
 
 <a name="dashboard-widgets"></a>
 ## Dashboard widget catalogue
@@ -94,7 +94,7 @@ The remaining tasks run the **subscription lifecycle**: check expiring, process 
 <a name="capabilities"></a>
 ## Roles & capabilities
 
-Modern Commerce uses Moodle's native roles and capabilities — there is no separate permission system. It defines **36 capabilities** and seeds a set of ready-made role presets (commerce admin, finance, product, reporting, storefront, marketing, support, subscription, and payment operations). Assign roles at **system context** via *Site administration -> Users -> Permissions -> Assign system roles*.
+Modern Commerce uses Moodle's native roles and capabilities: there is no separate permission system. It defines **36 capabilities** and seeds a set of ready-made role presets (commerce admin, finance, product, reporting, storefront, marketing, support, subscription, and payment operations). Assign roles at **system context** via *Site administration -> Users -> Permissions -> Assign system roles*.
 
 Common capabilities:
 
@@ -113,7 +113,7 @@ Refresh the seeded role presets at any time with `php local/moderncommerce/cli/s
 <a name="privacy"></a>
 ## Privacy & GDPR
 
-Modern Commerce processes personal data (buyers, orders, invoices, contacts, subscribers) and ships a **full Moodle Privacy API provider**. That means data export and erasure requests raised through Moodle's core privacy tools cover Modern Commerce data — supporting GDPR subject-access and right-to-be-forgotten workflows through Moodle's standard mechanisms.
+Modern Commerce processes personal data (buyers, orders, invoices, contacts, subscribers) and ships a **full Moodle Privacy API provider**. That means data export and erasure requests raised through Moodle's core privacy tools cover Modern Commerce data, supporting GDPR subject-access and right-to-be-forgotten workflows through Moodle's standard mechanisms.
 
 > {primary} Because privacy is handled through Moodle's core Privacy API, you administer export and deletion from *Site administration -> Users -> Privacy and policies* like any other compliant plugin.
 

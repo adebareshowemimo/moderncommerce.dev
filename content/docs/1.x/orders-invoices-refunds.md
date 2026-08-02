@@ -1,4 +1,4 @@
-# Modern Commerce — Orders, Invoices & Refunds
+# Modern Commerce: Orders, Invoices & Refunds
 
 ---
 
@@ -28,22 +28,22 @@ Buyer-facing routes: `/local/moderncommerce/cart.php`, `checkout.php`, `order.ph
 
 Manage orders from the admin:
 
-- `/local/moderncommerce/admin/orders.php` — all orders.
-- `/local/moderncommerce/admin/order_view.php?id=ID` — a single order.
+- `/local/moderncommerce/admin/orders.php`: all orders.
+- `/local/moderncommerce/admin/order_view.php?id=ID`: a single order.
 
 Viewing all orders requires `local/moderncommerce:viewallorders`; managing them requires `local/moderncommerce:manageorders`.
 
-> {warning} If a buyer paid but can't access their course: confirm the order status, the payment attempt status, that order items and entitlement rows exist, and any key usage rows — then run cron to process delayed fulfilment or subscription access sync.
+> {warning} If a buyer paid but can't access their course, confirm the order status, the payment attempt status, that order items and entitlement rows exist, and any key usage rows. Then run cron to process delayed fulfilment or subscription access sync.
 
 <a name="invoices"></a>
 ## Invoices & receipts
 
-Invoices are managed at `/local/moderncommerce/admin/invoices.php`. Invoice and receipt numbering uses configurable prefixes (defaults `INV` and `RCPT`) — set these **before** your first production transaction if you need a specific accounting format. See [Admin Settings Reference](/{{route}}/{{version}}/modern-commerce/admin-settings). Invoice emails carry tokens such as `{invoice_number}`, `{invoice_total}`, `{invoice_url}`, and `{invoice_pdf_url}`.
+Invoices are managed at `/local/moderncommerce/admin/invoices.php`. Invoice and receipt numbering uses configurable prefixes (defaults `INV` and `RCPT`): set these **before** your first production transaction if you need a specific accounting format. See [Admin Settings Reference](/{{route}}/{{version}}/modern-commerce/admin-settings). Invoice emails carry tokens such as `{invoice_number}`, `{invoice_total}`, `{invoice_url}`, and `{invoice_pdf_url}`.
 
 <a name="refunds"></a>
 ## Refunds
 
-Process refunds from the order/admin workflows; the action requires `local/moderncommerce:processrefunds`. A refund needs a payment attempt with a provider transaction ID, and the gateway must support refunds for that payment — actual behavior depends on the gateway integration and its configuration. See [Payments](/{{route}}/{{version}}/modern-commerce/payments).
+Process refunds from the order/admin workflows; the action requires `local/moderncommerce:processrefunds`. A refund needs a payment attempt with a provider transaction ID, and the gateway must support refunds for that payment. Actual behavior depends on the gateway integration and its configuration. See [Payments](/{{route}}/{{version}}/modern-commerce/payments).
 
 <a name="customers"></a>
 ## Customers

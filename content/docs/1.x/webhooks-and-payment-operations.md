@@ -16,7 +16,7 @@ At checkout, ModernCommerce evaluates gateway existence, enabled state, credenti
 
 Each gateway has a dedicated endpoint under `/local/moderncommerce/payment/`, for example `stripe_webhook.php`, as well as the normalized payment entry points. Configure the exact HTTPS URL shown for the active Moodle base URL in the provider dashboard.
 
-Gateway implementations verify provider-specific signatures/secrets. Stripe requires a signing secret and validates its signature header and timestamped payload. Flutterwave validates the configured secret hash/header. PayPal verifies its webhook signature using provider data. IP allow-listing, when enabled and supported, is an additional control—not a substitute for signatures.
+Gateway implementations verify provider-specific signatures/secrets. Stripe requires a signing secret and validates its signature header and timestamped payload. Flutterwave validates the configured secret hash/header. PayPal verifies its webhook signature using provider data. IP allow-listing, when enabled and supported, is an additional control, not a substitute for signatures.
 
 ## Ledgers
 

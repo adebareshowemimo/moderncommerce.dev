@@ -1,4 +1,4 @@
-# Modern Commerce — FAQ
+# Modern Commerce: FAQ
 
 ---
 
@@ -17,12 +17,12 @@
 <a name="wordpress"></a>
 ## Do I need WordPress or WooCommerce?
 
-No. Modern Commerce runs the whole store **inside Moodle** — catalog, cart, checkout, payments, invoices, and enrolment. There is no separate WordPress, WooCommerce, or Shopify front end to host or sync.
+No. Modern Commerce runs the whole store **inside Moodle**: catalog, cart, checkout, payments, invoices, and enrolment. There is no separate WordPress, WooCommerce, or Shopify front end to host or sync.
 
 <a name="existing"></a>
 ## Can I sell my existing Moodle courses?
 
-Yes. You attach commerce to courses you already have — set a price, and buyers are auto-enrolled on payment. You can also group courses into **bundles** and **programs**. See [Products & Pricing](/{{route}}/{{version}}/modern-commerce/products-and-pricing).
+Yes. You attach commerce to courses you already have: set a price, and buyers are auto-enrolled on payment. You can also group courses into **bundles** and **programs**. See [Products & Pricing](/{{route}}/{{version}}/modern-commerce/products-and-pricing).
 
 <a name="seats"></a>
 ## Can I sell seats to a company or team?
@@ -52,7 +52,7 @@ No companion Moodle plugin is required. The package does require its Composer de
 <a name="subs"></a>
 ## Does it do subscriptions / memberships?
 
-Yes — a full subscription subsystem: plans, trials, renewals, grace periods, plan changes, access sync, subscription keys, and lifecycle emails. See [Subscriptions](/{{route}}/{{version}}/modern-commerce/subscriptions).
+Yes. Modern Commerce includes a full subscription subsystem with plans, trials, renewals, grace periods, plan changes, access sync, subscription keys, and lifecycle emails. See [Subscriptions](/{{route}}/{{version}}/modern-commerce/subscriptions).
 
 <a name="gdpr"></a>
 ## How is personal data / GDPR handled?

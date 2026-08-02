@@ -172,7 +172,7 @@ Edwiser is not assigned a three-year total because the current live plan selecto
 
 ### Cost categories beyond licences
 
-Every proposal should explicitly cost hosting and capacity, installation and configuration, course/product migration, theme and storefront work, gateway onboarding, tax and invoice compliance, upgrades and security, backups and monitoring, synchronization incident response, staff training, support, and processor fees. ModernCommerce's economic advantage is removal of the recurring platform licence, separate WordPress estate, and bridge operations—not a claim that professional implementation and reliable operations are cost-free.
+Every proposal should explicitly cost hosting and capacity, installation and configuration, course/product migration, theme and storefront work, gateway onboarding, tax and invoice compliance, upgrades and security, backups and monitoring, synchronization incident response, staff training, support, and processor fees. ModernCommerce's economic advantage is the removal of the recurring platform licence, separate WordPress estate, and bridge operations. It is not a claim that professional implementation and reliable operations are cost-free.
 
 Pricing sources:
 

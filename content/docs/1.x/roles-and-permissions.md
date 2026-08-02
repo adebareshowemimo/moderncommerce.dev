@@ -98,7 +98,7 @@ viewsubscriptionreports, managesubscriptionfeatures
 
 This role can manage the dashboard, orders, customers, invoices, products, prices, categories, bundles/programs, coupons, course/bundle keys, storefront, reviews, contacts, newsletter, email templates, settings, branding, gateways, webhooks, refunds, audit evidence, notifications and the subscription subsystem.
 
-It does **not** automatically receive Moodle's core `moodle/site:config` capability. Therefore pages explicitly reserved for site configuration—such as the Add-ons or Components inventory—still require a site administrator or an additional carefully granted Moodle capability. Optional add-ons can also require their own component capabilities.
+It does **not** automatically receive Moodle's core `moodle/site:config` capability. Therefore, pages explicitly reserved for site configuration, such as the Add-ons or Components inventory, still require a site administrator or an additional carefully granted Moodle capability. Optional add-ons can also require their own component capabilities.
 
 The preset intentionally excludes buyer/learner capabilities. A staff user normally receives those through Moodle's authenticated-user role.
 

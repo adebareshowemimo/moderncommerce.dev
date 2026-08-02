@@ -1,6 +1,6 @@
 # Database reference
 
-The clean-install schema in `db/install.xml` defines **81 tables**. Moodle applies the configured `$CFG->prefix`; names below are the XMLDB logical names. Do not edit these tables directly in normal operations—use pages, external functions and owning services so validation, events and audit records remain consistent.
+The clean-install schema in `db/install.xml` defines **81 tables**. Moodle applies the configured `$CFG->prefix`; names below are the XMLDB logical names. Do not edit these tables directly in normal operations, use pages, external functions and owning services so validation, events and audit records remain consistent.
 
 ## Catalogue and merchandising
 

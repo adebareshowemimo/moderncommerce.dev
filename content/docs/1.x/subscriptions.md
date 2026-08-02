@@ -1,4 +1,4 @@
-# Modern Commerce — Subscriptions
+# Modern Commerce: Subscriptions
 
 ---
 
@@ -18,12 +18,12 @@ Modern Commerce includes a full subscription subsystem for recurring access: pla
 
 Admin pages:
 
-- `/local/moderncommerce/admin/subscriptions.php` — plans and subscriptions.
-- `/local/moderncommerce/admin/subscription_features.php` — feature matrix.
-- `/local/moderncommerce/admin/subscription_plan_access.php?id=ID` — access rules for a plan.
-- `/local/moderncommerce/admin/subscription_subscribers.php` — subscribers.
-- `/local/moderncommerce/admin/subscription_keys.php` — subscription keys.
-- `/local/moderncommerce/admin/subscription_emails.php` — lifecycle emails.
+- `/local/moderncommerce/admin/subscriptions.php`: plans and subscriptions.
+- `/local/moderncommerce/admin/subscription_features.php`: feature matrix.
+- `/local/moderncommerce/admin/subscription_plan_access.php?id=ID`: access rules for a plan.
+- `/local/moderncommerce/admin/subscription_subscribers.php`: subscribers.
+- `/local/moderncommerce/admin/subscription_keys.php`: subscription keys.
+- `/local/moderncommerce/admin/subscription_emails.php`: lifecycle emails.
 
 <a name="plan"></a>
 ## Create a plan
@@ -35,7 +35,7 @@ Admin pages:
 5. Preview the public subscribe flow.
 6. Test activation and access sync with a real account.
 
-> {warning} Configure subscription **lifecycle emails** and **subscription settings** before selling subscription products — see [Notifications](/{{route}}/{{version}}/modern-commerce/notifications) and [Admin Settings Reference](/{{route}}/{{version}}/modern-commerce/admin-settings).
+> {warning} Configure subscription **lifecycle emails** and **subscription settings** before selling subscription products: see [Notifications](/{{route}}/{{version}}/modern-commerce/notifications) and [Admin Settings Reference](/{{route}}/{{version}}/modern-commerce/admin-settings).
 
 <a name="trials"></a>
 ## Trials
@@ -66,7 +66,7 @@ Access granted by a subscription is reconciled against Moodle enrolment by a **s
 <a name="keys"></a>
 ## Subscription keys
 
-Use **subscription keys** when a learner should activate a plan without going through online checkout — for example prepaid or corporate activation. Manage them at `/local/moderncommerce/admin/subscription_keys.php`. See [Coupons & Keys](/{{route}}/{{version}}/modern-commerce/coupons-and-keys).
+Use **subscription keys** when a learner should activate a plan without going through online checkout: for example prepaid or corporate activation. Manage them at `/local/moderncommerce/admin/subscription_keys.php`. See [Coupons & Keys](/{{route}}/{{version}}/modern-commerce/coupons-and-keys).
 
 <a name="emails"></a>
 ## Lifecycle emails

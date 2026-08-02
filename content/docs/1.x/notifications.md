@@ -1,4 +1,4 @@
-# Modern Commerce — Notifications
+# Modern Commerce: Notifications
 
 ---
 
@@ -18,10 +18,10 @@ Modern Commerce sends transactional, reminder, dunning, celebratory, marketing, 
 
 Admin pages:
 
-- `/local/moderncommerce/admin/email_templates.php` — template library and outgoing email controls.
-- `/local/moderncommerce/admin/notifications.php` — queue, operational settings, delivery checks.
-- `/local/moderncommerce/admin/contact_emails.php` — contact autoreply and staff notification.
-- `/local/moderncommerce/admin/subscription_emails.php` — subscription lifecycle emails.
+- `/local/moderncommerce/admin/email_templates.php`: template library and outgoing email controls.
+- `/local/moderncommerce/admin/notifications.php`: queue, operational settings, delivery checks.
+- `/local/moderncommerce/admin/contact_emails.php`: contact autoreply and staff notification.
+- `/local/moderncommerce/admin/subscription_emails.php`: subscription lifecycle emails.
 
 <a name="queue"></a>
 ## The notification queue
@@ -33,8 +33,8 @@ Notifications are written to a **queue** and processed by scheduled tasks that d
 
 Two related surfaces work together inside `email_templates.php`:
 
-- **Template library** — reusable branded content. Each template has a name, stable key, type (`transactional`, `reminder`, `dunning`, `celebratory`, `marketing`, `operational`), status, subject, and body. Bundled templates are protected — **clone** one before customizing.
-- **Outgoing email events** — the actual commerce events (order confirmation, receipt, enrolment, refund, etc.). For each event you enable/disable it, pick a reusable template, and optionally override subject/body.
+- **Template library:** reusable branded content. Each template has a name, stable key, type (`transactional`, `reminder`, `dunning`, `celebratory`, `marketing`, `operational`), status, subject, and body. Bundled templates are protected, so **clone** one before customizing.
+- **Outgoing email events**: the actual commerce events (order confirmation, receipt, enrolment, refund, etc.). For each event you enable/disable it, pick a reusable template, and optionally override subject/body.
 
 > {primary} Only `marketing` templates are marketing-suppressible; keep transactional emails active. Marketing emails should include `{unsubscribe_url}`.
 
@@ -57,15 +57,15 @@ Operational alerts can also be delivered to **Slack** and **Microsoft Teams** vi
 
 Several automated flows run on cron:
 
-- **Abandoned-cart recovery** — an hourly task sends recovery notifications for carts left at checkout.
-- **Payment reminders** — sent twice daily for unpaid orders.
-- **Notification digests** — batched daily.
-- **Daily scan** — dispatches invoice/admin notification scans.
+- **Abandoned-cart recovery**: an hourly task sends recovery notifications for carts left at checkout.
+- **Payment reminders**: sent twice daily for unpaid orders.
+- **Notification digests**: batched daily.
+- **Daily scan**: dispatches invoice/admin notification scans.
 
 <a name="contact"></a>
 ## Contact & newsletter
 
-Public contact submissions and newsletter signups are stored and manageable from the admin (`contacts.php`, `newsletter_subscribers.php`). Contact emails support an **autoreply** to the sender and an **admin notification** to staff, each with its own template or custom override. Note that newsletter signup storage is separate from marketing suppression — marketing templates should still carry `{unsubscribe_url}`.
+Public contact submissions and newsletter signups are stored and manageable from the admin (`contacts.php`, `newsletter_subscribers.php`). Contact emails support an **autoreply** to the sender and an **admin notification** to staff, each with its own template or custom override. Note that newsletter signup storage is separate from marketing suppression: marketing templates should still carry `{unsubscribe_url}`.
 
 <a name="test"></a>
 ## Testing & go-live

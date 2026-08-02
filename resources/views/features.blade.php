@@ -39,7 +39,7 @@
         ['One connected checkout', 'Resolve product availability, current price, discounts, stock, buyer permissions and gateway readiness before payment.'],
         ['Configurable buyer fields', 'Hide, request or require phone and billing-address fields according to invoicing, tax and support needs.'],
         ['Coupon-aware totals', 'Preserve discount and tax adjustments with the order so historical documents do not depend on later coupon edits.'],
-        ['Single active currency', 'Choose one of 21 supported store currencies with configured symbol position and decimal formatting.'],
+        ['Single active currency', 'Choose one of 18 supported store currencies with configured symbol position and decimal formatting.'],
         ['Inclusive or exclusive tax', 'Configure tax treatment and carry calculated tax into order and document records.'],
         ['Inventory reservations', 'Protect limited offers during checkout and release stale reservations through cleanup workflows.'],
         ['Abandoned-cart state', 'Retain the evidence needed for cleanup and consent-aware recovery communication.'],
@@ -205,7 +205,7 @@
         <div class="col-lg-8">
           <p class="mc-section-label">Complete capability reference</p>
           <h1 class="display-3">Every feature required to sell, fulfil, and operate a modern ecommerce business for training, eLearning courses, and digital products.</h1>
-          <p class="lead mt-4">ModernCommerce covers the complete path from merchandising and checkout to verified payment, Moodle enrolment, recurring access, finance operations, customer service, analytics, and governance—inside one open-source Moodle plugin.</p>
+          <p class="lead mt-4">ModernCommerce covers the complete path from merchandising and checkout to verified payment, Moodle enrolment, recurring access, finance operations, customer service, analytics, and governance, inside one open-source Moodle plugin.</p>
           <div class="d-grid d-sm-flex gap-3 mt-4"><a class="btn btn-primary btn-lg" href="{{ config('app.demo_url') }}">Explore the live product</a><a class="btn btn-outline-primary btn-lg" href="{{ route('docs.show', 'feature-reference') }}">Open the technical reference</a></div>
         </div>
         <div class="col-lg-4"><div class="mc-feature-version"><span>Source reviewed</span><strong>ModernCommerce 2.1.6</strong><small>1 August 2026 · Moodle 5.2 · PHP 8.3+</small></div></div>
@@ -251,7 +251,7 @@
     <section class="mc-section mc-feature-boundaries"><div class="container"><div class="row gx-4 gy-5">
       <div class="col-lg-5"><p class="mc-section-label">Important operating boundaries</p><h2 class="display-5">A serious feature reference also explains what the product does not hide.</h2><p class="lead">These boundaries matter when evaluating production fit and total operating responsibility.</p></div>
       <div class="col-lg-7"><div class="mc-product-pillars">
-        <article><h3>One active store currency</h3><p>ModernCommerce supports 21 currencies, but each store operates one active currency at a time; it is not simultaneous multi-currency.</p></article>
+        <article><h3>One active store currency</h3><p>ModernCommerce supports 18 currencies, but each store operates one active currency at a time; it is not simultaneous multi-currency.</p></article>
         <article><h3>Your gateway accounts</h3><p>Stripe, PayPal, Paystack and Flutterwave require merchant accounts and credentials owned by your organization.</p></article>
         <article><h3>Cron is operational infrastructure</h3><p>Renewals, expiry, notifications, recovery, cleanup and report snapshots require Moodle cron every minute in production.</p></article>
         <article><h3>Open source still needs ownership</h3><p>GPL access removes platform lock-in; it does not replace secure hosting, backups, monitoring, upgrades, testing and accountable staff.</p></article>

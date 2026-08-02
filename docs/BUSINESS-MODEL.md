@@ -87,12 +87,12 @@ Agunfon Interactivity LLC, USA sustains development through optional services ra
 
 Approved commercial offers:
 
-1. **Implementation** — installation, configuration, storefront setup, gateway setup, migration, testing, and launch assistance.
-2. **Customization and integration** — organization-specific workflows, add-ons, gateway work, reporting, and systems integration.
-3. **Priority support** — defined response expectations, upgrade guidance, production troubleshooting, and release compatibility assistance.
-4. **Managed operations** — hosting coordination, monitoring, backups, updates, and operational support when the service scope is ready.
-5. **Training and onboarding** — administrator, finance, support, and development-team enablement.
-6. **Sponsorship or funded development** — community-visible feature work with scope and licensing agreed before development.
+1. **Implementation**: installation, configuration, storefront setup, gateway setup, migration, testing, and launch assistance.
+2. **Customization and integration**: organization-specific workflows, add-ons, gateway work, reporting, and systems integration.
+3. **Priority support**: defined response expectations, upgrade guidance, production troubleshooting, and release compatibility assistance.
+4. **Managed operations**: hosting coordination, monitoring, backups, updates, and operational support when the service scope is ready.
+5. **Training and onboarding**: administrator, finance, support, and development-team enablement.
+6. **Sponsorship or funded development**: community-visible feature work with scope and licensing agreed before development.
 
 Do not invent fixed tiers, SLA promises, or public prices before delivery scope and operating capacity are approved. Service pricing may be project-based or subscription-based; the software itself remains GPL licensed.
 

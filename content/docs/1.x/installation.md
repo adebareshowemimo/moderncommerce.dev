@@ -1,4 +1,4 @@
-# Modern Commerce — Installation
+# Modern Commerce: Installation
 
 ---
 
@@ -25,7 +25,7 @@ Copy the plugin so its path is:
 local/moderncommerce
 ```
 
-> {warning} The folder must be named `moderncommerce` — Moodle derives the component `local_moderncommerce` from it.
+> {warning} The folder must be named `moderncommerce`: Moodle derives the component `local_moderncommerce` from it.
 
 <a name="composer"></a>
 ## Install PHP dependencies (Composer)
@@ -53,7 +53,7 @@ Then confirm the plugin appears under:
 <a name="seed"></a>
 ## Seed install defaults
 
-On a **new** site, seed safe starting defaults — gateway records, email templates, storefront widgets, and the role presets — before you configure anything:
+On a **new** site, seed safe starting defaults, including gateway records, email templates, storefront widgets, and role presets, before you configure anything:
 
 ```bash
 php local/moderncommerce/cli/demo_data.php --install-defaults
@@ -66,15 +66,15 @@ php local/moderncommerce/cli/demo_data.php --install-defaults
 
 Open the day-to-day store settings at **Modern Commerce → Settings** (`/local/moderncommerce/admin/settings.php`) and set at least:
 
-1. **Store identity** — business name and support email.
-2. **Currency** — pick the active store currency **before** creating any prices (default NGN).
-3. **Tax** — mode and default rate, before opening checkout.
-4. **Payment gateways** — connect at least one merchant account (see [Payments](/{{route}}/{{version}}/modern-commerce/payments)).
+1. **Store identity**: business name and support email.
+2. **Currency**: pick the active store currency **before** creating any prices (default NGN).
+3. **Tax**: mode and default rate, before opening checkout.
+4. **Payment gateways**: connect at least one merchant account (see [Payments](/{{route}}/{{version}}/modern-commerce/payments)).
 5. **Checkout fields**, **navigation labels**, and **notification** sender/support details.
 
 Deeper configuration (webhook security, notification delivery channels, branding seeds, subscription defaults) lives in Moodle's native plugin settings under **Site administration → Plugins → Local plugins → Modern Commerce**. Both surfaces write to the same config store. See the [Admin Settings Reference](/{{route}}/{{version}}/modern-commerce/admin-settings).
 
-> {warning} **Confirm cron is running** — nothing in the notification, subscription, or reporting pipeline works without it.
+> {warning} **Confirm cron is running**: nothing in the notification, subscription, or reporting pipeline works without it.
 
 <a name="verify"></a>
 ## Verify the install
@@ -90,7 +90,7 @@ Deeper configuration (webhook security, notification delivery channels, branding
 <a name="uninstall"></a>
 ## Uninstalling
 
-Uninstall from **Site administration → Plugins → Plugins overview → Modern Commerce → Uninstall**. This removes the plugin and its data. **Export any orders, invoices, or reports you need to keep first** — see [Orders, Invoices & Refunds](/{{route}}/{{version}}/modern-commerce/orders-invoices-refunds).
+Uninstall from **Site administration → Plugins → Plugins overview → Modern Commerce → Uninstall**. This removes the plugin and its data. **Export any orders, invoices, or reports you need to keep first**: see [Orders, Invoices & Refunds](/{{route}}/{{version}}/modern-commerce/orders-invoices-refunds).
 
 ## Where to go next
 

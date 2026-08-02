@@ -1,4 +1,4 @@
-# Modern Commerce — Complete Feature Reference
+# Modern Commerce: Complete Feature Reference
 
 ---
 
@@ -104,7 +104,7 @@ See [Storefront & Widgets](/{{route}}/{{version}}/modern-commerce/storefront) an
 | Order placement | Checkout service | `purchase` | Validates the request and creates/continues a durable order before gateway redirection. |
 | Configurable contact fields | Settings → checkout | `managesettings` | Hides, requests or requires phone, address, city, state, country and postal code. |
 | Coupon totals | Cart/checkout | `purchase` | Validates code state, dates, usage limits, targets and context before preserving adjustments. |
-| Single active currency | Settings → currency | `managesettings` | Selects one of 21 supported currencies plus symbol position and decimals; not simultaneous multi-currency. |
+| Single active currency | Settings → currency | `managesettings` | Selects one of 18 supported currencies plus symbol position and decimals; not simultaneous multi-currency. |
 | Tax | Settings → tax/documents | `managesettings` | Supports inclusive or exclusive treatment and records the calculated tax with the order. |
 | Stale cart cleanup | Moodle cron | Scheduled task | Cleans old carts and releases applicable stale state. |
 
@@ -305,7 +305,7 @@ See [Web Services & Events](/{{route}}/{{version}}/modern-commerce/web-services-
 | Boundary | What it means for evaluation |
 |---|---|
 | Moodle 5.2 and PHP 8.3+ | The documented release targets this platform floor; verify the installed release before upgrading Moodle or PHP. |
-| One active store currency | Choose from 21 supported currencies, but do not promise simultaneous multi-currency checkout/reporting. |
+| One active store currency | Choose from 18 supported currencies, but do not promise simultaneous multi-currency checkout/reporting. |
 | Merchant-owned gateway accounts | The organization supplies credentials and accepts provider fees, settlement rules and account obligations. |
 | HTTPS for live payment operations | Production callbacks, webhooks and buyer trust require a correctly secured site. |
 | Cron every minute | Renewal, expiry, notifications, recovery, cleanup and reporting depend on working Moodle cron. |

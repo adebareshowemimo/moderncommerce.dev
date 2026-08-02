@@ -10,7 +10,7 @@ class DocumentationTest extends TestCase
     {
         $this->get('/docs/1.x/overview')
             ->assertOk()
-            ->assertSee('Modern Commerce — Overview')
+            ->assertSee('Modern Commerce: Overview')
             ->assertSee('GPL-3.0-or-later')
             ->assertDontSee('Modern Commerce Commercial License')
             ->assertDontSee('{{route}}')

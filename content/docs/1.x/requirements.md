@@ -1,4 +1,4 @@
-# Modern Commerce — Requirements
+# Modern Commerce: Requirements
 
 ---
 
@@ -27,7 +27,7 @@ Modern Commerce targets Moodle **5.2** specifically. It is not a multi-version p
 ## Server requirements
 
 - **PHP 8.3 or later.**
-- **HTTPS in production** — required for payment gateway redirects and webhooks to work reliably and securely.
+- **HTTPS in production**: required for payment gateway redirects and webhooks to work reliably and securely.
 - **Composer** available during installation or packaging to install the plugin's PHP dependencies. See [Installation](/{{route}}/{{version}}/modern-commerce/installation).
 
 <a name="cron"></a>
@@ -49,15 +49,15 @@ To take live payments you connect **your own merchant accounts** for one or more
 
 You provide each provider's API keys/secrets in the gateway admin; card capture happens **on the gateway**, not inside Moodle.
 
-> {warning} There is **no sale until at least one gateway is configured**. Set one up before opening checkout — see [Payments](/{{route}}/{{version}}/modern-commerce/payments).
+> {warning} There is **no sale until at least one gateway is configured**. Set one up before opening checkout: see [Payments](/{{route}}/{{version}}/modern-commerce/payments).
 
 <a name="optional"></a>
 ## Optional external services
 
 These are optional and off until you configure them:
 
-- **Slack** and **Microsoft Teams** incoming webhooks — for operational store alerts.
-- **Google reCAPTCHA** — spam protection on the public contact and newsletter forms. Modern Commerce reads Moodle's **core** reCAPTCHA keys; it stores no separate keys.
+- **Slack** and **Microsoft Teams** incoming webhooks: for operational store alerts.
+- **Google reCAPTCHA**: spam protection on the public contact and newsletter forms. Modern Commerce reads Moodle's **core** reCAPTCHA keys; it stores no separate keys.
 
 <a name="dependencies"></a>
 ## Dependencies
