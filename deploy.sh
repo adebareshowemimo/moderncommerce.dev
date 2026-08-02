@@ -9,6 +9,7 @@ DEPLOY_SKIP_GIT="${DEPLOY_SKIP_GIT:-0}"
 DEPLOY_SKIP_BUILD="${DEPLOY_SKIP_BUILD:-0}"
 DEPLOY_HEALTHCHECK_URL="${DEPLOY_HEALTHCHECK_URL:-}"
 ALLOW_NON_PRODUCTION="${ALLOW_NON_PRODUCTION:-0}"
+DEPLOY_RUNTIME_GROUP="${DEPLOY_RUNTIME_GROUP:-}"
 MAINTENANCE_ACTIVE=0
 
 [[ -d "$DEPLOY_ROOT" ]] || {
@@ -31,6 +32,54 @@ log() {
 fail() {
     printf '\nDeployment failed: %s\n' "$*" >&2
     exit 1
+}
+
+detect_runtime_group() {
+    if [[ -n "$DEPLOY_RUNTIME_GROUP" ]]; then
+        getent group "$DEPLOY_RUNTIME_GROUP" >/dev/null 2>&1 || fail "Runtime group does not exist: $DEPLOY_RUNTIME_GROUP"
+        return
+    fi
+
+    local candidate
+    for candidate in www-data nginx apache; do
+        if getent group "$candidate" >/dev/null 2>&1; then
+            DEPLOY_RUNTIME_GROUP="$candidate"
+            return
+        fi
+    done
+
+    DEPLOY_RUNTIME_GROUP="$(id -gn)"
+}
+
+prepare_runtime_directories() {
+    local deploy_user
+    deploy_user="$(id -un)"
+
+    detect_runtime_group
+
+    log "Preparing Laravel runtime directories for group $DEPLOY_RUNTIME_GROUP"
+    mkdir -p \
+        storage/app/private \
+        storage/app/public \
+        storage/framework/cache/data \
+        storage/framework/sessions \
+        storage/framework/views \
+        storage/logs \
+        bootstrap/cache
+
+    if [[ "$(id -gn)" != "$DEPLOY_RUNTIME_GROUP" ]]; then
+        if [[ "$(id -u)" == "0" ]]; then
+            chown -R "$deploy_user:$DEPLOY_RUNTIME_GROUP" storage bootstrap/cache
+        elif ! chgrp -R "$DEPLOY_RUNTIME_GROUP" storage bootstrap/cache 2>/dev/null; then
+            fail "Cannot assign runtime group $DEPLOY_RUNTIME_GROUP. Run the deployment with sufficient privileges or set DEPLOY_RUNTIME_GROUP to a shared group."
+        fi
+    fi
+
+    find storage bootstrap/cache -type d -exec chmod 2775 {} +
+    find storage bootstrap/cache -type f -exec chmod 0664 {} +
+
+    [[ -w storage/framework/views ]] || fail "storage/framework/views is not writable by the deployment user."
+    [[ -w bootstrap/cache ]] || fail "bootstrap/cache is not writable by the deployment user."
 }
 
 restore_application() {
@@ -72,6 +121,8 @@ if [[ "$DEPLOY_SKIP_GIT" != "1" ]]; then
     git fetch --prune origin "$DEPLOY_BRANCH"
     git pull --ff-only origin "$DEPLOY_BRANCH"
 fi
+
+prepare_runtime_directories
 
 log "Installing production PHP dependencies"
 composer install \

@@ -48,6 +48,18 @@ php artisan config:clear
 
 The page will replace both setup-state labels with the live **Support on Ko-fi** action. Commercial and technical support remain separate at `/support`.
 
+## Production runtime permissions
+
+Laravel must be able to write compiled views, cache data, sessions, and logs beneath `storage/`, and cached configuration beneath `bootstrap/cache/`. The deployment script creates these directories, assigns their shared group, and enables inherited group-write permissions before Composer or Artisan runs.
+
+On Debian or Ubuntu, the script automatically uses `www-data` when that group exists. For another PHP-FPM or web-server group, set it explicitly:
+
+```bash
+sudo DEPLOY_RUNTIME_GROUP=nginx ./deploy.sh
+```
+
+If production reports that `tempnam()` created a file in the system temporary directory, the configured PHP runtime cannot write to the intended Laravel cache directory. Run the deployment script with sufficient permission to correct the group ownership, then restart PHP-FPM if the warning persists.
+
 ## Recommended implementation sequence
 
 1. Confirm the public GitHub repository, documentation, demo, roadmap, and support URLs.
