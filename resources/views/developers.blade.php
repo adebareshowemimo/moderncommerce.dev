@@ -193,5 +193,6 @@ composer --working-dir=local/moderncommerce run mc:check-fast</code></pre>
     <section class="pb-5">
       <div class="container"><div class="mc-final-cta text-center"><p class="mc-section-label">Start with a working transaction</p><h2 class="display-3">Install it. Trace it. Then extend it.</h2><p class="lead mx-auto">Complete a sandbox purchase before designing an integration so you can see the order, payment, enrolment, invoice, and event lifecycle together.</p><div class="d-grid d-sm-flex justify-content-center gap-3 mt-4"><a class="btn btn-light btn-lg" href="{{ route('docs.show', 'quick-start') }}">Open the quick start</a><a class="btn btn-outline-light btn-lg" href="{{ route('docs.show', 'web-services-and-events') }}">Explore services and events</a></div></div></div>
     </section>
+    <x-support-development-callout heading="Give maintainers time to test, document, and ship." copy="Support the unglamorous work behind stable Moodle APIs, upgrade safety, extension contracts, examples, and dependable releases." />
   </main>
 </x-marketing-layout>

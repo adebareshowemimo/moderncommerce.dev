@@ -259,5 +259,6 @@
     </div></div></section>
 
     <section class="pb-5"><div class="container"><div class="mc-final-cta text-center"><p class="mc-section-label">Evaluate the complete system</p><h2 class="display-3">Trace a real sale from catalogue to course access.</h2><p class="lead mx-auto">Use the demo for product evidence and the technical reference for configuration, permissions, routes, data and operational boundaries.</p><div class="d-grid d-sm-flex justify-content-center gap-3 mt-4"><a class="btn btn-light btn-lg" href="{{ config('app.demo_url') }}">Explore the demo</a><a class="btn btn-outline-light btn-lg" href="{{ route('docs.show', 'feature-reference') }}">Read the feature reference</a></div></div></div></section>
+    <x-support-development-callout heading="Help maintain the features your Moodle store depends on." copy="Support ongoing compatibility, regression testing, accessibility, security work, and careful improvements across the complete commerce lifecycle." />
   </main>
 </x-marketing-layout>

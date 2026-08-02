@@ -33,6 +33,38 @@ class SupportPagesTest extends TestCase
             ->assertSee('/support', false);
     }
 
+    public function test_development_support_is_promoted_in_the_global_navigation_and_open_source_hero(): void
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('mc-support-project-action', false)
+            ->assertSee('Support development');
+
+        $this->get('/open-source')
+            ->assertOk()
+            ->assertSee('<a class="btn btn-outline-primary btn-lg" href="'.route('support-development').'">Support development</a>', false);
+    }
+
+    public function test_contextual_development_support_messages_appear_across_the_site(): void
+    {
+        $messages = [
+            '/' => 'Keep open-source Moodle commerce moving.',
+            '/product' => 'Fund the infrastructure behind every transaction.',
+            '/features' => 'Help maintain the features your Moodle store depends on.',
+            '/compare' => 'Back an open alternative with no platform tax.',
+            '/developers' => 'Give maintainers time to test, document, and ship.',
+            '/roadmap' => 'Help turn priorities into maintained releases.',
+            '/docs/1.x/overview' => 'Keep the documentation aligned with every release.',
+        ];
+
+        foreach ($messages as $path => $message) {
+            $this->get($path)
+                ->assertOk()
+                ->assertSee($message)
+                ->assertSee('Support development');
+        }
+    }
+
     public function test_configured_kofi_url_becomes_the_funding_action(): void
     {
         config()->set('app.kofi_url', 'https://ko-fi.com/moderncommerce');

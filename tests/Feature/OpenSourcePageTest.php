@@ -17,7 +17,9 @@ class OpenSourcePageTest extends TestCase
             ->assertSee('81')
             ->assertSee('36')
             ->assertSee('17')
-            ->assertSee('A public repository URL is not yet configured')
+            ->assertSee('https://github.com/adebareshowemimo/moderncommerce.dev', false)
+            ->assertSee('https://github.com/adebareshowemimo/moderncommerce.dev/issues', false)
+            ->assertDontSee('A public repository URL is not yet configured')
             ->assertSee('independent Moodle plugin by Agunfon Interactivity LLC, USA')
             ->assertDontSee('Page foundation ready')
             ->assertDontSee('Modern Commerce Commercial License');

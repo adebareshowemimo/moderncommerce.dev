@@ -78,5 +78,6 @@
         </div>
       </div>
     </section>
+    <x-support-development-callout heading="Keep the documentation aligned with every release." copy="Support the source review, examples, compatibility checks, and editing required to keep implementation guidance accurate as Moodle evolves." />
   </main>
 </x-marketing-layout>

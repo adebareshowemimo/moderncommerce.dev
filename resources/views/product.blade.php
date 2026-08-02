@@ -30,5 +30,6 @@
     </div></section>
 
     <section class="pb-5"><div class="container"><div class="mc-final-cta text-center"><p class="mc-section-label">The best open-source course-selling plugin for Moodle</p><h2 class="display-3">Sell the course. Enrol the learner. Govern the lifecycle.</h2><p class="lead mx-auto">Evaluate the real product, review the documentation, and compare the complete operating model.</p><div class="d-grid d-sm-flex justify-content-center gap-3 mt-4"><a class="btn btn-light btn-lg" href="{{ config('app.demo_url') }}">Explore the demo</a><a class="btn btn-outline-light btn-lg" href="{{ route('docs.show', 'overview') }}">Read the documentation</a></div></div></div></section>
+    <x-support-development-callout heading="Fund the infrastructure behind every transaction." copy="Your support gives maintainers more time to strengthen checkout, payments, enrolment, subscriptions, and the operational workflows around them." />
   </main>
 </x-marketing-layout>

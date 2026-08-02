@@ -37,5 +37,6 @@
       <div class="col-lg-6"><p class="mc-section-label">Influence the roadmap</p><h2 class="display-4">Bring evidence that maintainers can act on.</h2><p class="lead">Describe the Moodle context, user outcome, current behavior, reproduction steps, affected version, operational impact, and a safe definition of done.</p><div class="d-flex flex-wrap gap-3 mt-4"><a class="btn btn-primary" href="https://github.com/adebareshowemimo/moodle-local_moderncommerce/issues" rel="external">Review GitHub issues</a><a class="btn btn-outline-primary" href="{{ route('developers') }}">Developer guidance</a></div></div>
       <div class="col-lg-5 offset-lg-1"><div class="mc-roadmap-boundary"><strong>A roadmap is not a contract</strong><p>Items may change when source constraints, Moodle APIs, security findings, compatibility requirements, contributor availability, or stronger evidence changes the right solution.</p><a href="{{ route('support-development') }}">Learn how to support development</a></div></div>
     </div></div></section>
+    <x-support-development-callout heading="Help turn priorities into maintained releases." copy="Funding expands the time available for compatibility, payment resilience, documentation, and careful delivery—not promises or private control of the roadmap." />
   </main>
 </x-marketing-layout>

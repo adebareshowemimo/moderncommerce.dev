@@ -202,5 +202,6 @@
       </ul>
       <p class="mt-3 mb-0">The ModernCommerce baseline was verified directly against the current plugin's schema, payment classes, service registry, scheduled tasks, permissions, role presets, privacy provider, admin routes, and versioned documentation.</p>
     </div></div></section>
+    <x-support-development-callout heading="Back an open alternative with no platform tax." copy="Voluntary funding helps ModernCommerce remain inspectable, self-hosted, and available without a recurring software licence or revenue share." />
   </main>
 </x-marketing-layout>
