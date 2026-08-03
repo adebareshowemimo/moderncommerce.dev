@@ -1,66 +1,48 @@
-<x-marketing-layout title="ModernCommerce Support, Security & Implementation Help" description="Find ModernCommerce documentation, report Moodle ecommerce defects or security concerns, and discuss implementation, customization, training, or managed support.">
+<x-marketing-layout title="Professional ModernCommerce Support & Implementation" description="Hire Agunfon Interactivity for ModernCommerce implementation, migration, payment integration, customization, training, troubleshooting, upgrades, and managed support.">
   <main id="main-content">
     <section class="mc-page-hero mc-support-hero">
       <div class="container">
-        <div class="row gy-5 align-items-end">
-          <div class="col-lg-8">
-            <p class="mc-section-label">One support entry point</p>
-            <h1 class="display-2">Get the right help without guessing where to go.</h1>
-            <p class="lead mt-4">Use the documentation for product guidance, GitHub for reproducible software defects, private email for security concerns, and Agunfon Interactivity LLC, USA for scoped implementation and commercial support.</p>
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-7">
+            <p class="mc-section-label">Professional ModernCommerce services</p>
+            <h1 class="display-2">Bring ModernCommerce into production with expert support.</h1>
+            <p class="lead mt-4">Work with Agunfon Interactivity LLC, USA to plan, implement, customize, launch, and operate ModernCommerce in your Moodle environment.</p>
             <div class="d-grid d-sm-flex gap-3 mt-4">
-              <a class="btn btn-primary btn-lg" href="{{ route('docs.show', 'overview') }}">Open the documentation</a>
-              <a class="btn btn-outline-primary btn-lg" href="https://agunfoninteractivity.com/contact" rel="external">Discuss a project</a>
+              <a class="btn btn-primary btn-lg" href="https://agunfoninteractivity.com/contact" rel="external">Start a project</a>
+              <a class="btn btn-outline-primary btn-lg" href="mailto:support@agunfoninteractivity.com?subject=ModernCommerce%20professional%20services">Email the support team</a>
             </div>
+            <p class="mc-research-date mt-4 mb-0">Implementation · migration · custom development · training · managed support</p>
           </div>
-          <div class="col-lg-4">
-            <aside class="mc-support-assurance" aria-label="Support principles">
-              <span>Support principles</span>
-              <strong>Clear route. Clear responsibility.</strong>
-              <p>Community guidance remains open. Commercial response commitments begin only after scope, price, and service terms are agreed.</p>
+          <div class="col-lg-5">
+            <aside class="mc-support-assurance" aria-label="What to include in a project enquiry">
+              <span>Start with useful context</span>
+              <strong>Tell us what successful delivery looks like.</strong>
+              <p>Include your Moodle version, current commerce setup, required payment methods, desired launch window, known integrations, and the outcome your organization needs.</p>
             </aside>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mc-section pt-0">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-md-6 col-xl-3"><article class="mc-support-route h-100"><span>01 · Learn</span><h2>Self-service documentation</h2><p>Install, configure, operate, troubleshoot, and extend the current release using the source-backed versioned guides.</p><a href="{{ route('docs.show', 'quick-start') }}">Start with the quick guide →</a></article></div>
-          <div class="col-md-6 col-xl-3"><article class="mc-support-route h-100"><span>02 · Report</span><h2>Report a reproducible defect</h2><p>Search existing reports, document the environment and reproduction steps, and submit an ordinary software issue publicly.</p><a href="https://github.com/adebareshowemimo/moodle-local_moderncommerce/issues" rel="external">Open GitHub Issues →</a></article></div>
-          <div class="col-md-6 col-xl-3"><article class="mc-support-route h-100"><span>03 · Protect</span><h2>Report security concerns privately</h2><p>Do not disclose vulnerabilities, credentials, personal data, or sensitive logs in a public issue.</p><a href="mailto:support@agunfoninteractivity.com?subject=ModernCommerce%20security%20report">Email a security report →</a></article></div>
-          <div class="col-md-6 col-xl-3"><article class="mc-support-route h-100"><span>04 · Deliver</span><h2>Implementation and managed services</h2><p>Plan installation, migration, configuration, customization, training, production support, or ongoing operations.</p><a href="#commercial-support">Review professional services →</a></article></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mc-section mc-support-security">
-      <div class="container">
-        <div class="row gy-4 align-items-center">
-          <div class="col-lg-3"><p class="mc-section-label mb-lg-0">Security channel</p></div>
-          <div class="col-lg-6"><h2 class="h3">Sensitive reports stay private.</h2><p class="mb-0">Email <strong>support@agunfoninteractivity.com</strong> with the subject <code>ModernCommerce security report</code>. Include affected version, impact, reproduction details, and a safe way to contact you, but never send live credentials or unnecessary personal data.</p></div>
-          <div class="col-lg-3 text-lg-end"><a class="btn btn-light" href="mailto:support@agunfoninteractivity.com?subject=ModernCommerce%20security%20report">Prepare security email</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mc-section" id="commercial-support">
+    <section class="mc-section pt-0" id="commercial-support">
       <div class="container">
         <div class="row gy-5">
           <div class="col-lg-5">
-            <p class="mc-section-label">Professional services</p>
-            <h2 class="display-4">Bring the product into a real operating environment.</h2>
-            <p class="lead">Agunfon Interactivity LLC, USA provides optional professional services around the same GPL core. Engagements are scoped to the organization, environment, risk, and desired outcome.</p>
-            <p class="text-secondary">No public package implies an SLA, service window, fixed implementation duration, or managed-hosting responsibility until those terms are documented in an accepted proposal or agreement.</p>
+            <p class="mc-section-label">How we can help</p>
+            <h2 class="display-4">Professional services for the complete commerce lifecycle.</h2>
+            <p class="lead">Choose focused help for one delivery challenge or engage us across planning, launch, and ongoing operations.</p>
+            <p class="text-secondary">Every engagement is scoped around your Moodle environment, responsibilities, security requirements, integrations, timeline, and acceptance criteria.</p>
           </div>
           <div class="col-lg-7">
             <div class="mc-support-services">
-              <article><span>01</span><div><h3>Implementation and launch</h3><p>Compatibility review, installation, configuration, storefront setup, gateway sandboxing, test purchases, production readiness, and launch assistance.</p></div></article>
-              <article><span>02</span><div><h3>Customization and integration</h3><p>Organization-specific workflows, add-ons, gateway development, reporting, branding, data exchange, and Moodle ecosystem integration.</p></div></article>
-              <article><span>03</span><div><h3>Priority support</h3><p>Defined production-troubleshooting and upgrade-guidance arrangements established through an explicit service scope and response commitment.</p></div></article>
-              <article><span>04</span><div><h3>Managed operations</h3><p>Hosting coordination, monitoring, backups, updates, release validation, and operational support where responsibilities are agreed in writing.</p></div></article>
-              <article><span>05</span><div><h3>Training and onboarding</h3><p>Role-based enablement for administrators, product teams, finance operators, customer support, and developers.</p></div></article>
-              <article><span>06</span><div><h3>Funded development</h3><p>Scoped feature or integration work that contributes to the open-source project under agreed technical, delivery, and licensing terms.</p></div></article>
+              <article><span>01</span><div><h3>Implementation and launch</h3><p>Compatibility review, installation, configuration, gateway sandboxing, test purchases, production readiness, and launch assistance.</p></div></article>
+              <article><span>02</span><div><h3>Migration and data transition</h3><p>Plan the move from manual sales, another Moodle commerce plugin, or an external storefront while protecting product, customer, and operational continuity.</p></div></article>
+              <article><span>03</span><div><h3>Payment gateways and integrations</h3><p>Configure supported gateways or develop integrations with payment providers, business systems, reporting tools, and Moodle ecosystem services.</p></div></article>
+              <article><span>04</span><div><h3>Storefront and theme customization</h3><p>Adapt catalogue, product, checkout, account, email, and learner-facing experiences to your brand and commercial workflow.</p></div></article>
+              <article><span>05</span><div><h3>Custom features and development</h3><p>Build organization-specific workflows, add-ons, automation, reporting, fulfilment, and governed extensions to the GPL core.</p></div></article>
+              <article><span>06</span><div><h3>Upgrades and troubleshooting</h3><p>Investigate production problems, prepare Moodle and ModernCommerce upgrades, validate dependencies, and reduce release risk.</p></div></article>
+              <article><span>07</span><div><h3>Training and operational guidance</h3><p>Enable administrators, catalogue teams, finance operators, customer-support staff, and developers with role-specific guidance.</p></div></article>
+              <article><span>08</span><div><h3>Ongoing and managed support</h3><p>Establish agreed support, monitoring, maintenance, release validation, and operational responsibilities for your production environment.</p></div></article>
             </div>
           </div>
         </div>
@@ -70,21 +52,41 @@
     <section class="mc-section mc-support-process">
       <div class="container">
         <div class="row gy-5 align-items-start">
-          <div class="col-lg-4"><p class="mc-section-label">Engagement flow</p><h2 class="display-5">From need to accountable delivery.</h2></div>
+          <div class="col-lg-4"><p class="mc-section-label">How an engagement works</p><h2 class="display-5">From your requirement to accountable delivery.</h2><p class="text-secondary">Commercial response times, deliverables, and responsibilities begin when they are defined in an accepted proposal or service agreement.</p></div>
           <div class="col-lg-8"><ol class="row gy-4 list-unstyled mb-0">
-            <li class="col-md-6"><div><span>01</span><strong>Enquiry</strong><p>Share the organization, Moodle environment, business objective, urgency, and known constraints.</p></div></li>
-            <li class="col-md-6"><div><span>02</span><strong>Discovery</strong><p>Clarify technical fit, responsibilities, dependencies, risks, access, and acceptance criteria.</p></div></li>
-            <li class="col-md-6"><div><span>03</span><strong>Proposal</strong><p>Agree scope, deliverables, commercial terms, schedule, and any support or operational boundary.</p></div></li>
-            <li class="col-md-6"><div><span>04</span><strong>Delivery and handover</strong><p>Implement, verify, document, train, and transfer ownership, or begin an explicitly agreed ongoing service.</p></div></li>
+            <li class="col-md-6"><div><span>01</span><strong>Enquiry</strong><p>Share your Moodle environment, business objective, urgency, and known constraints.</p></div></li>
+            <li class="col-md-6"><div><span>02</span><strong>Discovery</strong><p>Clarify technical fit, dependencies, risks, responsibilities, and acceptance criteria.</p></div></li>
+            <li class="col-md-6"><div><span>03</span><strong>Proposal</strong><p>Agree the scope, deliverables, commercial terms, schedule, and support boundary.</p></div></li>
+            <li class="col-md-6"><div><span>04</span><strong>Delivery and handover</strong><p>Implement, verify, document, train, and transfer ownership—or begin an agreed ongoing service.</p></div></li>
           </ol></div>
         </div>
       </div>
     </section>
 
-    <section class="mc-section pt-0">
-      <div class="container"><div class="row g-4 mc-support-split">
-        <div class="col-lg-7"><div class="h-100"><p class="mc-section-label">Commercial help</p><h2>Need implementation or an operating partner?</h2><p>Contact Agunfon Interactivity with enough context to route the enquiry and prepare a useful discovery conversation.</p><div class="d-grid d-sm-flex gap-3"><a class="btn btn-primary" href="https://agunfoninteractivity.com/contact" rel="external">Contact Agunfon Interactivity</a><a class="btn btn-outline-primary" href="mailto:support@agunfoninteractivity.com?subject=ModernCommerce%20implementation%20enquiry">Email the support team</a></div></div></div>
-        <div class="col-lg-5"><div class="h-100"><p class="mc-section-label">Voluntary funding</p><h2>Want to sustain the open-source project?</h2><p>Project support is separate from purchasing implementation, priority support, managed services, or roadmap commitments.</p><a class="btn btn-outline-primary" href="{{ route('support-development') }}">Support development</a></div></div>
+    <section class="mc-section">
+      <div class="container">
+        <div class="row gy-5 mb-5 align-items-end">
+          <div class="col-lg-7"><p class="mc-section-label">Project resources</p><h2 class="display-4">Looking for community help instead?</h2></div>
+          <div class="col-lg-5"><p class="text-secondary mb-0">Documentation, ordinary bug reports, and responsible security disclosure remain available without purchasing professional services.</p></div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-md-4"><article class="mc-support-route h-100"><span>Learn</span><h3 class="h5">Read the documentation</h3><p>Install, configure, operate, troubleshoot, and extend the current release using versioned guides.</p><a href="{{ route('docs.show', 'quick-start') }}">Start with the quick guide →</a></article></div>
+          <div class="col-md-4"><article class="mc-support-route h-100"><span>Report</span><h3 class="h5">Submit a reproducible defect</h3><p>Search existing reports and document the environment, steps, expected result, and actual behaviour.</p><a href="https://github.com/adebareshowemimo/moodle-local_moderncommerce/issues" rel="external">Open GitHub Issues →</a></article></div>
+          <div class="col-md-4"><article class="mc-support-route h-100"><span>Protect</span><h3 class="h5">Report security concerns privately</h3><p>Never publish vulnerabilities, credentials, personal data, or sensitive production logs in a public issue.</p><a href="mailto:support@agunfoninteractivity.com?subject=ModernCommerce%20security%20report">Prepare a security email →</a></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-5">
+      <div class="container"><div class="mc-final-cta text-center">
+        <p class="mc-section-label">Work with the product team</p>
+        <h2 class="display-3">Tell us what you need ModernCommerce to deliver.</h2>
+        <p class="lead mx-auto">Start with your Moodle environment, commercial objective, required integrations, timeline, and the outcome you need.</p>
+        <div class="d-grid d-sm-flex justify-content-center gap-3 mt-4">
+          <a class="btn btn-light btn-lg" href="https://agunfoninteractivity.com/contact" rel="external">Contact Agunfon Interactivity</a>
+          <a class="btn btn-outline-light btn-lg" href="mailto:support@agunfoninteractivity.com?subject=ModernCommerce%20professional%20services">Email the support team</a>
+        </div>
+        <p class="mt-4 mb-0"><a class="link-light" href="{{ route('support-development') }}">Want to fund the open-source project instead?</a></p>
       </div></div>
     </section>
   </main>

@@ -72,7 +72,7 @@
             <a href="https://github.com/adebareshowemimo/moodle-local_moderncommerce/issues" rel="external"><span>Report</span><strong>Submit a reproducible issue</strong><small>Include version, environment, steps, expected result, actual result, and safe diagnostic evidence.</small></a>
             <a href="{{ route('docs.show', 'feature-reference') }}"><span>Review</span><strong>Improve technical documentation</strong><small>Identify unclear workflows, missing operational detail, or documentation that no longer matches source behaviour.</small></a>
             <a href="https://github.com/adebareshowemimo/moodle-local_moderncommerce" rel="external"><span>Build</span><strong>Contribute code and tests</strong><small>Start from the repository, preserve Moodle conventions, and accompany behavioural changes with verification.</small></a>
-            <a href="{{ route('support') }}"><span>Engage</span><strong>Fund scoped professional work</strong><small>Use the commercial route when you need deliverables, response commitments, customization, or managed operations.</small></a>
+            <a href="{{ route('support') }}#commercial-support"><span>Engage</span><strong>Hire professional ModernCommerce services</strong><small>Use the commercial route for implementation, migration, integrations, customization, training, troubleshooting, or managed support.</small></a>
           </div></div>
         </div>
       </div>
@@ -85,7 +85,7 @@
         @else
           <span class="btn btn-light btn-lg disabled" aria-disabled="true">Ko-fi setup in progress</span>
         @endif
-        <a class="btn btn-outline-light btn-lg" href="{{ route('support') }}">Need professional support?</a>
+        <a class="btn btn-outline-light btn-lg" href="{{ route('support') }}#commercial-support">Explore professional services</a>
       </div></div></div>
     </section>
   </main>

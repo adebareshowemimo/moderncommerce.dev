@@ -1,33 +1,33 @@
-<x-marketing-layout title="Moodle Ecommerce Comparison: ModernCommerce vs Alternatives" description="Compare ModernCommerce with Moodle payment enrolment, WooCommerce, LearnDash, Edwiser Bridge, LearnWorlds, and other course-selling approaches.">
+<x-marketing-layout title="Moodle Ecommerce Comparison: ModernCommerce vs Alternatives" description="Compare ModernCommerce with IOMAD, Moodle payment enrolment, WooCommerce, LearnDash, Edwiser Bridge, LearnWorlds, and other course-selling approaches.">
   <main id="main-content">
     <section class="mc-page-hero mc-compare-hero"><div class="container"><div class="row"><div class="col-xl-9">
       <p class="mc-section-label">Platform comparison</p>
       <h1 class="display-3">Why ModernCommerce is the best plugin for selling courses through Moodle.</h1>
-      <p class="lead mt-4">It is the only option in this comparison that combines a complete course storefront and commerce operation with Moodle remaining the learning system of record, without WordPress, a synchronization bridge, or hosted-platform migration.</p>
-      <p class="mc-research-date mb-0">Research reviewed 31 July 2026 · Official product and documentation sources</p>
+      <p class="lead mt-4">ModernCommerce concentrates on the complete course-selling operation inside Moodle. IOMAD also provides Moodle-native ecommerce, but its defining architecture is a multi-tenant Moodle distribution with company-specific administration, branding, licensing, and commerce.</p>
+      <p class="mc-research-date mb-0">Research updated 2 August 2026 · Official product and documentation sources</p>
     </div></div></div></section>
 
     <section class="mc-section pt-0 mc-route-summary"><div class="container">
       <div class="row justify-content-between align-items-end gy-3 mb-4">
-        <div class="col-lg-7"><p class="mc-section-label">Four ways to sell a Moodle course</p><h2 class="display-4">Compare what costs money, and what costs operational time.</h2></div>
+        <div class="col-lg-7"><p class="mc-section-label">Five ways to sell a Moodle course</p><h2 class="display-4">Compare what costs money, and what costs operational time.</h2></div>
         <div class="col-lg-4"><p class="text-secondary mb-0">A concise decision view for Moodle teams. The detailed product-by-product evidence follows below.</p></div>
       </div>
-      <div class="table-responsive mc-comparison-wrap" tabindex="0" aria-label="Scrollable summary comparison of four ways to sell Moodle courses">
+      <div class="table-responsive mc-comparison-wrap" tabindex="0" aria-label="Scrollable summary comparison of five ways to sell Moodle courses">
         <table class="table mc-comparison-table mc-route-table align-middle mb-0">
-          <thead><tr><th scope="col">Decision factor</th><th scope="col">Moodle payment enrolment</th><th scope="col">WordPress + WooCommerce bridge</th><th scope="col">Hosted SaaS LMS</th><th scope="col" class="mc-highlight-col">ModernCommerce</th></tr></thead>
+          <thead><tr><th scope="col">Decision factor</th><th scope="col">Moodle payment enrolment</th><th scope="col">IOMAD</th><th scope="col">WordPress + WooCommerce bridge</th><th scope="col">Hosted SaaS LMS</th><th scope="col" class="mc-highlight-col">ModernCommerce</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Runs entirely inside Moodle</th><td>Yes</td><td>No</td><td>No</td><td class="mc-highlight-col">Yes</td></tr>
-            <tr><th scope="row">Moodle remains the learning system</th><td>Yes</td><td>Yes</td><td>No, migration required</td><td class="mc-highlight-col">Yes</td></tr>
-            <tr><th scope="row">Additional application to operate</th><td>None</td><td>WordPress</td><td>None if Moodle is replaced</td><td class="mc-highlight-col">None</td></tr>
-            <tr><th scope="row">Cross-system synchronization</th><td>None</td><td>Required</td><td>Only if Moodle is retained</td><td class="mc-highlight-col">None</td></tr>
-            <tr><th scope="row">Branded storefront and catalogue</th><td>No full storefront</td><td>Included through WordPress</td><td>Included</td><td class="mc-highlight-col">Included</td></tr>
-            <tr><th scope="row">Cart, coupons and multi-item checkout</th><td>No</td><td>Included through WooCommerce</td><td>Plan-dependent</td><td class="mc-highlight-col">Included</td></tr>
-            <tr><th scope="row">Bundles, programs and access-key pools</th><td>No</td><td>Stack-dependent</td><td>Plan-dependent</td><td class="mc-highlight-col">Included</td></tr>
-            <tr><th scope="row">Subscriptions and recurring access</th><td>No</td><td>Paid extension or additional configuration</td><td>Higher plan</td><td class="mc-highlight-col">Included</td></tr>
-            <tr><th scope="row">Invoices, refunds and access audit</th><td>Limited</td><td>Distributed across the stack</td><td>Plan- and vendor-dependent</td><td class="mc-highlight-col">Included</td></tr>
-            <tr><th scope="row">Abandoned-cart recovery</th><td>No</td><td>Extension or external service</td><td>Plan-dependent</td><td class="mc-highlight-col">Included</td></tr>
-            <tr><th scope="row">Software and platform cost</th><td>$0 with Moodle</td><td>Hosting, connector and extension licences</td><td>Recurring subscription</td><td class="mc-highlight-col">$0 GPL core</td></tr>
-            <tr><th scope="row">Platform revenue or enrolment fee</th><td>None</td><td>None normally</td><td>Plan-dependent</td><td class="mc-highlight-col">None</td></tr>
+            <tr><th scope="row">Runs entirely inside Moodle</th><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td class="mc-highlight-col">Yes</td></tr>
+            <tr><th scope="row">Moodle remains the learning system</th><td>Yes</td><td>Yes—within an IOMAD distribution</td><td>Yes</td><td>No, migration required</td><td class="mc-highlight-col">Yes</td></tr>
+            <tr><th scope="row">Additional application to operate</th><td>None</td><td>None; replaces standard Moodle distribution</td><td>WordPress</td><td>None if Moodle is replaced</td><td class="mc-highlight-col">None</td></tr>
+            <tr><th scope="row">Cross-system synchronization</th><td>None</td><td>None for internal ecommerce</td><td>Required</td><td>Only if Moodle is retained</td><td class="mc-highlight-col">None</td></tr>
+            <tr><th scope="row">Branded storefront and catalogue</th><td>No full storefront</td><td>Included with tenant-specific products</td><td>Included through WordPress</td><td>Included</td><td class="mc-highlight-col">Included</td></tr>
+            <tr><th scope="row">Cart, coupons and multi-item checkout</th><td>No</td><td>Shopping cart and block purchasing</td><td>Included through WooCommerce</td><td>Plan-dependent</td><td class="mc-highlight-col">Included</td></tr>
+            <tr><th scope="row">Bundles, programs and access-key pools</th><td>No</td><td>Products, programs and licence blocks</td><td>Stack-dependent</td><td>Plan-dependent</td><td class="mc-highlight-col">Included</td></tr>
+            <tr><th scope="row">Subscriptions and recurring access</th><td>No</td><td>Not presented as a core ecommerce capability</td><td>Paid extension or additional configuration</td><td>Higher plan</td><td class="mc-highlight-col">Included</td></tr>
+            <tr><th scope="row">Invoices, refunds and access audit</th><td>Limited</td><td>Invoice payment and licence records; depth differs</td><td>Distributed across the stack</td><td>Plan- and vendor-dependent</td><td class="mc-highlight-col">Included</td></tr>
+            <tr><th scope="row">Abandoned-cart recovery</th><td>No</td><td>Not documented in reviewed core features</td><td>Extension or external service</td><td>Plan-dependent</td><td class="mc-highlight-col">Included</td></tr>
+            <tr><th scope="row">Software and platform cost</th><td>$0 with Moodle</td><td>$0 open-source distribution</td><td>Hosting, connector and extension licences</td><td>Recurring subscription</td><td class="mc-highlight-col">$0 GPL core</td></tr>
+            <tr><th scope="row">Platform revenue or enrolment fee</th><td>None</td><td>None documented</td><td>None normally</td><td>Plan-dependent</td><td class="mc-highlight-col">None</td></tr>
           </tbody>
         </table>
       </div>
@@ -38,11 +38,36 @@
       <div class="row g-4">
         <div class="col-md-6 col-xl-4"><article class="mc-category-card"><span>Moodle-native platform</span><h2>ModernCommerce</h2><p>Complete storefront and commerce operations run inside the Moodle installation and use Moodle courses, users, roles, cron, and privacy APIs.</p><strong>Best fit: organizations already committed to Moodle.</strong></article></div>
         <div class="col-md-6 col-xl-4"><article class="mc-category-card"><span>Core payment enrolment</span><h2>Moodle payment / PayPal</h2><p>A lightweight way to charge for access to an individual Moodle course. It is an enrolment method, not a complete ecommerce storefront.</p><strong>Best fit: simple pay-to-enter courses.</strong></article></div>
+        <div class="col-md-6 col-xl-4"><article class="mc-category-card"><span>Multi-tenant Moodle distribution</span><h2>IOMAD</h2><p>An open-source Moodle distribution combining company tenancy, delegated administration, licensing, reporting, white-labelling, and an internal ecommerce block.</p><strong>Best fit: organizations operating distinct training tenants.</strong></article></div>
         <div class="col-md-6 col-xl-4"><article class="mc-category-card"><span>WordPress commerce</span><h2>WooCommerce</h2><p>A broad, open-source ecommerce platform for WordPress. It needs an LMS and an integration layer when the learning system is Moodle.</p><strong>Best fit: WordPress-led commerce teams.</strong></article></div>
         <div class="col-md-6 col-xl-4"><article class="mc-category-card"><span>WordPress LMS stack</span><h2>LearnDash + WooCommerce</h2><p>Learning and commerce both run in WordPress. The official integration links WooCommerce products to LearnDash courses or groups.</p><strong>Best fit: organizations choosing WordPress as the LMS.</strong></article></div>
         <div class="col-md-6 col-xl-4"><article class="mc-category-card"><span>WordPress–Moodle bridge</span><h2>Edwiser Bridge + WooCommerce</h2><p>WordPress owns the storefront while Moodle delivers learning. Course, user, purchase, and access data cross an integration boundary.</p><strong>Best fit: Moodle sites that require a WordPress storefront.</strong></article></div>
         <div class="col-md-6 col-xl-4"><article class="mc-category-card"><span>Hosted all-in-one LMS</span><h2>LearnWorlds</h2><p>A subscription SaaS combining hosted course delivery, website building, checkout, marketing, and platform operations.</p><strong>Best fit: teams that prefer a managed hosted platform.</strong></article></div>
       </div>
+    </div></section>
+
+    <section class="mc-section mc-comparison-section"><div class="container">
+      <div class="row justify-content-between align-items-end gy-3 mb-4"><div class="col-lg-7"><p class="mc-section-label">ModernCommerce vs IOMAD</p><h2 class="display-4">Adjacent products with different centers of gravity.</h2></div><div class="col-lg-4"><p class="text-secondary mb-0">IOMAD leads with multi-tenancy and company licensing. ModernCommerce leads with end-to-end commerce operations inside an existing Moodle site.</p></div></div>
+      <div class="table-responsive mc-comparison-wrap" tabindex="0" aria-label="Scrollable ModernCommerce and IOMAD comparison">
+        <table class="table mc-comparison-table align-middle mb-0">
+          <thead><tr><th scope="col">Decision factor</th><th scope="col" class="mc-highlight-col">ModernCommerce</th><th scope="col">IOMAD</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Primary purpose</th><td class="mc-highlight-col">Complete Moodle commerce operation</td><td>Multi-tenant Moodle delivery and administration</td></tr>
+            <tr><th scope="row">Deployment model</th><td class="mc-highlight-col">Plugin installed into Moodle</td><td>Moodle distribution with IOMAD components</td></tr>
+            <tr><th scope="row">Internal storefront and cart</th><td class="mc-highlight-col">Included</td><td>Included through IOMAD ecommerce</td></tr>
+            <tr><th scope="row">Products, bundles and programs</th><td class="mc-highlight-col">Courses, bundles, programs and plans</td><td>Course products, bundles, programs and learning paths</td></tr>
+            <tr><th scope="row">Payment gateways</th><td class="mc-highlight-col">Stripe, PayPal, Paystack and Flutterwave integrations</td><td>Uses available Moodle payment gateways</td></tr>
+            <tr><th scope="row">Tenant-specific brands, catalogues and payment accounts</th><td class="mc-highlight-col">No dedicated multi-tenant company layer</td><td>Core strength</td></tr>
+            <tr><th scope="row">Bulk organizational access</th><td class="mc-highlight-col">Prepaid key pools and seat tracking</td><td>Tenant licences, block purchases and volume pricing</td></tr>
+            <tr><th scope="row">Recurring subscriptions</th><td class="mc-highlight-col">Plans, trials, grace, changes and access reconciliation</td><td>Not presented as a core ecommerce capability in reviewed documentation</td></tr>
+            <tr><th scope="row">Finance operations</th><td class="mc-highlight-col">Orders, invoices, adjustments, refunds, reconciliation and audit records</td><td>Ecommerce and payment-account workflows; public documentation emphasizes products and licences</td></tr>
+            <tr><th scope="row">Recovery and lifecycle automation</th><td class="mc-highlight-col">Abandoned-cart recovery, reminders and queued multichannel notifications</td><td>Not documented as equivalent core commerce workflows</td></tr>
+            <tr><th scope="row">Delegated tenant administration</th><td class="mc-highlight-col">Commerce roles within one Moodle site</td><td>Company hierarchies, tenant managers, per-tenant roles and reporting</td></tr>
+            <tr><th scope="row">Best fit</th><td class="mc-highlight-col">Moodle operators prioritizing a deep selling and finance lifecycle</td><td>Providers prioritizing isolated company experiences and delegated training administration</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mc-table-note mt-3 mb-0">These products may also be complementary in a custom architecture, but compatibility and overlapping ownership should be assessed before combining them.</p>
     </div></section>
 
     <section class="mc-section mc-why-section"><div class="container">
@@ -88,6 +113,7 @@
           <tbody>
             <tr class="mc-highlight"><th scope="row">ModernCommerce</th><td>Moodle</td><td>Inside Moodle</td><td>Your Moodle database</td><td>Self-hosted</td><td><span class="mc-status yes">None</span></td></tr>
             <tr><th scope="row">Moodle payment / PayPal</th><td>Moodle</td><td>Course enrolment payment</td><td>Your Moodle database</td><td>Self-hosted</td><td><span class="mc-status yes">None</span></td></tr>
+            <tr><th scope="row">IOMAD</th><td>Moodle within IOMAD</td><td>Inside IOMAD/Moodle</td><td>Your IOMAD/Moodle database</td><td>Self-hosted</td><td><span class="mc-status yes">None for internal ecommerce</span></td></tr>
             <tr><th scope="row">WooCommerce</th><td>Separate LMS required</td><td>WordPress</td><td>WordPress database</td><td>Self-hosted / managed WP</td><td><span class="mc-status partial">Depends on LMS</span></td></tr>
             <tr><th scope="row">LearnDash + WooCommerce</th><td>LearnDash on WordPress</td><td>WooCommerce</td><td>WordPress database</td><td>Self-hosted / managed WP</td><td><span class="mc-status yes">Same application</span></td></tr>
             <tr><th scope="row">Edwiser + WooCommerce</th><td>Moodle</td><td>WordPress</td><td>Split across both systems</td><td>Two applications</td><td><span class="mc-status partial">Bridge and synchronization</span></td></tr>
@@ -163,6 +189,7 @@
           <tbody>
             <tr class="mc-highlight"><th scope="row">ModernCommerce</th><td><strong>$0 software licence</strong></td><td>Storefront, cart, subscriptions, invoices, B2B keys, recovery, reporting, and four gateways are in the open-source product.</td><td>Uses the existing Moodle application; incremental capacity depends on your installation.</td><td><strong>$0 published recurring licence</strong><br><small>Implementation and support are optional/variable.</small></td></tr>
             <tr><th scope="row">Moodle payment / PayPal</th><td>$0 with Moodle</td><td>No extra software for the simple PayPal path, but it does not match a full storefront, cart, subscriptions, B2B seats, or commerce operations.</td><td>Uses existing Moodle hosting.</td><td><strong>$0 for the basic path</strong><br><small>Additional gateway plugins may be paid.</small></td></tr>
+            <tr><th scope="row">IOMAD</th><td>$0 open-source software</td><td>Internal ecommerce, tenant products, licence purchasing, volume pricing, and available Moodle gateways are included. Subscription, recovery, and deeper finance requirements need separate verification or development.</td><td>Runs as a self-hosted Moodle distribution; migration, configuration, upgrades, and support remain operating costs.</td><td><strong>$0 published recurring licence</strong><br><small>Implementation and optional commercial support are variable.</small></td></tr>
             <tr><th scope="row">WooCommerce alone</th><td>$0 open-source core</td><td>Still needs a Moodle/LMS connector. Recurring billing through WooCommerce Subscriptions is <strong>$279/year</strong>; invoicing, recovery, learning access, and other extensions can add cost.</td><td>Requires a WordPress site, hosting, security, backups, and maintenance.</td><td><strong>Cannot be totalled as a Moodle solution</strong><br><small>$279/year before the connector and other extensions.</small></td></tr>
             <tr><th scope="row">LearnDash + WooCommerce</th><td>LearnDash LMS from <strong>$199/year</strong> for one site; WooCommerce core is $0.</td><td>LearnDash can sell natively. For a Woo-based recurring commerce stack, add WooCommerce Subscriptions at $279/year. Group management, reviews, reporting, invoices, and recovery depend on the chosen bundle/extensions.</td><td>Requires WordPress hosting and operations; it replaces Moodle as the LMS in this comparison.</td><td><strong>Illustrative comparable stack: $778/year</strong><br><small>$499 Ultimate Course Creator bundle + $279 Woo Subscriptions; before hosting and other commerce extensions.</small></td></tr>
             <tr><th scope="row">Edwiser Bridge + WooCommerce</th><td>Free core; Pro pricing varies by current plan/term.</td><td>WooCommerce Subscriptions is not included and adds $279/year when recurring billing is required. Edwiser's optional setup service is <strong>$199 one-time</strong> and excludes licences, gateways, and third-party setup.</td><td>Requires both Moodle and WordPress hosting, plus bridge and synchronization monitoring.</td><td><strong>Current Pro plan + $279/year</strong><br><small>Plus two-system operations; quote the live plan before procurement.</small></td></tr>
@@ -183,6 +210,7 @@
       <div class="col-lg-4"><p class="mc-section-label">Decision guide</p><h2 class="display-4">The shortest honest answer</h2></div>
       <div class="col-lg-8"><div class="mc-decision-list">
         <article><strong>Choose Moodle payment enrolment</strong><p>when you only need to collect a fee and grant access to an individual Moodle course.</p></article>
+        <article><strong>Choose IOMAD</strong><p>when multi-tenant branding, company hierarchies, delegated tenant administration, course sharing, licences, and tenant-specific commerce are the primary requirements.</p></article>
         <article><strong>Choose WooCommerce or LearnDash</strong><p>when WordPress is your preferred operating environment and its commerce ecosystem is strategically important.</p></article>
         <article><strong>Choose Edwiser Bridge</strong><p>when a separate WordPress storefront is a firm requirement and your team accepts cross-system synchronization.</p></article>
         <article><strong>Choose LearnWorlds</strong><p>when you want the vendor to host the LMS and commerce platform and are comfortable with a recurring SaaS relationship.</p></article>
@@ -198,6 +226,7 @@
         <li><a href="https://www.learndash.com/pricing-hero-2-columns/">LearnDash pricing</a>, <a href="https://learndash.com/support/kb/non-knowledgebase/woocommerce-add-on/woocommerce-integration/">WooCommerce integration</a>, <a href="https://learndash.com/support/kb/core/courses/course-enrollment-mode/">course access modes</a>, <a href="https://learndash.com/support/kb/core/uncategorized/payments/">payments</a>, <a href="https://learndash.com/support/kb/core/uncategorized/groups/">groups</a>, and <a href="https://learndash.com/support/kb/core/uncategorized/group-registration/">organizational seats</a></li>
         <li><a href="https://edwiser.org/bridge-wordpress-moodle-integration/extensions/woocommerce-integration/">Edwiser Bridge WooCommerce integration and plan selector</a>, <a href="https://edwiser.org/edwiser-bundle-setup-service/">setup-service pricing</a>, <a href="https://edwiser.org/documentation/edwiser-bridge-pro/">Pro documentation</a>, and <a href="https://edwiser.org/documentation/edwiser-bridge/synchronization-options/">synchronization options</a></li>
         <li><a href="https://docs.moodle.org/502/en/Enrolments">Moodle enrolment documentation</a> and <a href="https://docs.moodle.org/401/en/Enrolment_on_payment">Enrolment on payment</a></li>
+        <li><a href="https://www.iomad.org/">IOMAD product overview</a>, <a href="https://www.iomad.org/ecommerce/">ecommerce capabilities</a>, <a href="https://www.iomad.org/multi-tenancy/">multi-tenancy capabilities</a>, and <a href="https://docs.iomad.org/wiki/Products_and_how_to_manage_them">product-management documentation</a></li>
         <li><a href="https://www.learnworlds.com/pricing/">LearnWorlds pricing and plan features</a> and <a href="https://support.learnworlds.com/support/solutions/articles/12000027238">LearnWorlds product pricing options</a></li>
       </ul>
       <p class="mt-3 mb-0">The ModernCommerce baseline was verified directly against the current plugin's schema, payment classes, service registry, scheduled tasks, permissions, role presets, privacy provider, admin routes, and versioned documentation.</p>

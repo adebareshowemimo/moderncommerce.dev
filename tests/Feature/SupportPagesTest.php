@@ -6,15 +6,21 @@ use Tests\TestCase;
 
 class SupportPagesTest extends TestCase
 {
-    public function test_support_page_routes_each_request_to_the_right_channel(): void
+    public function test_support_page_leads_with_professional_services_and_contact_options(): void
     {
         $this->get('/support')
             ->assertOk()
-            ->assertSee('Get the right help without guessing where to go.')
-            ->assertSee('Self-service documentation')
-            ->assertSee('Report a reproducible defect')
-            ->assertSee('Report security concerns privately')
-            ->assertSee('Implementation and managed services')
+            ->assertSee('Bring ModernCommerce into production with expert support.')
+            ->assertSee('Start a project')
+            ->assertSee('Implementation and launch')
+            ->assertSee('Migration and data transition')
+            ->assertSee('Payment gateways and integrations')
+            ->assertSee('Storefront and theme customization')
+            ->assertSee('Custom features and development')
+            ->assertSee('Upgrades and troubleshooting')
+            ->assertSee('Training and operational guidance')
+            ->assertSee('Ongoing and managed support')
+            ->assertSee('Looking for community help instead?')
             ->assertSee('/support-development', false)
             ->assertSee('support@agunfoninteractivity.com');
     }
@@ -30,6 +36,8 @@ class SupportPagesTest extends TestCase
             ->assertSee('not a tax-deductible charitable contribution')
             ->assertSee('does not purchase technical support')
             ->assertSee('GPL-3.0-or-later')
+            ->assertSee('Explore professional services')
+            ->assertSee('/support#commercial-support', false)
             ->assertSee('/support', false);
     }
 
