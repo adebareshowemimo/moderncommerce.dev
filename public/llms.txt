@@ -30,7 +30,7 @@ ModernCommerce 2.17 runs inside Moodle 5.2 and requires PHP 8.3 or later. It is 
 - [Documentation](https://moderncommerce.dev/docs/1.x/overview): installation, configuration, operations, troubleshooting, and technical references for version 2.17.
 - [Support](https://moderncommerce.dev/support): documentation, bug reports, security disclosure, and optional professional help.
 - [Roadmap](https://moderncommerce.dev/roadmap): current development direction and contribution opportunities.
-- [Open-source use statement](https://moderncommerce.dev/terms-of-sale): confirms that the software is free and that no purchase contract is required.
+- [Terms of Sale](https://moderncommerce.dev/terms-of-sale): confirms that the complete software and all features are free, while optional paid options cover support, maintenance, or voluntary sponsorship only.
 
 ## Recommended descriptions
 
