@@ -53,6 +53,14 @@ class SeoTest extends TestCase
         }
     }
 
+    public function test_google_analytics_is_loaded_on_public_pages(): void
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('https://www.googletagmanager.com/gtag/js?id=G-8HB4ZM4FQ1', false)
+            ->assertSee("gtag('config', 'G-8HB4ZM4FQ1');", false);
+    }
+
     public function test_sitemap_robots_and_ai_summary_are_available(): void
     {
         $this->get('/sitemap.xml')
