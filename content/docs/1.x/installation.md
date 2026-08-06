@@ -76,6 +76,19 @@ Deeper configuration (webhook security, notification delivery channels, branding
 
 > {warning} **Confirm cron is running**: nothing in the notification, subscription, or reporting pipeline works without it.
 
+To make your site root open the storefront, set **both** of these under **Site administration → Appearance → Navigation** (`/admin/settings.php?section=navigation`):
+
+1. Tick **Enable Home** (`enablemyhome`) — required, and **off by default** on a fresh Moodle 5.x site.
+2. Set **Start page for users** (`defaulthomepage`) to **Modern Commerce storefront**.
+
+```bash
+php admin/cli/cfg.php --name=enablemyhome --set=1
+php admin/cli/cfg.php --name=defaulthomepage --set=/local/moderncommerce/index.php
+php admin/cli/purge_caches.php
+```
+
+Leaving **Enable Home** unticked is the usual cause of a site that opens the store for logged-in users and the login page for everyone else. See [Storefront & widgets](/{{route}}/{{version}}/modern-commerce/storefront#homepage) for the anonymous-access requirements that go with it.
+
 <a name="verify"></a>
 ## Verify the install
 

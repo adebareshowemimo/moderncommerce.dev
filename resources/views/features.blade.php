@@ -208,7 +208,7 @@
           <p class="lead mt-4">ModernCommerce covers the complete path from merchandising and checkout to verified payment, Moodle enrolment, recurring access, finance operations, customer service, analytics, and governance, inside one open-source Moodle plugin.</p>
           <div class="d-grid d-sm-flex gap-3 mt-4"><a class="btn btn-primary btn-lg" href="{{ config('app.demo_url') }}">Explore the live product</a><a class="btn btn-outline-primary btn-lg" href="{{ route('docs.show', 'feature-reference') }}">Open the technical reference</a></div>
         </div>
-        <div class="col-lg-4"><div class="mc-feature-version"><span>Source reviewed</span><strong>ModernCommerce 2.1.7</strong><small>1 August 2026 · Moodle 5.2 · PHP 8.3+</small></div></div>
+        <div class="col-lg-4"><div class="mc-feature-version"><span>Source reviewed</span><strong>ModernCommerce 2.1.8</strong><small>1 August 2026 · Moodle 5.2 · PHP 8.3+</small></div></div>
       </div></div>
     </section>
 

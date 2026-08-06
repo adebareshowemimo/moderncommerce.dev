@@ -21,7 +21,7 @@
 <a name="use"></a>
 ## How to use this reference
 
-This is the consolidated feature inventory for **ModernCommerce 2.1.7**. It explains what each feature owns, where an administrator normally manages it, the primary Moodle capability protecting it, and the operational behavior that matters in production.
+This is the consolidated feature inventory for **ModernCommerce 2.1.8**. It explains what each feature owns, where an administrator normally manages it, the primary Moodle capability protecting it, and the operational behavior that matters in production.
 
 The public product catalogue is at [moderncommerce.dev/features](/features). This document is the technical companion. Follow the linked task guide when you need field-level setup or a production checklist.
 

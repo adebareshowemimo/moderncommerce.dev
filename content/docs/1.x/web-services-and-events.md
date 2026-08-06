@@ -1,6 +1,6 @@
 # Web services & events
 
-`db/services.php` defines **156 Moodle external functions** in the audited 2.1.7 source. They are AJAX functions used by the shipped browser applications, not an unauthenticated generic REST API. The function declaration supplies its class, method, read/write type, AJAX flag, capability and login policy; the external class performs parameter validation and repeats the applicable context/capability checks.
+`db/services.php` defines **156 Moodle external functions** in the audited 2.1.8 source. They are AJAX functions used by the shipped browser applications, not an unauthenticated generic REST API. The function declaration supplies its class, method, read/write type, AJAX flag, capability and login policy; the external class performs parameter validation and repeats the applicable context/capability checks.
 
 ## Public catalogue and reviews
 

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'version' => '2.1.7',
+    'version' => '2.1.8',
     'sections' => [
         'overview' => 'Overview',
         'feature-reference' => 'Complete feature reference',
@@ -48,10 +48,10 @@ return [
         'faq' => 'FAQ',
     ],
     'descriptions' => [
-        'overview' => 'Understand ModernCommerce 2.1.7, the free open-source Moodle ecommerce platform for selling courses, bundles, subscriptions, and corporate training.',
+        'overview' => 'Understand ModernCommerce 2.1.8, the free open-source Moodle ecommerce platform for selling courses, bundles, subscriptions, and corporate training.',
         'feature-reference' => 'Review every ModernCommerce feature, administration page, Moodle capability, workflow, and product boundary in one technical reference.',
         'architecture' => 'Learn how ModernCommerce runs inside Moodle using native users, courses, enrolments, roles, events, tasks, privacy APIs, and payment workflows.',
-        'requirements' => 'Check the Moodle, PHP, database, HTTPS, cron, payment-gateway, and server requirements for installing ModernCommerce 2.1.7.',
+        'requirements' => 'Check the Moodle, PHP, database, HTTPS, cron, payment-gateway, and server requirements for installing ModernCommerce 2.1.8.',
         'installation' => 'Install ModernCommerce in Moodle, complete the database upgrade, configure cron and permissions, and verify the ecommerce platform safely.',
         'upgrading' => 'Upgrade ModernCommerce safely with release compatibility, staging, backup, database migration, cron, cache, and rollback guidance.',
         'quick-start' => 'Launch a Moodle course storefront with ModernCommerce: configure the plugin, create a product, connect payments, test checkout, and enrol learners.',

@@ -17,7 +17,7 @@
 |---|---|
 | Supported Moodle | **5.2 only** |
 | Plugin type | Local plugin (`local_moderncommerce`) |
-| Current release | 2.1.7 |
+| Current release | 2.1.8 |
 | Maturity | Stable |
 | License | GPL-3.0-or-later |
 

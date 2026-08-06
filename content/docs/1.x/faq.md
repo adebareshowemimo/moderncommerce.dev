@@ -32,7 +32,7 @@ Yes. Use **enrolment-key pools** for prepaid, bulk, or corporate sales. A pool c
 <a name="versions"></a>
 ## Which Moodle and PHP versions are supported?
 
-Moodle **5.2 only**, and **PHP 8.3 or later**. The current release is **2.1.7 (Stable)**. See [Requirements](/{{route}}/{{version}}/modern-commerce/requirements).
+Moodle **5.2 only**, and **PHP 8.3 or later**. The current release is **2.1.8 (Stable)**. See [Requirements](/{{route}}/{{version}}/modern-commerce/requirements).
 
 <a name="revshare"></a>
 ## Do you take a revenue share or transaction fee?

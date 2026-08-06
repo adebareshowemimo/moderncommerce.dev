@@ -35,7 +35,7 @@ class DocumentationTest extends TestCase
             ->assertSee('Build the catalogue')
             ->assertSee('Sell and fulfil')
             ->assertSee('Operate the platform')
-            ->assertSee('Version 2.1.7')
+            ->assertSee('Version 2.1.8')
             ->assertSee('aria-current="page"', false)
             ->assertSee('Quick start');
     }
@@ -105,9 +105,9 @@ class DocumentationTest extends TestCase
     {
         $this->get('/docs/1.x/upgrading')
             ->assertOk()
-            ->assertSee('2.1.7')
-            ->assertSee('2026080100')
-            ->assertDontSee('2026072301');
+            ->assertSee('2.1.8')
+            ->assertSee('2026080500')
+            ->assertDontSee('2026080100');
 
         $this->get('/docs/1.x/admin-settings')
             ->assertOk()
@@ -133,7 +133,7 @@ class DocumentationTest extends TestCase
         $this->get('/docs/1.x/release-packaging')
             ->assertOk()
             ->assertSee('composer run mc:package')
-            ->assertSee('moderncommerce-v2.1.7.zip');
+            ->assertSee('moderncommerce-v2.1.8.zip');
 
         $this->get('/docs/1.x/moodle-plugin-directory')
             ->assertOk()

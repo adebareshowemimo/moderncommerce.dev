@@ -133,7 +133,34 @@ Branding is driven by design tokens configured at `/local/moderncommerce/admin/b
 <a name="homepage"></a>
 ## Use the storefront as the Moodle home page
 
-Modern Commerce registers its storefront as a selectable Moodle default homepage. To open your site directly into the store: **Site administration → search "Default home page" → select "Modern Commerce storefront" → save**, then test the site root logged out and logged in. If the option isn't visible after install, purge caches and reload. Do **not** edit Moodle core `index.php` for this.
+Modern Commerce registers its storefront as a selectable Moodle start page, so your site root opens the store instead of Moodle's front page. **Two** settings are required, and both live on **Site administration → Appearance → Navigation** (`/admin/settings.php?section=navigation`):
+
+1. Tick **Enable Home** (`enablemyhome`). This is **off by default** on a fresh Moodle 5.x site.
+2. Set **Start page for users** (`defaulthomepage`, labelled *Default home page for users* on earlier Moodle releases) to **Modern Commerce storefront**.
+
+Save, then test the site root both logged out and logged in. If the storefront option isn't listed after install or upgrade, purge caches and reload the page: the hook that contributes it is cached.
+
+From the command line:
+
+```bash
+php admin/cli/cfg.php --name=enablemyhome --set=1
+php admin/cli/cfg.php --name=defaulthomepage --set=/local/moderncommerce/index.php
+php admin/cli/purge_caches.php
+```
+
+> {warning} **Store opens for logged-in users but shows the login page to everyone else?** **Enable Home** is unticked. Moodle core redirects anonymous visitors away from the site root before it reaches the branch that forwards to a URL start page, so the storefront redirect never runs. Logged-in users are unaffected, which is what makes the symptom look one-sided.
+
+Once the setting is applied, Moodle core routes logged-in users to the storefront, and Modern Commerce redirects anonymous front-page requests that core leaves on the site home.
+
+For anonymous visitors to actually see the store, three site-level conditions also have to hold:
+
+| Requirement | Where | Notes |
+| --- | --- | --- |
+| **Force users to log in** off (`forcelogin`) | Site administration → General → Security → Site security settings | When enabled, every page requires a session and no public storefront is possible. |
+| Visitor role holds `local/moderncommerce:viewcatalog` | **Role for visitors** in Site administration → Users → Permissions → User policies, then that role's definition | The `guest` archetype receives this capability at install. |
+| Widget **audience** is `all` or `guest` | Storefront edit mode, per widget | A widget restricted to logged-in users stays hidden from anonymous visitors even when the page loads. |
+
+Optionally enable **Open to search engines** (`opentowebcrawlers`) so the storefront can be indexed. Do **not** edit Moodle core `index.php` or add a theme-level redirect for this.
 
 <a name="spam"></a>
 ## Spam protection

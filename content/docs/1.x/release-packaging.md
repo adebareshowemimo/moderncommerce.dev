@@ -54,10 +54,10 @@ Confirm that:
 
 ## Version and release rules
 
-Every released file change must be represented by the appropriate `$plugin->version`, `$plugin->release`, release notes, Git tag, and release asset. For release 2.1.7, the archive name is:
+Every released file change must be represented by the appropriate `$plugin->version`, `$plugin->release`, release notes, Git tag, and release asset. For release 2.1.8, the archive name is:
 
 ```text
-moderncommerce-v2.1.7.zip
+moderncommerce-v2.1.8.zip
 ```
 
 Database upgrade steps must use a build number greater than the previously released build and remain safe when executed once during Moodle upgrade.

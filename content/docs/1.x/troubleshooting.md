@@ -37,6 +37,10 @@ Check Moodle outgoing mail, event/template enabled state, template status, queue
 
 Check Moodle course visibility, product status/visibility, active price window, inventory, merchandising dates, category mapping, widget filters and viewer capability. Do not create a duplicate product before locating the failed condition.
 
+## Site root does not open the storefront
+
+Two settings are required, both on **Site administration → Appearance → Navigation**: **Enable Home** (`enablemyhome`) ticked, and **Start page for users** (`defaulthomepage`) set to **Modern Commerce storefront**. `enablemyhome` is off by default on a fresh Moodle 5.x site, and while it is off Moodle core redirects anonymous visitors away from the site root before the storefront redirect runs. The signature of that missed step is a store that opens correctly for logged-in users but shows the login page to everyone else. If the storefront option is absent from the dropdown, purge caches: the hook that contributes it is cached. See [Storefront & widgets](/{{route}}/{{version}}/modern-commerce/storefront#homepage).
+
 ## Stale layout, label or branding
 
 Purge Moodle caches and browser/CDN caches after verifying the saved value. Run the design-system build check if deployed CSS differs from source. Confirm the active Moodle theme is not overriding commerce styles.
