@@ -34,13 +34,14 @@ class TutorialsPageTest extends TestCase
         $path = base_path('content/tutorials/tutorials.json');
         $original = file_get_contents($path);
         $tutorials = json_decode($original, true, flags: JSON_THROW_ON_ERROR);
+        $videoId = $tutorials[0]['youtube_id'];
         $tutorials[0]['published'] = true;
         $tutorials[0]['published_at'] = '2026-08-10';
         file_put_contents($path, json_encode($tutorials, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES).PHP_EOL);
 
         try {
             $content = $this->get('/tutorials/add-advanced-pricing-to-a-product')->assertOk()->getContent();
-            $this->assertStringContainsString('youtube-nocookie.com/embed/1F4hN_0I_9c', $content);
+            $this->assertStringContainsString("youtube-nocookie.com/embed/{$videoId}", $content);
             $this->assertStringContainsString('"@type":"VideoObject"', $content);
             $this->assertStringContainsString('"@type":"TechArticle"', $content);
         } finally {
