@@ -6,14 +6,14 @@ use Tests\TestCase;
 
 class TutorialsPageTest extends TestCase
 {
-    public function test_tutorial_library_is_available_and_drafts_are_hidden(): void
+    public function test_tutorial_library_lists_the_published_advanced_pricing_tutorial(): void
     {
         $this->get('/tutorials')
             ->assertOk()
             ->assertSee('Video tutorials built around real tasks.')
-            ->assertDontSee('How to Add Advanced Pricing to a Product in ModernCommerce');
+            ->assertSee('How to Add Advanced Pricing to a Product in ModernCommerce');
 
-        $this->get('/tutorials/add-advanced-pricing-to-a-product')->assertNotFound();
+        $this->get('/tutorials/add-advanced-pricing-to-a-product')->assertOk();
     }
 
     public function test_navigation_and_sitemap_include_the_tutorial_library(): void
@@ -26,7 +26,7 @@ class TutorialsPageTest extends TestCase
         $this->get('/sitemap.xml')
             ->assertOk()
             ->assertSee('/tutorials', false)
-            ->assertDontSee('/tutorials/add-advanced-pricing-to-a-product', false);
+            ->assertSee('/tutorials/add-advanced-pricing-to-a-product', false);
     }
 
     public function test_published_tutorial_has_video_article_metadata(): void

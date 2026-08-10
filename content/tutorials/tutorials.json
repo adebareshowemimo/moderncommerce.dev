@@ -6,7 +6,7 @@
     "youtube_id": "zX_zTaZqllY",
     "duration": "PT2M59S",
     "duration_label": "2:59",
-    "published_at": null,
+    "published_at": "2026-08-10",
     "updated_at": "2026-08-10",
     "product_version": "2.1.8",
     "topic": "Products & Pricing",
@@ -90,7 +90,7 @@
         "route": "quick-start"
       }
     ],
-    "published": false
+    "published": true
   },
   {
     "slug": "create-a-product-in-moderncommerce",
