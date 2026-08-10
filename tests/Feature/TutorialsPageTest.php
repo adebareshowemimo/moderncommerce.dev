@@ -13,6 +13,7 @@ class TutorialsPageTest extends TestCase
             ->assertSee('Video tutorials built around real tasks.')
             ->assertSee('How to Add Advanced Pricing to a Product in ModernCommerce');
 
+        $this->assertFileExists(public_path('images/tutorials/add-advanced-pricing-to-a-product.jpg'));
         $this->get('/tutorials/add-advanced-pricing-to-a-product')->assertOk();
     }
 
