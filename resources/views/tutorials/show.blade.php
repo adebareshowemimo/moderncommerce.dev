@@ -1,0 +1,16 @@
+@php
+  $pageUrl = route('tutorials.show', $tutorial['slug']);
+  $watchUrl = 'https://www.youtube.com/watch?v='.$tutorial['youtube_id'];
+  $thumbnailUrl = asset(ltrim($tutorial['thumbnail'], '/'));
+  $videoSchema = ['@type' => 'VideoObject', '@id' => $pageUrl.'#/schema/video', 'name' => $tutorial['title'], 'description' => $tutorial['description'], 'thumbnailUrl' => [$thumbnailUrl], 'uploadDate' => $tutorial['published_at'], 'duration' => $tutorial['duration'], 'embedUrl' => 'https://www.youtube-nocookie.com/embed/'.$tutorial['youtube_id'], 'contentUrl' => $watchUrl];
+  $breadcrumbSchema = ['@type' => 'BreadcrumbList', '@id' => $pageUrl.'#/schema/breadcrumbs', 'itemListElement' => [['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')], ['@type' => 'ListItem', 'position' => 2, 'name' => 'Tutorials', 'item' => route('tutorials.index')], ['@type' => 'ListItem', 'position' => 3, 'name' => $tutorial['title'], 'item' => $pageUrl]]];
+@endphp
+<x-marketing-layout :title="$tutorial['title'].' | ModernCommerce Tutorial'" :description="$tutorial['description']" :social-image="$thumbnailUrl" og-type="article" schema-type="TechArticle" :extra-schema="[$videoSchema, $breadcrumbSchema]">
+  <main id="main-content">
+    <article>
+      <header class="mc-page-hero mc-tutorial-detail-hero"><div class="container"><nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="{{ route('tutorials.index') }}">Tutorials</a></li><li class="breadcrumb-item active" aria-current="page">{{ $tutorial['topic'] }}</li></ol></nav><div class="row gy-4"><div class="col-lg-9"><p class="mc-section-label">{{ $tutorial['topic'] }} · {{ $tutorial['duration_label'] }}</p><h1 class="display-3">{{ $tutorial['title'] }}</h1><p class="lead mb-0">{{ $tutorial['description'] }}</p></div></div></div></header>
+      <section class="pb-5"><div class="container"><div class="mc-video-shell" data-youtube-id="{{ $tutorial['youtube_id'] }}"><button type="button" class="mc-video-launch" aria-label="Play {{ $tutorial['title'] }}"><img src="{{ $thumbnailUrl }}" alt=""><span aria-hidden="true">▶</span></button></div></div></section>
+      <section class="mc-section pt-4"><div class="container"><div class="row gy-5 gx-lg-5"><aside class="col-lg-4"><div class="mc-tutorial-aside"><h2 class="h5">What you will learn</h2><ul>@foreach($tutorial['learning_outcomes'] as $outcome)<li>{{ $outcome }}</li>@endforeach</ul><h2 class="h5 mt-4">Prerequisites</h2><ul>@foreach($tutorial['prerequisites'] as $prerequisite)<li>{{ $prerequisite }}</li>@endforeach</ul><h2 class="h5 mt-4">Chapters</h2><ol class="list-unstyled mc-tutorial-chapters">@foreach($tutorial['chapters'] as $chapter)<li><a href="{{ $watchUrl.'&t='.$chapter['seconds'].'s' }}"><span>{{ $chapter['time'] }}</span>{{ $chapter['title'] }}</a></li>@endforeach</ol></div></aside><div class="col-lg-8"><div class="mc-doc-content mc-tutorial-content">{!! $content !!}</div><div class="mc-related-docs mt-5"><h2 class="h4">Related documentation</h2><div class="d-flex flex-wrap gap-3">@foreach($tutorial['related_docs'] as $doc)<a class="btn btn-outline-primary" href="{{ route('docs.show', $doc['route']) }}">{{ $doc['title'] }}</a>@endforeach</div></div></div></div></div></section>
+    </article>
+  </main>
+</x-marketing-layout>

@@ -1,0 +1,249 @@
+[
+  {
+    "slug": "add-advanced-pricing-to-a-product",
+    "title": "How to Add Advanced Pricing to a Product in ModernCommerce",
+    "description": "Add and verify a tier-based Advanced Pricing rule for an existing ModernCommerce course product.",
+    "youtube_id": "1F4hN_0I_9c",
+    "duration": "PT2M59S",
+    "duration_label": "2:59",
+    "published_at": null,
+    "updated_at": "2026-08-10",
+    "product_version": "2.1.8",
+    "topic": "Products & Pricing",
+    "level": "Beginner",
+    "thumbnail": "/images/tutorials/add-advanced-pricing-to-a-product.jpg",
+    "article": "add-advanced-pricing-to-a-product.md",
+    "learning_outcomes": [
+      "Open Advanced Pricing for an existing product",
+      "Understand Sale and Tier price types",
+      "Set amount, comparison amount and quantity boundaries",
+      "Save the rule and verify the persisted pricing row"
+    ],
+    "prerequisites": [
+      "ModernCommerce 2.1.8 or a compatible later release",
+      "A product you have permission to edit"
+    ],
+    "chapters": [
+      {
+        "time": "00:00",
+        "seconds": 0,
+        "title": "Opening"
+      },
+      {
+        "time": "00:03",
+        "seconds": 3,
+        "title": "Find and edit the product"
+      },
+      {
+        "time": "00:21",
+        "seconds": 21,
+        "title": "Open Advanced Pricing"
+      },
+      {
+        "time": "00:30",
+        "seconds": 30,
+        "title": "Choose a Price Type"
+      },
+      {
+        "time": "00:49",
+        "seconds": 49,
+        "title": "Enter the amount and comparison"
+      },
+      {
+        "time": "01:09",
+        "seconds": 69,
+        "title": "Set the quantity range"
+      },
+      {
+        "time": "01:36",
+        "seconds": 96,
+        "title": "Review optional dates"
+      },
+      {
+        "time": "02:00",
+        "seconds": 120,
+        "title": "Confirm Enabled"
+      },
+      {
+        "time": "02:12",
+        "seconds": 132,
+        "title": "Save the price"
+      },
+      {
+        "time": "02:24",
+        "seconds": 144,
+        "title": "Verify the saved Tier rule"
+      },
+      {
+        "time": "02:48",
+        "seconds": 168,
+        "title": "Closing"
+      }
+    ],
+    "related_docs": [
+      {
+        "title": "Products and pricing",
+        "route": "products-and-pricing"
+      },
+      {
+        "title": "Quick start",
+        "route": "quick-start"
+      }
+    ],
+    "published": false
+  },
+  {
+    "slug": "create-a-product-in-moderncommerce",
+    "title": "How to Create a Product in ModernCommerce",
+    "description": "Create, save and verify a basic Moodle course product while learning what every field, option and switch controls.",
+    "youtube_id": "D82QL_GCMMQ",
+    "duration": "PT5M50S",
+    "duration_label": "5:50",
+    "published_at": "2026-08-10",
+    "updated_at": "2026-08-10",
+    "product_version": "2.1.8",
+    "topic": "Products & Pricing",
+    "level": "Beginner",
+    "thumbnail": "/images/tutorials/create-a-product-in-moderncommerce.jpg",
+    "article": "create-a-product-in-moderncommerce.md",
+    "learning_outcomes": [
+      "Create a Course product and connect it to a Moodle course",
+      "Understand every Product Type and Status option",
+      "Configure sale pricing and managed inventory",
+      "Save the product and verify the persisted catalogue row"
+    ],
+    "prerequisites": [
+      "ModernCommerce 2.1.8 or a compatible later release",
+      "A selectable Moodle course that is not linked to another product",
+      "Permission to manage ModernCommerce products"
+    ],
+    "chapters": [
+      {
+        "time": "00:00",
+        "seconds": 0,
+        "title": "Introduction"
+      },
+      {
+        "time": "00:03",
+        "seconds": 3,
+        "title": "Open New Product"
+      },
+      {
+        "time": "00:18",
+        "seconds": 18,
+        "title": "Product Name"
+      },
+      {
+        "time": "00:31",
+        "seconds": 31,
+        "title": "Product Type"
+      },
+      {
+        "time": "00:55",
+        "seconds": 55,
+        "title": "Status"
+      },
+      {
+        "time": "01:18",
+        "seconds": 78,
+        "title": "Category"
+      },
+      {
+        "time": "01:45",
+        "seconds": 105,
+        "title": "Select Moodle Course"
+      },
+      {
+        "time": "02:11",
+        "seconds": 131,
+        "title": "Display Order"
+      },
+      {
+        "time": "02:21",
+        "seconds": 141,
+        "title": "Short Description"
+      },
+      {
+        "time": "02:37",
+        "seconds": 157,
+        "title": "Visible"
+      },
+      {
+        "time": "02:50",
+        "seconds": 170,
+        "title": "Featured"
+      },
+      {
+        "time": "03:04",
+        "seconds": 184,
+        "title": "Purchasable"
+      },
+      {
+        "time": "03:17",
+        "seconds": 197,
+        "title": "Base Price"
+      },
+      {
+        "time": "03:28",
+        "seconds": 208,
+        "title": "Put on Sale"
+      },
+      {
+        "time": "03:47",
+        "seconds": 227,
+        "title": "Compare At Price"
+      },
+      {
+        "time": "04:02",
+        "seconds": 242,
+        "title": "Price Preview"
+      },
+      {
+        "time": "04:16",
+        "seconds": 256,
+        "title": "Stock Management"
+      },
+      {
+        "time": "04:31",
+        "seconds": 271,
+        "title": "Stock"
+      },
+      {
+        "time": "04:39",
+        "seconds": 279,
+        "title": "Reserved Stock"
+      },
+      {
+        "time": "04:50",
+        "seconds": 290,
+        "title": "Back Orders"
+      },
+      {
+        "time": "05:03",
+        "seconds": 303,
+        "title": "Save Product"
+      },
+      {
+        "time": "05:14",
+        "seconds": 314,
+        "title": "Verify the Product"
+      },
+      {
+        "time": "05:29",
+        "seconds": 329,
+        "title": "Next Tutorial"
+      }
+    ],
+    "related_docs": [
+      {
+        "title": "Products and pricing",
+        "route": "products-and-pricing"
+      },
+      {
+        "title": "Quick start",
+        "route": "quick-start"
+      }
+    ],
+    "published": true
+  }
+]

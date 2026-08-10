@@ -5,6 +5,7 @@ use Carbon\Carbon;
 use Spatie\LaravelMarkdown\MarkdownRenderer;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
+use App\Support\TutorialRepository;
 
 Route::get('/', function () {
     return view('home');
@@ -28,6 +29,22 @@ Route::view('/product', 'product')->name('product');
 Route::view('/features', 'features')->name('features');
 Route::view('/compare', 'compare')->name('compare');
 Route::view('/terms-of-sale', 'terms-of-sale')->name('terms-of-sale');
+
+Route::get('/tutorials', function (TutorialRepository $tutorials) {
+    return view('tutorials.index', ['tutorials' => $tutorials->all()]);
+})->name('tutorials.index');
+
+Route::get('/tutorials/{slug}', function (string $slug, TutorialRepository $tutorials, MarkdownRenderer $markdown) {
+    $tutorial = $tutorials->findPublished($slug);
+    abort_unless($tutorial, 404);
+
+    $source = file_get_contents(base_path('content/tutorials/'.$tutorial['article']));
+
+    return view('tutorials.show', [
+        'tutorial' => $tutorial,
+        'content' => $markdown->toHtml($source),
+    ]);
+})->where('slug', '[a-z0-9-]+')->name('tutorials.show');
 
 Route::redirect('/docs', '/docs/1.x/overview', 301)->name('docs');
 
@@ -61,7 +78,7 @@ Route::get('/docs/1.x/{section}', function (string $section, MarkdownRenderer $m
     ]);
 })->where('section', '[a-z0-9-]+')->name('docs.show');
 
-Route::get('/sitemap.xml', function () use ($pages) {
+Route::get('/sitemap.xml', function (TutorialRepository $tutorials) use ($pages) {
     $modified = static fn (string $path): Carbon => Carbon::createFromTimestamp(filemtime($path));
     $sitemap = Sitemap::create()->add(
         Url::create(route('home'))
@@ -91,6 +108,20 @@ Route::get('/sitemap.xml', function () use ($pages) {
             Url::create(route('docs.show', $section))
                 ->setPriority(0.7)
                 ->setLastModificationDate($modified(base_path("content/docs/1.x/{$section}.md"))),
+        );
+    }
+
+    $sitemap->add(
+        Url::create(route('tutorials.index'))
+            ->setPriority(0.8)
+            ->setLastModificationDate($modified(base_path('content/tutorials/tutorials.json'))),
+    );
+
+    foreach ($tutorials->all() as $tutorial) {
+        $sitemap->add(
+            Url::create(route('tutorials.show', $tutorial['slug']))
+                ->setPriority(0.75)
+                ->setLastModificationDate(Carbon::parse($tutorial['updated_at'])),
         );
     }
 

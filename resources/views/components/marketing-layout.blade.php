@@ -4,10 +4,13 @@
   'canonical' => null,
   'robots' => 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1',
   'schemaType' => null,
+  'socialImage' => null,
+  'ogType' => 'website',
+  'extraSchema' => [],
 ])
 @php
   $canonicalUrl = $canonical ?: url()->current();
-  $socialImage = asset('images/product/dashboard.png');
+  $resolvedSocialImage = $socialImage ?: asset('images/product/dashboard.png');
   $siteUrl = rtrim(url('/'), '/');
   $resolvedSchemaType = $schemaType ?: (request()->routeIs('docs.show') ? 'TechArticle' : 'WebPage');
   $schemaGraph = [
@@ -95,6 +98,9 @@
       ],
     ];
   }
+  foreach ($extraSchema as $schemaItem) {
+    $schemaGraph[] = $schemaItem;
+  }
 @endphp
 <!doctype html>
 <html lang="en">
@@ -108,16 +114,16 @@
   <link rel="alternate" hreflang="en" href="{{ $canonicalUrl }}">
   <meta property="og:site_name" content="ModernCommerce">
   <meta property="og:locale" content="en_US">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ $ogType }}">
   <meta property="og:title" content="{{ $title }}">
   <meta property="og:description" content="{{ $description }}">
   <meta property="og:url" content="{{ $canonicalUrl }}">
-  <meta property="og:image" content="{{ $socialImage }}">
+  <meta property="og:image" content="{{ $resolvedSocialImage }}">
   <meta property="og:image:alt" content="ModernCommerce Moodle ecommerce administration dashboard">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ $title }}">
   <meta name="twitter:description" content="{{ $description }}">
-  <meta name="twitter:image" content="{{ $socialImage }}">
+  <meta name="twitter:image" content="{{ $resolvedSocialImage }}">
   <meta name="twitter:image:alt" content="ModernCommerce Moodle ecommerce administration dashboard">
   <script type="application/ld+json">{!! json_encode(['@context' => 'https://schema.org', '@graph' => $schemaGraph], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
   <link rel="icon" type="image/png" href="{{ asset('images/brand/moderncommerce-logo-dark.png') }}">
@@ -144,7 +150,7 @@
       <div class="offcanvas offcanvas-end" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel">
         <div class="offcanvas-header"><h2 class="offcanvas-title h5" id="siteNavLabel">Modern Commerce</h2><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close navigation"></button></div>
         <div class="offcanvas-body align-items-lg-center">
-          <ul class="navbar-nav mx-lg-auto gap-lg-1"><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('product')]) href="{{ route('product') }}" @if(request()->routeIs('product')) aria-current="page" @endif>Product</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('features')]) href="{{ route('features') }}" @if(request()->routeIs('features')) aria-current="page" @endif>Features</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('compare')]) href="{{ route('compare') }}" @if(request()->routeIs('compare')) aria-current="page" @endif>Compare</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('open-source')]) href="{{ route('open-source') }}" @if(request()->routeIs('open-source')) aria-current="page" @endif>Open source</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('developers')]) href="{{ route('developers') }}" @if(request()->routeIs('developers')) aria-current="page" @endif>Developers</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('docs*')]) href="{{ route('docs') }}" @if(request()->routeIs('docs*')) aria-current="page" @endif>Docs</a></li><li class="nav-item"><a class="nav-link" href="https://github.com/adebareshowemimo/moodle-local_moderncommerce" rel="external">GitHub</a></li></ul>
+          <ul class="navbar-nav mx-lg-auto gap-lg-1"><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('product')]) href="{{ route('product') }}" @if(request()->routeIs('product')) aria-current="page" @endif>Product</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('features')]) href="{{ route('features') }}" @if(request()->routeIs('features')) aria-current="page" @endif>Features</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('compare')]) href="{{ route('compare') }}" @if(request()->routeIs('compare')) aria-current="page" @endif>Compare</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('open-source')]) href="{{ route('open-source') }}" @if(request()->routeIs('open-source')) aria-current="page" @endif>Open source</a></li><li class="nav-item"><a @class(['nav-link', 'active' => request()->routeIs('developers')]) href="{{ route('developers') }}" @if(request()->routeIs('developers')) aria-current="page" @endif>Developers</a></li><li class="nav-item dropdown"><button @class(['nav-link dropdown-toggle border-0 bg-transparent', 'active' => request()->routeIs('docs*') || request()->routeIs('tutorials.*')]) type="button" data-bs-toggle="dropdown" aria-expanded="false">Learn</button><ul class="dropdown-menu"><li><a class="dropdown-item" href="{{ route('docs') }}">Documentation</a></li><li><a class="dropdown-item" href="{{ route('tutorials.index') }}">Video tutorials</a></li></ul></li><li class="nav-item"><a class="nav-link" href="https://github.com/adebareshowemimo/moodle-local_moderncommerce" rel="external">GitHub</a></li></ul>
           <div class="d-grid d-lg-flex gap-2 mt-4 mt-lg-0"><a @class(['btn', 'btn-outline-primary', 'mc-support-project-action', 'active' => request()->routeIs('support-development')]) href="{{ route('support-development') }}" @if(request()->routeIs('support-development')) aria-current="page" @endif>Support development</a><a class="btn btn-primary" href="{{ config('app.demo_url') }}">Explore the demo</a></div>
         </div>
       </div>
@@ -178,6 +184,7 @@
             <h2 class="mc-footer-heading" id="footer-resources-heading">Project &amp; resources</h2>
             <ul class="mc-footer-links list-unstyled mb-0">
               <li><a href="{{ route('docs') }}">Documentation</a></li>
+              <li><a href="{{ route('tutorials.index') }}">Video tutorials</a></li>
               <li><a href="{{ route('open-source') }}">Open source</a></li>
               <li><a href="{{ route('roadmap') }}">Roadmap</a></li>
               <li><a href="{{ route('support') }}">Support</a></li>
