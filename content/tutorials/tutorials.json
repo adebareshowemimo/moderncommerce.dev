@@ -1,5 +1,119 @@
 [
   {
+    "slug": "set-up-categories-in-modern-commerce",
+    "title": "How to Set Up Categories in Modern Commerce",
+    "description": "Create a Modern Commerce category, assign it to products and use it to organise the customer catalogue without changing Moodle course categories.",
+    "youtube_id": "aznQ5cHhYDE",
+    "duration": "PT5M25S",
+    "duration_label": "5:25",
+    "published_at": "2026-08-10",
+    "updated_at": "2026-08-10",
+    "product_version": "2.1.8",
+    "topic": "Categories & Catalogue",
+    "level": "Beginner",
+    "thumbnail": "/images/tutorials/set-up-categories-in-modern-commerce.jpg",
+    "article": "set-up-categories-in-modern-commerce.md",
+    "learning_outcomes": [
+      "Distinguish Modern Commerce product categories from Moodle course categories",
+      "Create and configure a Modern Commerce category",
+      "Assign the category to a course product, bundle or program",
+      "Use product categories in the customer catalogue and coupon targeting"
+    ],
+    "prerequisites": [
+      "ModernCommerce 2.1.8 or a compatible later release",
+      "Permission to manage Modern Commerce categories and products",
+      "At least one course product, bundle or program to categorise"
+    ],
+    "chapters": [
+      {
+        "time": "00:00",
+        "seconds": 0,
+        "title": "Introduction"
+      },
+      {
+        "time": "00:03",
+        "seconds": 3,
+        "title": "What Modern Commerce categories do"
+      },
+      {
+        "time": "00:18",
+        "seconds": 18,
+        "title": "Moodle and Modern Commerce categories compared"
+      },
+      {
+        "time": "00:35",
+        "seconds": 35,
+        "title": "The value of a separate sales structure"
+      },
+      {
+        "time": "01:01",
+        "seconds": 61,
+        "title": "Create a category"
+      },
+      {
+        "time": "01:11",
+        "seconds": 71,
+        "title": "Understand the category table"
+      },
+      {
+        "time": "01:28",
+        "seconds": 88,
+        "title": "Enter the category details"
+      },
+      {
+        "time": "01:58",
+        "seconds": 118,
+        "title": "Configure visibility"
+      },
+      {
+        "time": "02:27",
+        "seconds": 147,
+        "title": "Save and verify the category"
+      },
+      {
+        "time": "02:56",
+        "seconds": 176,
+        "title": "Assign the category to a product"
+      },
+      {
+        "time": "03:29",
+        "seconds": 209,
+        "title": "Verify the product assignment"
+      },
+      {
+        "time": "03:43",
+        "seconds": 223,
+        "title": "Use categories with bundles and programs"
+      },
+      {
+        "time": "04:06",
+        "seconds": 246,
+        "title": "Filter the customer catalogue"
+      },
+      {
+        "time": "04:44",
+        "seconds": 284,
+        "title": "Target coupons by category"
+      },
+      {
+        "time": "04:59",
+        "seconds": 299,
+        "title": "Summary"
+      }
+    ],
+    "related_docs": [
+      {
+        "title": "Products and pricing",
+        "route": "products-and-pricing"
+      },
+      {
+        "title": "Coupons and enrolment keys",
+        "route": "coupons-and-keys"
+      }
+    ],
+    "published": true
+  },
+  {
     "slug": "add-advanced-pricing-to-a-product",
     "title": "How to Add Advanced Pricing to a Product in ModernCommerce",
     "description": "Add and verify a tier-based Advanced Pricing rule for an existing ModernCommerce course product.",
