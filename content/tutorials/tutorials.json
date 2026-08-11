@@ -1,5 +1,146 @@
 [
   {
+    "slug": "create-a-course-bundle-in-moderncommerce",
+    "title": "How to Create a Course Bundle in ModernCommerce",
+    "description": "Create, price, save and verify a course Bundle in ModernCommerce, including its cover image, catalogue details, sale pricing and course order.",
+    "youtube_id": "SMxQxR0VSVA",
+    "duration": "PT6M52S",
+    "duration_label": "6:52",
+    "published_at": "2026-08-11",
+    "updated_at": "2026-08-11",
+    "product_version": "2.1.8",
+    "topic": "Bundles & Programs",
+    "level": "Beginner",
+    "thumbnail": "/images/tutorials/create-a-course-bundle-in-moderncommerce.png",
+    "article": "create-a-course-bundle-in-moderncommerce.md",
+    "learning_outcomes": [
+      "Create a Bundle and add its prepared cover image",
+      "Configure lifecycle, catalogue and presentation settings",
+      "Set regular and sale pricing without a scheduled date boundary",
+      "Add, reorder and restore courses before saving",
+      "Verify the saved Bundle in the table and reopened form"
+    ],
+    "prerequisites": [
+      "ModernCommerce 2.1.8 or a compatible later release",
+      "Permission to manage Modern Commerce bundles and programs",
+      "At least one Moodle course available to include in the Bundle",
+      "A prepared 16:9 Bundle cover image"
+    ],
+    "chapters": [
+      {
+        "time": "00:00",
+        "seconds": 0,
+        "title": "Introduction"
+      },
+      {
+        "time": "00:03",
+        "seconds": 3,
+        "title": "Open the Bundle builder"
+      },
+      {
+        "time": "00:20",
+        "seconds": 20,
+        "title": "Upload the Bundle image"
+      },
+      {
+        "time": "00:34",
+        "seconds": 34,
+        "title": "Enter the Bundle name"
+      },
+      {
+        "time": "00:47",
+        "seconds": 47,
+        "title": "Choose Bundle or Program"
+      },
+      {
+        "time": "01:03",
+        "seconds": 63,
+        "title": "Set the lifecycle status"
+      },
+      {
+        "time": "01:26",
+        "seconds": 86,
+        "title": "Assign the catalogue category"
+      },
+      {
+        "time": "01:45",
+        "seconds": 105,
+        "title": "Set display order and enrollment limit"
+      },
+      {
+        "time": "02:15",
+        "seconds": 135,
+        "title": "Add the descriptions"
+      },
+      {
+        "time": "02:38",
+        "seconds": 158,
+        "title": "Configure visibility and featured status"
+      },
+      {
+        "time": "03:09",
+        "seconds": 189,
+        "title": "Enter the regular price"
+      },
+      {
+        "time": "03:21",
+        "seconds": 201,
+        "title": "Enable sale pricing"
+      },
+      {
+        "time": "03:37",
+        "seconds": 217,
+        "title": "Enter the sale price and review dates"
+      },
+      {
+        "time": "04:18",
+        "seconds": 258,
+        "title": "Verify the price preview"
+      },
+      {
+        "time": "04:32",
+        "seconds": 272,
+        "title": "Search for and add courses"
+      },
+      {
+        "time": "05:03",
+        "seconds": 303,
+        "title": "Reorder, remove and restore courses"
+      },
+      {
+        "time": "05:32",
+        "seconds": 332,
+        "title": "Save the Bundle"
+      },
+      {
+        "time": "05:49",
+        "seconds": 349,
+        "title": "Verify the saved row"
+      },
+      {
+        "time": "06:07",
+        "seconds": 367,
+        "title": "Reopen and verify the saved Bundle"
+      },
+      {
+        "time": "06:35",
+        "seconds": 395,
+        "title": "Conclusion"
+      }
+    ],
+    "related_docs": [
+      {
+        "title": "Products and pricing",
+        "route": "products-and-pricing"
+      },
+      {
+        "title": "Quick start",
+        "route": "quick-start"
+      }
+    ],
+    "published": true
+  },
+  {
     "slug": "set-up-categories-in-modern-commerce",
     "title": "How to Set Up Categories in Modern Commerce",
     "description": "Create a Modern Commerce category, assign it to products and use it to organise the customer catalogue without changing Moodle course categories.",
