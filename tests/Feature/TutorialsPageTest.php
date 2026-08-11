@@ -11,11 +11,16 @@ class TutorialsPageTest extends TestCase
         $this->get('/tutorials')
             ->assertOk()
             ->assertSee('Video tutorials built around real tasks.')
+            ->assertSee('How to Create a Course Bundle in ModernCommerce')
             ->assertSee('How to Set Up Categories in Modern Commerce')
             ->assertSee('How to Add Advanced Pricing to a Product in ModernCommerce');
 
+        $this->assertFileExists(public_path('images/tutorials/create-a-course-bundle-in-moderncommerce.png'));
         $this->assertFileExists(public_path('images/tutorials/add-advanced-pricing-to-a-product.jpg'));
         $this->assertFileExists(public_path('images/tutorials/set-up-categories-in-modern-commerce.jpg'));
+        $this->get('/tutorials/create-a-course-bundle-in-moderncommerce')
+            ->assertOk()
+            ->assertSee('SMxQxR0VSVA');
         $this->get('/tutorials/add-advanced-pricing-to-a-product')->assertOk();
         $this->get('/tutorials/set-up-categories-in-modern-commerce')
             ->assertOk()
@@ -32,6 +37,7 @@ class TutorialsPageTest extends TestCase
         $this->get('/sitemap.xml')
             ->assertOk()
             ->assertSee('/tutorials', false)
+            ->assertSee('/tutorials/create-a-course-bundle-in-moderncommerce', false)
             ->assertSee('/tutorials/set-up-categories-in-modern-commerce', false)
             ->assertSee('/tutorials/add-advanced-pricing-to-a-product', false);
     }
