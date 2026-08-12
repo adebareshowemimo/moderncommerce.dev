@@ -15,9 +15,23 @@ class TutorialsPageTest extends TestCase
             ->assertSee('How to Set Up Categories in Modern Commerce')
             ->assertSee('How to Add Advanced Pricing to a Product in ModernCommerce');
 
-        $this->assertFileExists(public_path('images/tutorials/create-a-course-bundle-in-moderncommerce.png'));
+        $this->assertFileExists(public_path('images/tutorials/create-a-course-bundle-in-moderncommerce-v2.png'));
         $this->assertFileExists(public_path('images/tutorials/add-advanced-pricing-to-a-product.jpg'));
-        $this->assertFileExists(public_path('images/tutorials/set-up-categories-in-modern-commerce.jpg'));
+        $this->assertFileExists(public_path('images/tutorials/set-up-categories-in-modern-commerce-v2.png'));
+        $this->assertFileExists(public_path('images/tutorials/set-up-advanced-bundle-features-in-moderncommerce-v2.png'));
+
+        $tutorials = json_decode(
+            file_get_contents(base_path('content/tutorials/tutorials.json')),
+            true,
+            flags: JSON_THROW_ON_ERROR,
+        );
+        foreach (array_filter($tutorials, fn (array $tutorial): bool => $tutorial['published']) as $tutorial) {
+            $thumbnailPath = public_path(ltrim($tutorial['thumbnail'], '/'));
+            $this->assertFileExists($thumbnailPath, "Missing thumbnail for {$tutorial['slug']}");
+            $dimensions = getimagesize($thumbnailPath);
+            $this->assertSame(1280, $dimensions[0], "Thumbnail width is invalid for {$tutorial['slug']}");
+            $this->assertSame(720, $dimensions[1], "Thumbnail height is invalid for {$tutorial['slug']}");
+        }
         $this->get('/tutorials/create-a-course-bundle-in-moderncommerce')
             ->assertOk()
             ->assertSee('SMxQxR0VSVA');

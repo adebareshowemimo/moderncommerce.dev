@@ -11,7 +11,7 @@
     "product_version": "2.1.8",
     "topic": "Bundles & Programs",
     "level": "Beginner",
-    "thumbnail": "/images/tutorials/create-a-course-bundle-in-moderncommerce.png",
+    "thumbnail": "/images/tutorials/create-a-course-bundle-in-moderncommerce-v2.png",
     "article": "create-a-course-bundle-in-moderncommerce.md",
     "learning_outcomes": [
       "Create a Bundle and add its prepared cover image",
@@ -152,7 +152,7 @@
     "product_version": "2.1.8",
     "topic": "Categories & Catalogue",
     "level": "Beginner",
-    "thumbnail": "/images/tutorials/set-up-categories-in-modern-commerce.jpg",
+    "thumbnail": "/images/tutorials/set-up-categories-in-modern-commerce-v2.png",
     "article": "set-up-categories-in-modern-commerce.md",
     "learning_outcomes": [
       "Distinguish Modern Commerce product categories from Moodle course categories",
@@ -513,7 +513,7 @@
     "product_version": "2.2.0",
     "topic": "Bundles & Programs",
     "level": "Intermediate",
-    "thumbnail": "/images/tutorials/set-up-advanced-bundle-features-in-moderncommerce.png",
+    "thumbnail": "/images/tutorials/set-up-advanced-bundle-features-in-moderncommerce-v2.png",
     "article": "set-up-advanced-bundle-features-in-moderncommerce.md",
     "learning_outcomes": [
       "Configure catalogue visibility, duration, assessments and merchandising information",
