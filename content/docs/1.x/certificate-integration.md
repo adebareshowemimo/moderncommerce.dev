@@ -1,6 +1,8 @@
 # Certificate integration
 
-ModernCommerce can surface certificate-related merchandising and learner links, but Moodle course completion and an installed certificate activity remain the source of truth. A ModernCommerce “certificate enabled” flag does not create a certificate by itself.
+ModernCommerce supports two certificate paths. Course products use an installed Moodle certificate activity and its course restrictions. Programs can automatically issue one native `tool_certificate` award from the template selected in Advanced Bundle Settings after the live program completion policy is satisfied.
+
+The program **certificate enabled** setting activates this final-award workflow when either the store-wide default template or a valid program-specific override is available.
 
 ## Ownership boundary
 
@@ -8,7 +10,7 @@ ModernCommerce can surface certificate-related merchandising and learner links, 
 | --- | --- |
 | Course activities, completion criteria, grades, and completion state | Moodle course configuration |
 | Certificate activity, template, issue rules, and issued certificate | Optional `mod_coursecertificate` integration |
-| Bundle/program certificate and completion messaging | ModernCommerce merchandising metadata |
+| Program completion calculation and final award orchestration | ModernCommerce program progress service |
 | Learner certificate discovery page | ModernCommerce learner interface, gated by available certificate evidence |
 
 The certificate integration must remain optional. ModernCommerce pages should not call certificate classes, strings, or services unless `mod_coursecertificate` is installed and upgraded.
@@ -26,9 +28,17 @@ Administrators can open the course and use **More → Course completion** to rev
 
 ## Configure ModernCommerce presentation
 
-For a course product, use the course merchandising/advanced-feature administration to describe buyer-facing outcomes without duplicating Moodle course logic. For a bundle or program, configure completion policy, pass threshold, must-pass courses, outline, badges, and certificate messaging in the advanced bundle editor.
+For a course product, use the course merchandising/advanced-feature administration to describe buyer-facing outcomes without duplicating Moodle course logic. For programs, select the global fallback under **Modern Commerce > Settings > Certificates**, then configure the completion policy, pass threshold, certificate enablement, template override, and certificate prerequisites in the advanced program editor.
 
-Keep these claims aligned with the actual Moodle rules. If the sales page promises a certificate after all included courses pass, the Moodle completion and certificate restrictions must enforce the same requirement.
+The global Certificates tab and bundle/program Advanced Features pages provide **Manage Certificate Templates** for authorised administrators. It opens Moodle's native manager in a new tab so templates can be created or edited without losing unsaved ModernCommerce changes. The link and selectors are hidden safely when Course Certificate is unavailable or the user lacks template-manager access.
+
+**Must Pass Courses** is a program-only child of **Pass Policy**. It appears for `weighted_avg` and `any_pass`, with one course per styled checkbox row and an internally scrollable list for large curricula. It is hidden and cleared for `all_must_pass`, because that policy already requires every course to pass. The server rejects unknown policies and discards must-pass IDs that are not included in the program.
+
+Certificate prerequisites are searchable external Moodle courses. Selecting a result closes and resets the dropdown for the next search. Prerequisites never lock included program courses; they prevent final completion and certificate issuance until Moodle reports every selected prerequisite complete.
+
+Program issuance is automatic and duplicate-safe. ModernCommerce resolves the program override before the global default, issues through `tool_certificate`, and stores the native issue ID on `program_progress`. Course-product certificates remain controlled by their Moodle activity and restrictions.
+
+The first completed transition also emits `program_completed` and queues the editable `moderncommerce_program_completed` learner communication. Recalculation does not send it twice.
 
 ## Verification checklist
 
@@ -37,7 +47,7 @@ Use a fresh learner account and verify:
 1. Purchase or redemption grants the expected course access.
 2. The learner cannot obtain the certificate before satisfying completion rules.
 3. Required grades and must-pass courses behave as advertised.
-4. The certificate activity becomes available after completion.
+4. The applicable course certificate becomes available, or the program award is automatically issued after completion.
 5. The issued certificate opens from Moodle and appears where the ModernCommerce learner certificate interface expects it.
 6. Revoked, expired, or unavailable certificates do not produce broken links.
 7. The experience remains understandable when the optional certificate plugin is absent.
@@ -47,7 +57,7 @@ Use a fresh learner account and verify:
 - **Certificate never becomes available:** inspect course completion, activity restrictions, required grades, cron, and the learner's effective completion record.
 - **Certificate appears too early:** fix Moodle completion/restriction rules; do not rely on a storefront flag.
 - **Learner page is empty:** confirm the certificate plugin is installed, the activity/template is configured, a certificate was issued, and the current user owns the evidence.
-- **Bundle claim does not match issuance:** reconcile bundle completion metadata, must-pass courses, included course mappings, and actual Moodle completion rules.
+- **Program award is missing:** reconcile program status, prerequisites, policy, pass grade, must-pass courses, template visibility, `tool_certificate_issues`, and progress `certificateissueid`.
 - **Integration errors after uninstalling the certificate plugin:** confirm optional-component gating and purge Moodle caches.
 
 See [Bundles & programs](/{{route}}/{{version}}/modern-commerce/bundles-and-programs), [Course merchandising](/{{route}}/{{version}}/modern-commerce/course-merchandising), [Learner account & access](/{{route}}/{{version}}/modern-commerce/learner-account), and [Add-ons & extension points](/{{route}}/{{version}}/modern-commerce/addons-and-extension).

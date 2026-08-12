@@ -14,6 +14,8 @@ Learner functions are `get_learner_dashboard`, `list_learner_courses`, `list_lea
 
 These functions must scope personal records to the current user. Administrative all-user functions are separate.
 
+`get_learner_product_access` synchronizes owned programs before responding. Program responses include prerequisite state, overall progress, curriculum-ordered course states, and learner-safe launch URLs for every included course. Prerequisites affect final completion and certificate eligibility, not course access.
+
 ## Products, prices, categories and coupons
 
 - Products: `search_courses`, `list_products`, `save_product`, `get_product`, `toggle_product`, `archive_product`.
@@ -68,6 +70,8 @@ The plugin defines 12 event classes: `audit_event`, `order_created`, `order_paid
 - `order_status_changed` → order-side effects;
 - `order_paid` → subscription activation/renewal;
 - Moodle `course_completed` → subscription progress;
+- Moodle `course_completed` → program synchronization, course-access reconciliation, policy evaluation and certificate issuance;
+- ModernCommerce `program_completed` → duplicate-safe learner email and in-app completion communication;
 - Moodle `user_deleted` → privacy cleanup.
 
 When extending the system, prefer a documented event/service contract over direct table writes. An event class existing in source does not mean every external integration is guaranteed a stable public API; version and test custom integrations.

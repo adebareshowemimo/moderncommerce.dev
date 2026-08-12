@@ -13,6 +13,7 @@
 - [Installation](/{{route}}/{{version}}/modern-commerce/installation): install, Composer step, run the upgrade, seed defaults.
 - [Quick Start](/{{route}}/{{version}}/modern-commerce/quick-start): connect a gateway, price a course, and take a test purchase.
 - [Products & Pricing](/{{route}}/{{version}}/modern-commerce/products-and-pricing): courses, bundles vs programs, prices, sale prices, inventory, merchandising.
+- [Bundles & Programs](/{{route}}/{{version}}/modern-commerce/bundles-and-programs): full included-course access, certificate prerequisites, grades, progress, conversion, and final certificates.
 - [Storefront](/{{route}}/{{version}}/modern-commerce/storefront): the widget-driven public store, edit mode, pages, and branding.
 - [Payments](/{{route}}/{{version}}/modern-commerce/payments): the four gateways, keys/secrets, webhooks, IP whitelist, tax, and currency.
 - [Subscriptions](/{{route}}/{{version}}/modern-commerce/subscriptions): plans, trials, renewals, grace, plan changes, and access sync.

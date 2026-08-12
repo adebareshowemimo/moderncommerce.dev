@@ -1,6 +1,6 @@
 # Database reference
 
-The clean-install schema in `db/install.xml` defines **81 tables**. Moodle applies the configured `$CFG->prefix`; names below are the XMLDB logical names. Do not edit these tables directly in normal operations, use pages, external functions and owning services so validation, events and audit records remain consistent.
+The clean-install schema in `db/install.xml` defines **82 tables**. Moodle applies the configured `$CFG->prefix`; names below are the XMLDB logical names. Do not edit these tables directly in normal operations, use pages, external functions and owning services so validation, events and audit records remain consistent.
 
 ## Catalogue and merchandising
 
@@ -24,6 +24,7 @@ The clean-install schema in `db/install.xml` defines **81 tables**. Moodle appli
 | `bundle_mustpass` | Included courses marked must-pass |
 | `bundle_prereq` | Stored prerequisite-course metadata |
 | `bundle_tags` | Bundle/program merchandising tags |
+| `program_progress` | Per-learner ordered progress, current course, completion outcome and native certificate issue ID |
 
 For abbreviated rows in this and following tables, prepend `local_moderncommerce_`.
 
