@@ -500,5 +500,146 @@
       }
     ],
     "published": true
+  },
+  {
+    "slug": "set-up-advanced-bundle-features-in-moderncommerce",
+    "title": "How to Set Up Advanced Bundle Features in ModernCommerce",
+    "description": "Configure advanced merchandising settings for Bundles and Programs, including duration, assessments, outlines, tags, completion, grading, prerequisites and certificates.",
+    "youtube_id": "ZmMX-DHLJrA",
+    "duration": "PT10M9S",
+    "duration_label": "10:09",
+    "published_at": "2026-08-12",
+    "updated_at": "2026-08-12",
+    "product_version": "2.2.0",
+    "topic": "Bundles & Programs",
+    "level": "Intermediate",
+    "thumbnail": "/images/tutorials/set-up-advanced-bundle-features-in-moderncommerce.png",
+    "article": "set-up-advanced-bundle-features-in-moderncommerce.md",
+    "learning_outcomes": [
+      "Configure catalogue visibility, duration, assessments and merchandising information",
+      "Use Moodle learning hours and quiz data for automatic totals",
+      "Create and order a learner-facing course outline",
+      "Configure Program pass policies, grades and must-pass courses",
+      "Set up Program certificates and prerequisite courses",
+      "Save and verify persisted Bundle and Program settings"
+    ],
+    "prerequisites": [
+      "ModernCommerce 2.2.0 or a compatible later release",
+      "Permission to manage Modern Commerce Bundles and Programs",
+      "An existing Bundle and Program with included Moodle courses",
+      "Certificate integration and a template when certificate issuance is required"
+    ],
+    "chapters": [
+      {
+        "time": "00:00",
+        "seconds": 0,
+        "title": "Opening"
+      },
+      {
+        "time": "00:03",
+        "seconds": 3,
+        "title": "Open Advanced Bundle settings"
+      },
+      {
+        "time": "00:54",
+        "seconds": 54,
+        "title": "Review Bundle Overview"
+      },
+      {
+        "time": "01:15",
+        "seconds": 75,
+        "title": "Configure catalogue visibility"
+      },
+      {
+        "time": "02:37",
+        "seconds": 157,
+        "title": "Set duration and learning hours"
+      },
+      {
+        "time": "03:34",
+        "seconds": 214,
+        "title": "Configure assessments"
+      },
+      {
+        "time": "04:07",
+        "seconds": 247,
+        "title": "Build the course outline"
+      },
+      {
+        "time": "04:50",
+        "seconds": 290,
+        "title": "Add merchandising tags"
+      },
+      {
+        "time": "05:14",
+        "seconds": 314,
+        "title": "Set promotional flags"
+      },
+      {
+        "time": "05:53",
+        "seconds": 353,
+        "title": "Save and verify the Bundle"
+      },
+      {
+        "time": "06:16",
+        "seconds": 376,
+        "title": "Open Program completion settings"
+      },
+      {
+        "time": "06:36",
+        "seconds": 396,
+        "title": "Choose the Pass Policy"
+      },
+      {
+        "time": "07:05",
+        "seconds": 425,
+        "title": "Set the Pass Grade"
+      },
+      {
+        "time": "07:32",
+        "seconds": 452,
+        "title": "Select Must Pass Courses"
+      },
+      {
+        "time": "07:57",
+        "seconds": 477,
+        "title": "Configure certificates"
+      },
+      {
+        "time": "08:59",
+        "seconds": 539,
+        "title": "Add Program prerequisites"
+      },
+      {
+        "time": "09:20",
+        "seconds": 560,
+        "title": "Save and verify the Program"
+      },
+      {
+        "time": "09:40",
+        "seconds": 580,
+        "title": "Review the completed setup"
+      },
+      {
+        "time": "09:58",
+        "seconds": 598,
+        "title": "Closing"
+      }
+    ],
+    "related_docs": [
+      {
+        "title": "Bundles and programs",
+        "route": "bundles-and-programs"
+      },
+      {
+        "title": "Products and pricing",
+        "route": "products-and-pricing"
+      },
+      {
+        "title": "Certificate integration",
+        "route": "certificate-integration"
+      }
+    ],
+    "published": true
   }
 ]
